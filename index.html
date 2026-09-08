@@ -1753,8 +1753,8 @@ function submitFeedback(){
   const fields = {
     'entry.195244615':  brandValue,  // 品牌（單選，必須精確匹配）
     'entry.1040040451': name,        // 姓名
-    'entry.713710872':  fbtype,      // 回報類型
-    'entry.1274080264': issue        // 說明與建議
+    'entry.1274080264': fbtype,      // 回報類型
+    'entry.713710872':  issue        // 說明與建議
   };
   Object.entries(fields).forEach(([k,v])=>{
     const inp = document.createElement('input');
