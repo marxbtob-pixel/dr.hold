@@ -275,7 +275,7 @@ body.rd-theme .price-tag{color:#c0154a;}
 #fb-close{position:absolute;top:14px;right:16px;background:none;border:none;font-size:22px;cursor:pointer;color:var(--muted);}
 
 /* ── 版本更新彈窗 ── */
-#ver-modal{position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:5000;display:flex;align-items:center;justify-content:center;padding:1rem;}
+#ver-modal{position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:99999;display:flex;align-items:center;justify-content:center;padding:1rem;}
 #ver-box{background:#fff;border-radius:18px;max-width:460px;width:100%;box-shadow:0 12px 48px rgba(0,0,0,.25);overflow:hidden;animation:slideUp .3s ease;}
 @keyframes slideUp{from{transform:translateY(30px);opacity:0}to{transform:translateY(0);opacity:1}}
 #ver-header{padding:22px 24px 16px;position:relative;color:#fff;background:linear-gradient(135deg,#1a6db5,#1a8fd1);}
@@ -2497,12 +2497,16 @@ function initQADB(){
 // ── 版本更新彈窗 ──
 function closeVerModal(){
   const m=document.getElementById('ver-modal');
-  if(m) m.style.display='none';
+  if(m){ m.style.display='none'; }
+  document.body.style.overflow='';
   sessionStorage.setItem('ver_modal_closed_v120','1');
 }
 function openVerModal(){
   const m=document.getElementById('ver-modal');
-  if(m) m.style.display='flex';
+  if(!m) return;
+  m.style.display='flex';
+  m.style.zIndex='99999';
+  document.body.style.overflow='hidden';
 }
 function updateVerModalTheme(brand){
   const h=document.getElementById('ver-header');
@@ -2512,12 +2516,16 @@ function updateVerModalTheme(brand){
 }
 
 // ── INIT ──
-if(!sessionStorage.getItem('ver_modal_closed_v120')){
-  openVerModal();
-}
 buildFilters();
 filterProducts();
 buildVideos();
+// 版本更新彈窗：DOMContentLoaded 確保 DOM 就緒後顯示
+document.addEventListener('DOMContentLoaded', function(){
+  // 暫時強制顯示（測試用，確認樣式正常後可恢復 sessionStorage 判斷）
+  // if(!sessionStorage.getItem('ver_modal_closed_v120')){
+  openVerModal();
+  // }
+});
 // 若已有姓名記錄，直接跳過彈窗
 if(staffName){
   document.getElementById('staff-modal').style.display='none';
