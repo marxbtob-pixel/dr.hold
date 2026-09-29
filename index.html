@@ -298,6 +298,57 @@ body.rd-theme #ver-ok-btn:hover{background:var(--rd1);}
 body.rd-theme .ver-section-title{color:var(--rd1);}
 body.rd-theme .ver-list li{background:var(--rd-bg);}
 body.rd-theme .ver-list li::before{color:var(--rd2);}
+/* ── 異議神助手 ── */
+#obj-modal{position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:9000;display:none;align-items:center;justify-content:center;padding:1rem;}
+#obj-modal.open{display:flex;}
+#obj-box{background:#fff;border-radius:18px;max-width:520px;width:100%;box-shadow:0 12px 48px rgba(0,0,0,.25);overflow:hidden;}
+#obj-header{background:linear-gradient(135deg,#1a6db5,#1a8fd1);padding:18px 24px;position:relative;color:#fff;}
+#obj-header h2{font-size:18px;font-weight:800;margin:0;}
+#obj-header p{font-size:12px;opacity:.8;margin:4px 0 0;}
+#obj-close{position:absolute;top:12px;right:16px;background:rgba(255,255,255,.2);border:none;color:#fff;width:28px;height:28px;border-radius:50%;cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center;}
+#obj-close:hover{background:rgba(255,255,255,.35);}
+.obj-cards{display:flex;flex-direction:column;gap:12px;padding:20px 24px;}
+.obj-card{border:2px solid var(--border);border-radius:var(--r);padding:16px 20px;cursor:pointer;transition:all .2s;display:flex;align-items:center;gap:14px;background:#fff;}
+.obj-card:hover{border-color:var(--b2);background:var(--b-light);box-shadow:var(--sh);}
+.obj-card-icon{font-size:28px;flex-shrink:0;}
+.obj-card-info{flex:1;}
+.obj-card-title{font-size:16px;font-weight:700;color:var(--text);}
+.obj-card-sub{font-size:12px;color:var(--muted);margin-top:3px;}
+.obj-card-arrow{font-size:18px;color:var(--hint);}
+body.rd-theme #obj-header{background:linear-gradient(135deg,#8b1a3a,#d44f7a);}
+body.rd-theme .obj-card:hover{border-color:var(--rd2);background:var(--rd-light);}
+/* 異議詳情彈窗 */
+#obj-detail-modal{position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:9100;display:none;align-items:center;justify-content:center;padding:1rem;}
+#obj-detail-modal.open{display:flex;}
+#obj-detail-box{background:#fff;border-radius:18px;max-width:640px;width:100%;max-height:88vh;display:flex;flex-direction:column;box-shadow:0 12px 48px rgba(0,0,0,.3);overflow:hidden;}
+#obj-detail-header{background:linear-gradient(135deg,#1a6db5,#1a8fd1);padding:16px 20px;color:#fff;position:relative;flex-shrink:0;}
+#obj-detail-header h3{font-size:16px;font-weight:800;margin:0;}
+#obj-detail-close{position:absolute;top:12px;right:16px;background:rgba(255,255,255,.2);border:none;color:#fff;width:28px;height:28px;border-radius:50%;cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center;}
+.obj-detail-toolbar{padding:12px 16px;border-bottom:1px solid var(--border);flex-shrink:0;display:flex;flex-direction:column;gap:8px;background:#fafbfc;}
+.obj-search-row{display:flex;gap:8px;}
+.obj-search-inp{flex:1;padding:8px 14px;border:1.5px solid var(--border);border-radius:var(--rp);font-size:14px;font-family:inherit;outline:none;}
+.obj-search-inp:focus{border-color:var(--b2);}
+.obj-tabs{display:flex;gap:6px;}
+.obj-tab-btn{padding:6px 16px;border-radius:var(--rp);border:1.5px solid var(--border);background:#fff;font-size:13px;font-weight:600;cursor:pointer;font-family:inherit;color:var(--muted);transition:all .15s;}
+.obj-tab-btn.active{background:var(--b2);color:#fff;border-color:var(--b2);}
+.obj-tags-row{display:flex;flex-wrap:wrap;gap:6px;}
+.obj-tag{padding:4px 12px;border-radius:999px;border:1.5px solid var(--border);background:#fff;font-size:12px;cursor:pointer;font-family:inherit;color:var(--muted);white-space:nowrap;transition:all .15s;}
+.obj-tag.active{background:var(--b2);color:#fff;border-color:var(--b2);}
+#obj-detail-body{flex:1;overflow-y:auto;padding:12px 16px;}
+.obj-item{border:1px solid var(--border);border-radius:var(--r);margin-bottom:10px;overflow:hidden;}
+.obj-item-head{padding:10px 14px;background:#f8f9fa;cursor:pointer;display:flex;justify-content:space-between;align-items:center;}
+.obj-item-head:hover{background:var(--b-light);}
+.obj-item-q{font-size:14px;font-weight:600;color:var(--text);flex:1;}
+.obj-item-cat{font-size:11px;padding:2px 8px;border-radius:999px;background:var(--b-bg);color:var(--b1);font-weight:600;margin-left:8px;white-space:nowrap;}
+.obj-item-body{display:none;padding:12px 14px;font-size:13px;color:var(--muted);line-height:1.8;white-space:pre-line;border-top:1px solid var(--border);}
+.obj-item.open .obj-item-body{display:block;}
+.obj-empty{text-align:center;padding:3rem;color:var(--hint);font-size:14px;}
+body.rd-theme #obj-detail-header{background:linear-gradient(135deg,#8b1a3a,#d44f7a);}
+body.rd-theme .obj-tab-btn.active{background:var(--rd2);border-color:var(--rd2);}
+body.rd-theme .obj-tag.active{background:var(--rd2);border-color:var(--rd2);}
+body.rd-theme .obj-search-inp:focus{border-color:var(--rd2);}
+body.rd-theme .obj-item-head:hover{background:var(--rd-light);}
+body.rd-theme .obj-item-cat{background:var(--rd-bg);color:var(--rd1);}
 /* ── QA查詢資料庫 ── */
 .qadb-item{background:#fff;border:1px solid var(--border);border-radius:var(--r);overflow:hidden;box-shadow:var(--sh);}
 .qadb-item-head{padding:12px 16px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:10px;}
@@ -364,6 +415,7 @@ body.rd-theme .qadb-q mark{background:#ffd0e5;}
   <button class="nav-tab active" data-tab="products">🔍 產品查詢</button>
   <button class="nav-tab" data-tab="ai">💬 AI問答</button>
   <button class="nav-tab" data-tab="audio">🎬 語音教案</button>
+  <button class="nav-tab" id="btn-objection" onclick="openObjectionModal()" style="color:var(--b1);font-weight:700">⚡ 異議神助手</button>
   <button class="nav-tab" data-tab="quiz">📝 測驗</button>
   <button class="nav-tab" data-tab="exam">🎓 考核</button>
   <button class="nav-tab" data-tab="score">🏆 成績</button>
@@ -2518,6 +2570,110 @@ function updateVerModalTheme(brand){
   else h.classList.remove('rd');
 }
 
+// ── 異議神助手 ──
+
+// 預留資料結構（日後填入 Excel / JSON）
+const OBJ_DATA = {
+  skincare: {
+    title: '🧴 保養品異議即時通',
+    categories: ['全部','價格異議','效果懷疑','成分疑慮','競品比較','時間不夠','需要考慮','已有其他產品','不需要','家人反對','過敏敏感','已在使用','其他'],
+    items: [
+      // 範例 dummy data（待填入真實話術）
+      {cat:'價格異議', q:'這個好貴，比市面上的都貴', phone:'（電銷口語版話術）', line:'（客服LINE版話術）'},
+      {cat:'效果懷疑', q:'用了真的有效果嗎？', phone:'（電銷口語版話術）', line:'（客服LINE版話術）'},
+      {cat:'成分疑慮', q:'成分安全嗎？有沒有副作用？', phone:'（電銷口語版話術）', line:'（客服LINE版話術）'},
+    ]
+  },
+  intimate: {
+    title: '🌸 私密處異議即時通',
+    categories: ['全部'],
+    items: [] // 內容建置中
+  }
+};
+
+let objCurrentType = 'skincare';
+let objCurrentTab = 'phone';
+let objActiveTag = '全部';
+
+function openObjectionModal(){
+  document.getElementById('obj-modal').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeObjectionModal(){
+  document.getElementById('obj-modal').classList.remove('open');
+  document.body.style.overflow='';
+}
+
+function openObjectionDetail(type){
+  objCurrentType = type;
+  objActiveTag = '全部';
+  objCurrentTab = 'phone';
+  const data = OBJ_DATA[type];
+  document.getElementById('obj-detail-title').textContent = data.title;
+  document.getElementById('obj-search').value = '';
+  // Reset tabs
+  document.getElementById('obj-tab-phone').classList.add('active');
+  document.getElementById('obj-tab-line').classList.remove('active');
+  // Build tags
+  buildObjTags();
+  renderObjectionItems();
+  document.getElementById('obj-detail-modal').classList.add('open');
+}
+function closeObjectionDetail(){
+  document.getElementById('obj-detail-modal').classList.remove('open');
+}
+
+function switchObjTab(tab){
+  objCurrentTab = tab;
+  document.getElementById('obj-tab-phone').classList.toggle('active', tab==='phone');
+  document.getElementById('obj-tab-line').classList.toggle('active', tab==='line');
+  renderObjectionItems();
+}
+
+function buildObjTags(){
+  const row = document.getElementById('obj-tags');
+  row.innerHTML = '';
+  const cats = OBJ_DATA[objCurrentType].categories;
+  cats.forEach(cat=>{
+    const b = document.createElement('button');
+    b.className = 'obj-tag' + (cat===objActiveTag?' active':'');
+    b.textContent = cat;
+    b.onclick = ()=>{ objActiveTag=cat; buildObjTags(); renderObjectionItems(); };
+    row.appendChild(b);
+  });
+}
+
+function renderObjectionItems(){
+  const q = (document.getElementById('obj-search').value||'').toLowerCase().trim();
+  const body = document.getElementById('obj-detail-body');
+  body.innerHTML = '';
+  const items = OBJ_DATA[objCurrentType].items;
+  const filtered = items.filter(item=>{
+    const catMatch = objActiveTag==='全部' || item.cat===objActiveTag;
+    const txt = (item.q + ' ' + item.phone + ' ' + item.line).toLowerCase();
+    const qMatch = !q || txt.includes(q);
+    return catMatch && qMatch;
+  });
+
+  if(!filtered.length){
+    body.innerHTML = `<div class="obj-empty">${OBJ_DATA[objCurrentType].items.length===0?'🚧 內容建置中，敬請期待！':'🔎 找不到相關話術，試試其他關鍵字'}</div>`;
+    return;
+  }
+
+  filtered.forEach(item=>{
+    const ans = objCurrentTab==='phone' ? item.phone : item.line;
+    const div = document.createElement('div');
+    div.className = 'obj-item';
+    div.innerHTML = `
+      <div class="obj-item-head" onclick="this.closest('.obj-item').classList.toggle('open')">
+        <span class="obj-item-q">Q：${item.q}</span>
+        <span class="obj-item-cat">${item.cat}</span>
+      </div>
+      <div class="obj-item-body">${ans}</div>`;
+    body.appendChild(div);
+  });
+}
+
 // ── INIT ──
 buildFilters();
 filterProducts();
@@ -2571,6 +2727,59 @@ appendMsg("bot","嗨！我是黛后商品小助理 👑\n\n我只根據「商品
     <div id="ver-footer">
       <button id="ver-ok-btn" onclick="closeVerModal()">我知道了，開始使用 🚀</button>
     </div>
+  </div>
+</div>
+
+<!-- 異議神助手主選單 -->
+<div id="obj-modal" onclick="if(event.target===this)closeObjectionModal()">
+  <div id="obj-box">
+    <div id="obj-header">
+      <button id="obj-close" onclick="closeObjectionModal()">✕</button>
+      <h2>⚡ 異議神助手</h2>
+      <p>快速找到最佳話術，輕鬆應對各種客戶異議</p>
+    </div>
+    <div class="obj-cards">
+      <div class="obj-card" onclick="openObjectionDetail('skincare')">
+        <div class="obj-card-icon">🧴</div>
+        <div class="obj-card-info">
+          <div class="obj-card-title">保養品異議即時通</div>
+          <div class="obj-card-sub">13 大分類 / 50 則話術</div>
+        </div>
+        <div class="obj-card-arrow">›</div>
+      </div>
+      <div class="obj-card" onclick="openObjectionDetail('intimate')">
+        <div class="obj-card-icon">🌸</div>
+        <div class="obj-card-info">
+          <div class="obj-card-title">私密處異議即時通</div>
+          <div class="obj-card-sub">內容建置中 🚧</div>
+        </div>
+        <div class="obj-card-arrow">›</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 異議詳情彈窗 -->
+<div id="obj-detail-modal" onclick="if(event.target===this)closeObjectionDetail()">
+  <div id="obj-detail-box">
+    <div id="obj-detail-header">
+      <button id="obj-detail-close" class="obj-detail-close" onclick="closeObjectionDetail()">✕</button>
+      <h3 id="obj-detail-title">保養品異議即時通</h3>
+    </div>
+    <div class="obj-detail-toolbar">
+      <!-- 搜尋列 -->
+      <div class="obj-search-row">
+        <input class="obj-search-inp" id="obj-search" type="text" placeholder="搜尋異議話術關鍵字..." oninput="renderObjectionItems()"/>
+      </div>
+      <!-- 電銷/客服 分頁 -->
+      <div class="obj-tabs">
+        <button class="obj-tab-btn active" id="obj-tab-phone" onclick="switchObjTab('phone')">📞 電銷口語版</button>
+        <button class="obj-tab-btn" id="obj-tab-line" onclick="switchObjTab('line')">💬 客服 LINE 版</button>
+      </div>
+      <!-- 分類 Tag -->
+      <div class="obj-tags-row" id="obj-tags"></div>
+    </div>
+    <div id="obj-detail-body"></div>
   </div>
 </div>
 
