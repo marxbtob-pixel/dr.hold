@@ -300,7 +300,7 @@ body.rd-theme .ver-list li{background:var(--rd-bg);}
 body.rd-theme .ver-list li::before{color:var(--rd2);}
 /* ── 異議神助手 ── */
 #obj-modal{position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:9000;display:none;align-items:center;justify-content:center;padding:1rem;}
-#obj-modal.open{display:flex;}
+/* #obj-modal.open{display:flex;} - now controlled via JS style.display */
 #obj-box{background:#fff;border-radius:18px;max-width:520px;width:100%;box-shadow:0 12px 48px rgba(0,0,0,.25);overflow:hidden;}
 #obj-header{background:linear-gradient(135deg,#1a6db5,#1a8fd1);padding:18px 24px;position:relative;color:#fff;}
 #obj-header h2{font-size:18px;font-weight:800;margin:0;}
@@ -319,7 +319,7 @@ body.rd-theme #obj-header{background:linear-gradient(135deg,#8b1a3a,#d44f7a);}
 body.rd-theme .obj-card:hover{border-color:var(--rd2);background:var(--rd-light);}
 /* 異議詳情彈窗 */
 #obj-detail-modal{position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:9100;display:none;align-items:center;justify-content:center;padding:1rem;}
-#obj-detail-modal.open{display:flex;}
+/* #obj-detail-modal.open{display:flex;} - now controlled via JS style.display */
 #obj-detail-box{background:#fff;border-radius:18px;max-width:640px;width:100%;max-height:88vh;display:flex;flex-direction:column;box-shadow:0 12px 48px rgba(0,0,0,.3);overflow:hidden;}
 #obj-detail-header{background:linear-gradient(135deg,#1a6db5,#1a8fd1);padding:16px 20px;color:#fff;position:relative;flex-shrink:0;}
 #obj-detail-header h3{font-size:16px;font-weight:800;margin:0;}
@@ -1230,10 +1230,13 @@ const VIDEOS=[
 // ── NAV ──
 document.querySelectorAll(".nav-tab").forEach(btn=>{
   btn.onclick=()=>{
+    // 異議神助手按鈕沒有 data-tab，跳過 tab 切換邏輯
+    if(btn.id==='btn-objection'){ openObjectionModal(); return; }
     document.querySelectorAll(".nav-tab").forEach(b=>b.classList.remove("active"));
     document.querySelectorAll(".tab-page").forEach(p=>p.classList.remove("active"));
     btn.classList.add("active");
-    document.getElementById("tab-"+btn.dataset.tab).classList.add("active");
+    var tabEl = document.getElementById("tab-"+btn.dataset.tab);
+    if(tabEl) tabEl.classList.add("active");
     if(btn.dataset.tab==='qadb') initQADB();
   };
 });
@@ -2596,12 +2599,13 @@ let objCurrentTab = 'phone';
 let objActiveTag = '全部';
 
 function openObjectionModal(){
-  document.getElementById('obj-modal').classList.add('open');
-  document.body.style.overflow='hidden';
+  var modal = document.getElementById('objectionModal');
+  if(modal){ modal.style.display='flex'; document.body.style.overflow='hidden'; }
+  else{ console.error('找不到 objectionModal 元素'); }
 }
 function closeObjectionModal(){
-  document.getElementById('obj-modal').classList.remove('open');
-  document.body.style.overflow='';
+  var modal = document.getElementById('objectionModal');
+  if(modal){ modal.style.display='none'; document.body.style.overflow=''; }
 }
 
 function openObjectionDetail(type){
@@ -2617,10 +2621,10 @@ function openObjectionDetail(type){
   // Build tags
   buildObjTags();
   renderObjectionItems();
-  document.getElementById('obj-detail-modal').classList.add('open');
+  var dm=document.getElementById('objectionDetailModal'); if(dm) dm.style.display='flex';
 }
 function closeObjectionDetail(){
-  document.getElementById('obj-detail-modal').classList.remove('open');
+  var dm=document.getElementById('objectionDetailModal'); if(dm) dm.style.display='none';
 }
 
 function switchObjTab(tab){
@@ -2731,7 +2735,7 @@ appendMsg("bot","嗨！我是黛后商品小助理 👑\n\n我只根據「商品
 </div>
 
 <!-- 異議神助手主選單 -->
-<div id="obj-modal" onclick="if(event.target===this)closeObjectionModal()">
+<div id="objectionModal" onclick="if(event.target===this)closeObjectionModal()" style="display:none">
   <div id="obj-box">
     <div id="obj-header">
       <button id="obj-close" onclick="closeObjectionModal()">✕</button>
@@ -2743,7 +2747,7 @@ appendMsg("bot","嗨！我是黛后商品小助理 👑\n\n我只根據「商品
         <div class="obj-card-icon">🧴</div>
         <div class="obj-card-info">
           <div class="obj-card-title">保養品異議即時通</div>
-          <div class="obj-card-sub">13 大分類 / 50 則話術</div>
+          <div class="obj-card-sub">10 大分類 / 100 則話術</div>
         </div>
         <div class="obj-card-arrow">›</div>
       </div>
@@ -2751,7 +2755,7 @@ appendMsg("bot","嗨！我是黛后商品小助理 👑\n\n我只根據「商品
         <div class="obj-card-icon">🌸</div>
         <div class="obj-card-info">
           <div class="obj-card-title">私密處異議即時通</div>
-          <div class="obj-card-sub">內容建置中 🚧</div>
+          <div class="obj-card-sub">10 大分類 / 100 則話術</div>
         </div>
         <div class="obj-card-arrow">›</div>
       </div>
@@ -2760,7 +2764,7 @@ appendMsg("bot","嗨！我是黛后商品小助理 👑\n\n我只根據「商品
 </div>
 
 <!-- 異議詳情彈窗 -->
-<div id="obj-detail-modal" onclick="if(event.target===this)closeObjectionDetail()">
+<div id="objectionDetailModal" onclick="if(event.target===this)closeObjectionDetail()" style="display:none">
   <div id="obj-detail-box">
     <div id="obj-detail-header">
       <button id="obj-detail-close" class="obj-detail-close" onclick="closeObjectionDetail()">✕</button>
