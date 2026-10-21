@@ -298,57 +298,6 @@ body.rd-theme #ver-ok-btn:hover{background:var(--rd1);}
 body.rd-theme .ver-section-title{color:var(--rd1);}
 body.rd-theme .ver-list li{background:var(--rd-bg);}
 body.rd-theme .ver-list li::before{color:var(--rd2);}
-/* ── 異議神助手 ── */
-#obj-modal{position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:9000;display:none;align-items:center;justify-content:center;padding:1rem;}
-/* #obj-modal.open{display:flex;} - now controlled via JS style.display */
-#obj-box{background:#fff;border-radius:18px;max-width:520px;width:100%;box-shadow:0 12px 48px rgba(0,0,0,.25);overflow:hidden;}
-#obj-header{background:linear-gradient(135deg,#1a6db5,#1a8fd1);padding:18px 24px;position:relative;color:#fff;}
-#obj-header h2{font-size:18px;font-weight:800;margin:0;}
-#obj-header p{font-size:12px;opacity:.8;margin:4px 0 0;}
-#obj-close{position:absolute;top:12px;right:16px;background:rgba(255,255,255,.2);border:none;color:#fff;width:28px;height:28px;border-radius:50%;cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center;}
-#obj-close:hover{background:rgba(255,255,255,.35);}
-.obj-cards{display:flex;flex-direction:column;gap:12px;padding:20px 24px;}
-.obj-card{border:2px solid var(--border);border-radius:var(--r);padding:16px 20px;cursor:pointer;transition:all .2s;display:flex;align-items:center;gap:14px;background:#fff;}
-.obj-card:hover{border-color:var(--b2);background:var(--b-light);box-shadow:var(--sh);}
-.obj-card-icon{font-size:28px;flex-shrink:0;}
-.obj-card-info{flex:1;}
-.obj-card-title{font-size:16px;font-weight:700;color:var(--text);}
-.obj-card-sub{font-size:12px;color:var(--muted);margin-top:3px;}
-.obj-card-arrow{font-size:18px;color:var(--hint);}
-body.rd-theme #obj-header{background:linear-gradient(135deg,#8b1a3a,#d44f7a);}
-body.rd-theme .obj-card:hover{border-color:var(--rd2);background:var(--rd-light);}
-/* 異議詳情彈窗 */
-#obj-detail-modal{position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:9100;display:none;align-items:center;justify-content:center;padding:1rem;}
-/* #obj-detail-modal.open{display:flex;} - now controlled via JS style.display */
-#obj-detail-box{background:#fff;border-radius:18px;max-width:640px;width:100%;max-height:88vh;display:flex;flex-direction:column;box-shadow:0 12px 48px rgba(0,0,0,.3);overflow:hidden;}
-#obj-detail-header{background:linear-gradient(135deg,#1a6db5,#1a8fd1);padding:16px 20px;color:#fff;position:relative;flex-shrink:0;}
-#obj-detail-header h3{font-size:16px;font-weight:800;margin:0;}
-#obj-detail-close{position:absolute;top:12px;right:16px;background:rgba(255,255,255,.2);border:none;color:#fff;width:28px;height:28px;border-radius:50%;cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center;}
-.obj-detail-toolbar{padding:12px 16px;border-bottom:1px solid var(--border);flex-shrink:0;display:flex;flex-direction:column;gap:8px;background:#fafbfc;}
-.obj-search-row{display:flex;gap:8px;}
-.obj-search-inp{flex:1;padding:8px 14px;border:1.5px solid var(--border);border-radius:var(--rp);font-size:14px;font-family:inherit;outline:none;}
-.obj-search-inp:focus{border-color:var(--b2);}
-.obj-tabs{display:flex;gap:6px;}
-.obj-tab-btn{padding:6px 16px;border-radius:var(--rp);border:1.5px solid var(--border);background:#fff;font-size:13px;font-weight:600;cursor:pointer;font-family:inherit;color:var(--muted);transition:all .15s;}
-.obj-tab-btn.active{background:var(--b2);color:#fff;border-color:var(--b2);}
-.obj-tags-row{display:flex;flex-wrap:wrap;gap:6px;}
-.obj-tag{padding:4px 12px;border-radius:999px;border:1.5px solid var(--border);background:#fff;font-size:12px;cursor:pointer;font-family:inherit;color:var(--muted);white-space:nowrap;transition:all .15s;}
-.obj-tag.active{background:var(--b2);color:#fff;border-color:var(--b2);}
-#obj-detail-body{flex:1;overflow-y:auto;padding:12px 16px;}
-.obj-item{border:1px solid var(--border);border-radius:var(--r);margin-bottom:10px;overflow:hidden;}
-.obj-item-head{padding:10px 14px;background:#f8f9fa;cursor:pointer;display:flex;justify-content:space-between;align-items:center;}
-.obj-item-head:hover{background:var(--b-light);}
-.obj-item-q{font-size:14px;font-weight:600;color:var(--text);flex:1;}
-.obj-item-cat{font-size:11px;padding:2px 8px;border-radius:999px;background:var(--b-bg);color:var(--b1);font-weight:600;margin-left:8px;white-space:nowrap;}
-.obj-item-body{display:none;padding:12px 14px;font-size:13px;color:var(--muted);line-height:1.8;white-space:pre-line;border-top:1px solid var(--border);}
-.obj-item.open .obj-item-body{display:block;}
-.obj-empty{text-align:center;padding:3rem;color:var(--hint);font-size:14px;}
-body.rd-theme #obj-detail-header{background:linear-gradient(135deg,#8b1a3a,#d44f7a);}
-body.rd-theme .obj-tab-btn.active{background:var(--rd2);border-color:var(--rd2);}
-body.rd-theme .obj-tag.active{background:var(--rd2);border-color:var(--rd2);}
-body.rd-theme .obj-search-inp:focus{border-color:var(--rd2);}
-body.rd-theme .obj-item-head:hover{background:var(--rd-light);}
-body.rd-theme .obj-item-cat{background:var(--rd-bg);color:var(--rd1);}
 /* ── QA查詢資料庫 ── */
 .qadb-item{background:#fff;border:1px solid var(--border);border-radius:var(--r);overflow:hidden;box-shadow:var(--sh);}
 .qadb-item-head{padding:12px 16px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:10px;}
@@ -415,7 +364,7 @@ body.rd-theme .qadb-q mark{background:#ffd0e5;}
   <button class="nav-tab active" data-tab="products">🔍 產品查詢</button>
   <button class="nav-tab" data-tab="ai">💬 AI問答</button>
   <button class="nav-tab" data-tab="audio">🎬 語音教案</button>
-  <button class="nav-tab" id="btn-objection" onclick="openObjectionModal()" style="color:var(--b1);font-weight:700">⚡ 異議神助手</button>
+  <button class="nav-tab" data-tab="objection">⚡ 異議神助手</button>
   <button class="nav-tab" data-tab="quiz">📝 測驗</button>
   <button class="nav-tab" data-tab="exam">🎓 考核</button>
   <button class="nav-tab" data-tab="score">🏆 成績</button>
@@ -489,6 +438,119 @@ body.rd-theme .qadb-q mark{background:#ffd0e5;}
       <!-- QA結果 -->
       <div id="qadbResults" style="display:flex;flex-direction:column;gap:8px"></div>
     </div>
+  </div>
+</div>
+
+<!-- 異議神助手整版 -->
+<div class="tab-page" id="tab-objection">
+  <div style="max-width:1100px;margin:0 auto;padding:0 4px">
+
+    <!-- Header -->
+    <div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:10px">
+      <div>
+        <h2 style="font-size:22px;font-weight:800;color:var(--text);margin:0">🛡 拒處話術與異議神助手</h2>
+        <p style="font-size:13px;color:var(--muted);margin:4px 0 0">跨品牌通用客訴與異議處理指南</p>
+      </div>
+      <select id="obj-brand-sel" onchange="switchObjBrand(this.value)"
+        style="padding:8px 14px;border:1.5px solid var(--border);border-radius:var(--r);font-size:14px;font-family:inherit;outline:none;background:#fff;cursor:pointer">
+        <option value="skincare">跨品牌通用</option>
+        <option value="intimate">私密處專屬（建置中）</option>
+      </select>
+    </div>
+
+    <!-- 第一層：大分類兩個方框（預設顯示，選完後隱藏） -->
+    <div id="obj-l1" style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:20px">
+      <div onclick="selectObjType('skincare')" style="border:2px solid var(--b2);border-radius:var(--r);padding:20px;cursor:pointer;background:#fff;transition:all .2s;display:flex;align-items:center;gap:14px" onmouseover="this.style.background='var(--b-light)'" onmouseout="this.style.background='#fff'">
+        <span style="font-size:32px">🧴</span>
+        <div>
+          <div style="font-size:16px;font-weight:700;color:var(--text)">保養品異議即時通</div>
+          <div style="font-size:12px;color:var(--muted);margin-top:3px">10 大分類・102 則話術</div>
+        </div>
+        <span style="margin-left:auto;font-size:20px;color:var(--hint)">›</span>
+      </div>
+      <div onclick="selectObjType('intimate')" style="border:2px solid var(--border);border-radius:var(--r);padding:20px;cursor:pointer;background:#fff;transition:all .2s;display:flex;align-items:center;gap:14px" onmouseover="this.style.background='#fafafa'" onmouseout="this.style.background='#fff'">
+        <span style="font-size:32px">🌸</span>
+        <div>
+          <div style="font-size:16px;font-weight:700;color:var(--text)">私密處異議即時通</div>
+          <div style="font-size:12px;color:var(--hint);margin-top:3px">內容建置中 🚧</div>
+        </div>
+        <span style="margin-left:auto;font-size:20px;color:var(--hint)">›</span>
+      </div>
+    </div>
+
+    <!-- 第二層以下（選完大分類後顯示） -->
+    <div id="obj-l2plus" style="display:none">
+      <!-- 麵包屑返回 -->
+      <div style="margin-bottom:12px">
+        <button onclick="backToObjL1()" style="padding:5px 14px;border:1.5px solid var(--border);border-radius:var(--rp);background:#fff;font-size:13px;cursor:pointer;font-family:inherit;color:var(--muted)">← 返回</button>
+        <span id="obj-breadcrumb" style="font-size:13px;color:var(--muted);margin-left:10px"></span>
+      </div>
+
+      <!-- 第二層：主題分類 Tag -->
+      <div id="obj-page-tags" style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px"></div>
+
+      <!-- 搜尋框 -->
+      <div style="position:relative;margin-bottom:14px">
+        <span style="position:absolute;left:14px;top:50%;transform:translateY(-50%);color:var(--hint);font-size:16px">🔍</span>
+        <input id="obj-page-search" type="text"
+          placeholder="即時搜尋拒絕詞，例如：沒興趣、太貴、問家人..."
+          oninput="renderObjPagePills()"
+          style="width:100%;padding:12px 14px 12px 42px;border:1.5px solid var(--border);border-radius:var(--r);font-size:14px;font-family:inherit;outline:none;box-sizing:border-box"/>
+      </div>
+
+      <!-- 第三層：拒絕詞膠囊 -->
+      <div style="font-size:12px;color:var(--muted);font-weight:600;margin-bottom:8px">客戶可能這樣說（點選拒絕詞）</div>
+      <div id="obj-page-pills" style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px"></div>
+
+      <!-- 第四層：回應卡片 -->
+      <div id="obj-page-content" style="display:none">
+        <!-- 題目標題 + 上下頁 -->
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;flex-wrap:wrap;gap:8px">
+          <h3 id="obj-page-qtitle" style="font-size:17px;font-weight:800;color:var(--text);margin:0"></h3>
+          <div style="display:flex;align-items:center;gap:6px">
+            <button onclick="objPageNav(-1)" style="padding:5px 14px;border:1.5px solid var(--border);border-radius:var(--rp);background:#fff;font-size:13px;cursor:pointer;font-family:inherit">‹ 上一題</button>
+            <span id="obj-page-nav-label" style="font-size:13px;color:var(--muted);white-space:nowrap">1 / 1</span>
+            <button onclick="objPageNav(1)" style="padding:5px 14px;border:1.5px solid var(--border);border-radius:var(--rp);background:#fff;font-size:13px;cursor:pointer;font-family:inherit">下一題 ›</button>
+          </div>
+        </div>
+
+        <!-- 心法提示 -->
+        <div id="obj-page-tip" style="display:none;background:#f3f0ff;border-left:4px solid #7c3aed;border-radius:0 var(--rs) var(--rs) 0;padding:10px 14px;font-size:13px;color:#4c1d95;margin-bottom:14px;white-space:pre-line">
+          <span style="font-weight:700">💡 心法提示：</span><span id="obj-page-tip-text"></span>
+        </div>
+
+        <!-- 雙欄卡片 -->
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+          <!-- 左欄：四步對話 -->
+          <div style="background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:16px;box-shadow:var(--sh)">
+            <div style="font-size:14px;font-weight:700;color:var(--text);margin-bottom:12px">📞 四步對話拆解</div>
+            <div id="obj-page-steps" style="display:flex;flex-direction:column;gap:10px"></div>
+          </div>
+          <!-- 右欄：LINE / 電話版 -->
+          <div style="background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:16px;box-shadow:var(--sh)">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;flex-wrap:wrap;gap:6px">
+              <!-- 頁籤 -->
+              <div style="display:flex;gap:4px">
+                <button id="obj-tab-line-btn" onclick="switchObjRightTab('line')"
+                  style="padding:5px 12px;border-radius:var(--rp);border:1.5px solid var(--b2);background:var(--b2);color:#fff;font-size:12px;font-weight:700;cursor:pointer;font-family:inherit">💬 LINE 文字版</button>
+                <button id="obj-tab-phone-btn" onclick="switchObjRightTab('phone')"
+                  style="padding:5px 12px;border-radius:var(--rp);border:1.5px solid var(--border);background:#fff;color:var(--muted);font-size:12px;font-weight:700;cursor:pointer;font-family:inherit">🎙️ 電話口條版</button>
+              </div>
+              <!-- 複製 -->
+              <button onclick="copyObjPageLine()" id="obj-page-copy-btn"
+                style="padding:5px 12px;border:1.5px solid var(--b2);border-radius:var(--rp);background:#fff;color:var(--b2);font-size:12px;font-weight:600;cursor:pointer;font-family:inherit">📋 一鍵複製</button>
+            </div>
+            <div id="obj-page-line" style="background:var(--bg);border:1px solid var(--border);border-radius:var(--rs);padding:12px;font-size:13px;color:var(--text);line-height:1.9;white-space:pre-line;min-height:180px;max-height:320px;overflow-y:auto"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 空狀態 -->
+      <div id="obj-page-empty" style="text-align:center;padding:3rem;color:var(--hint);font-size:14px">
+        👆 請選擇上方分類，再點選拒絕詞查看話術
+      </div>
+    </div>
+
   </div>
 </div>
 
@@ -1230,14 +1292,13 @@ const VIDEOS=[
 // ── NAV ──
 document.querySelectorAll(".nav-tab").forEach(btn=>{
   btn.onclick=()=>{
-    // 異議神助手按鈕沒有 data-tab，跳過 tab 切換邏輯
-    if(btn.id==='btn-objection'){ openObjectionModal(); return; }
     document.querySelectorAll(".nav-tab").forEach(b=>b.classList.remove("active"));
     document.querySelectorAll(".tab-page").forEach(p=>p.classList.remove("active"));
     btn.classList.add("active");
     var tabEl = document.getElementById("tab-"+btn.dataset.tab);
     if(tabEl) tabEl.classList.add("active");
     if(btn.dataset.tab==='qadb') initQADB();
+    if(btn.dataset.tab==='objection') initObjectionPage();
   };
 });
 
@@ -2575,110 +2636,1046 @@ function updateVerModalTheme(brand){
 
 // ── 異議神助手 ──
 
-// 預留資料結構（日後填入 Excel / JSON）
+// ── 異議神助手資料（JSON 結構）──
+const objectionData = {
+  skincare: [
+    {category:'價格/預算/優惠', phrase:'太貴了/價格太高',
+     tip:'保養品是要長期使用的，價格一定會是很重要的考量',
+     step1:'我懂～保養品畢竟是要長期使用的，價格一定會是很重要的考量',
+     step2:'我想先了解一下，您覺得價格比較高，是超過目前的預算，還是還不太確定這個產品對您來說值不值得呢？',
+     step3:'了解～那我們先從您的需求來看，不一定要一次考慮很多。您目前最在意的保養問題是什麼？我先幫您看看，哪些是真的需要、哪些其實可以先不用。',
+     step4:'那如果以您剛剛提到的這個需求來看，您會希望我先幫您抓一個比較適合的保養方式，還是您目前有一個希望控制的預算，我依照預算幫您一起規劃呢？',
+     lineText:'我懂～保養品要長期使用，價格確實很重要😊\n\n想了解一下～是超出預算，還是不確定適不適合您呢？\n\n了解～那我們先從您目前最需要的保養找起，不一定要一次用很多。\n\n您比較希望我依照您的「需求」還是「預算」幫您一起規劃呢？',
+     phoneText:'我懂～保養品畢竟是要長期使用的，價格一定會是很重要的考量\n\n我想先了解一下，您覺得價格比較高，是超過目前的預算，還是還不太確定這個產品對您來說值不值得呢？\n\n了解～那我們先從您的需求來看，不一定要一次考慮很多。您目前最在意的保養問題是什麼？我先幫您看看，哪些是真的需要、哪些其實可以先不用。\n\n那如果以您剛剛提到的這個需求來看，您會希望我先幫您抓一個比較適合的保養方式，還是您目前有一個希望控制的預算，我依照預算幫您一起規劃呢？'},
+    {category:'價格/預算/優惠', phrase:'你們家的價格比別人貴',
+     tip:'不要急著解釋「為什麼比較貴」，而是先了解客戶是在比價格，還是在比價值。',
+     step1:'我懂～現在保養品牌很多，大家一定都會比較一下😊',
+     step2:'想了解一下～您通常會比較在意價格、成分，還是使用上的感受呢？',
+     step3:'了解～其實保養不一定是越貴越好，重點是適不適合您的需求，我先幫您一起看看。',
+     step4:'那您目前最在意的保養問題是什麼？我從這個部分幫您評估看看。',
+     lineText:'我懂～現在保養品牌很多，大家一定都會比較一下😊\n\n您比較在意的是價格差距，還是想了解產品的差異呢？\n\n其實保養不一定是越貴越好，重點還是適不適合您的需求，我先幫您一起看看。\n\n那您目前最在意的保養問題是什麼？我從這個部分幫您評估看看。',
+     phoneText:'我懂～現在保養品牌很多，大家一定都會比較一下😊\n\n想了解一下～您通常會比較在意價格、成分，還是使用上的感受呢？\n\n了解～其實保養不一定是越貴越好，重點是適不適合您的需求，我先幫您一起看看。\n\n那您目前最在意的保養問題是什麼？我從這個部分幫您評估看看。'},
+    {category:'價格/預算/優惠', phrase:'有沒有便宜一點的？',
+     tip:'把重點放在「了解客人的預算與需求」，不要讓客人覺得我們只是在降價。',
+     step1:'可以理解～保養品要持續使用，預算當然也要考量😊',
+     step2:'想了解一下～您希望控制在大約什麼預算呢？',
+     step3:'了解～那我可以先依您的預算，從真正需要的部分幫您搭配，不一定要一次很多。',
+     step4:'那您目前最想改善的是哪個部分？我先從這個需求幫您看看。',
+     lineText:'可以理解～保養品要持續使用，預算當然也要考量😊\n\n想了解一下～您希望控制在大約什麼預算呢？\n\n了解～那我可以依您的預算，從真正需要的部分幫您搭配，不一定要一次很多。\n\n那您目前最想改善的是哪個部分？我先從這個需求幫您看看。',
+     phoneText:'可以理解～保養品要持續使用，預算當然也要考量😊\n\n想了解一下～您希望控制在大約什麼預算呢？\n\n了解～那我可以先依您的預算，從真正需要的部分幫您搭配，不一定要一次很多。\n\n那您目前最想改善的是哪個部分？我先從這個需求幫您看看。'},
+    {category:'價格/預算/優惠', phrase:'我沒有這麼多預算',
+     tip:'重點不是問預算，而是先了解「預算有限時，客人最想解決什麼。',
+     step1:'我了解～每個人的預算都不一樣，當然要在自己舒服的範圍內😊',
+     step2:'那您目前比較希望把預算放在哪一類的保養上呢？',
+     step3:'了解～那我們就先抓最需要的部分，不需要一次把整套都用齊。',
+     step4:'那我們就從您最在意的部分開始，我幫您看看怎麼搭配會比較好。',
+     lineText:'我了解～每個人的預算都不一樣，當然要在自己舒服的範圍內😊\n\n那您目前比較希望把預算放在哪一類的保養上呢？\n\n了解～那我們就先抓最需要的部分，不需要一次把整套都用齊。\n\n那我們就從您最在意的部分開始，我幫您看看怎麼搭配會比較剛好。',
+     phoneText:'我了解～每個人的預算都不一樣，當然要在自己舒服的範圍內😊\n\n那您目前比較希望把預算放在哪一類的保養上呢？\n\n了解～那我們就先抓最需要的部分，不需要一次把整套都用齊。\n\n那我們就從您最在意的部分開始，我幫您看看怎麼搭配會比較好。'},
+    {category:'價格/預算/優惠', phrase:'我覺得保養品不用買這麼貴',
+     tip:'先找出客人為什麼覺得不需要這麼貴 → 找出真正重視的需求 → 幫她判斷哪些值得投入 → 自然進入下一步。',
+     step1:'我懂～保養品是每天都會用的，價格一定會考量😊',
+     step2:'您會覺得不用買這麼貴，是比較在意價格，還是覺得目前的保養其實不用做到這麼多呢？',
+     step3:'了解～其實我在幫客人規劃時，不會什麼都往上加，會先看目前最需要改善的，再決定哪些保養值得投入。',
+     step4:'那您現在最在意的是哪個保養問題？我先幫您判斷這部分有沒有需要特別加強。',
+     lineText:'我懂～保養品是每天都會用的，價格一定會考量😊\n\n您會覺得不用買這麼貴，是比較在意價格，還是覺得目前的保養其實不用做到這麼多呢？\n\n了解～其實我在幫客人規劃時，也不會什麼都往上加，會先看目前最需要改善的，再決定哪些保養值得投入。\n\n那您現在最在意的是哪個保養問題？我先幫您判斷這部分有沒有需要特別加強。',
+     phoneText:'我懂～保養品是每天都會用的，價格一定會考量😊\n\n您會覺得不用買這麼貴，是比較在意價格，還是覺得目前的保養其實不用做到這麼多呢？\n\n了解～其實我在幫客人規劃時，不會什麼都往上加，會先看目前最需要改善的，再決定哪些保養值得投入。\n\n那您現在最在意的是哪個保養問題？我先幫您判斷這部分有沒有需要特別加強。'},
+    {category:'價格/預算/優惠', phrase:'我先買便宜的試試看',
+     tip:'這題的關鍵是：客人不是單純嫌貴，而是想降低試錯成本。顧問的角色應該先理解「為什麼想先試便宜的」，再協助她判斷，而不是直接否定便宜產品。',
+     step1:'可以啊～先從自己比較沒有負擔的方式開始，我很能理解😊',
+     step2:'您會想先選便宜一點的，主要是想先試試效果，還是比較擔心不適合自己呢？',
+     step3:'了解～如果是擔心不適合，其實可以先從您的膚況和需求判斷，這樣比較不容易花了錢又要重新換。',
+     step4:'您先跟我說一下目前最困擾的膚況，我幫您看看適合從哪裡開始比較好。',
+     lineText:'可以啊～先從自己比較沒有負擔的方式開始，我很能理解😊\n\n您會想先選便宜一點的，主要是想先試試效果，還是比較擔心不適合自己呢？\n\n了解～如果是擔心不適合，其實可以先從您的膚況和需求判斷，這樣比較不容易花了錢又要重新換。\n\n您先跟我說一下目前最困擾的膚況，我幫您看看適合從哪裡開始比較好。',
+     phoneText:'可以啊～先從自己比較沒有負擔的方式開始，我很能理解😊\n\n您會想先選便宜一點的，主要是想先試試效果，還是比較擔心不適合自己呢？\n\n了解～如果是擔心不適合，其實可以先從您的膚況和需求判斷，這樣比較不容易花了錢又要重新換。\n\n您先跟我說一下目前最困擾的膚況，我幫您看看適合從哪裡開始比較好。'},
+    {category:'價格/預算/優惠', phrase:'我不想一次買這麼多',
+     tip:'這題的核心不是「嫌貴」，而是擔心一次買太多、用不完或投入太大。',
+     step1:'我懂～一次準備太多保養品，確實會讓人有壓力，也怕最後用不完😊',
+     step2:'您比較擔心的是東西太多不好使用，還是怕買回去用不完呢？',
+     step3:'了解～那其實不用一次把很多產品都準備齊，我會先依您的膚況和需求，把真正需要的留下來，其他可以之後有需要再補。',
+     step4:'那我們就先從您目前最需要的一、兩個部分開始，先把保養方式建立起來，這樣比較沒有負擔。',
+     lineText:'我懂～一次買太多確實會有壓力，也會擔心用不完😊\n\n想先了解一下，您比較擔心的是東西太多不好使用，還是怕買回去用不完呢？\n\n了解～那其實不用一次全部準備，我會先依您的需求把真正需要的留下來，其他有需要再補就好。\n\n我們可以先從目前最需要的1～2個部分開始，這樣比較輕鬆，也比較好持續使用。',
+     phoneText:'我懂～一次準備太多保養品，確實會讓人有壓力，也怕最後用不完😊\n\n您比較擔心的是東西太多不好使用，還是怕買回去用不完呢？\n\n了解～那其實不用一次把很多產品都準備齊，我會先依您的膚況和需求，把真正需要的留下來，其他可以之後有需要再補。\n\n那我們就先從您目前最需要的一、兩個部分開始，先把保養方式建立起來，這樣比較沒有負擔。'},
+    {category:'價格/預算/優惠', phrase:'有活動/優惠再跟我說',
+     tip:'這題比較偏向「價格等待型拒處」，客戶不是完全沒需求，而是想等更好的價格條件。所以不要急著談優惠，而是先確認「優惠是不是主要卡點」，再把需求拉回來。',
+     step1:'可以理解～如果有活動，確實會希望等到比較優惠的時候再入手😊',
+     step2:'那您通常會比較在意哪一種優惠方式？像是價格折扣、組合優惠，還是贈品呢？',
+     step3:'了解～那我就知道您比較在意哪一種方式。之後如果有符合您在意的活動，我可以再跟您說明，您再依當時的活動和自己的需求判斷就好。',
+     step4:'那我先依您在意的優惠方式幫您留意，有合適的活動時再讓您參考，您到時候再決定就可以。',
+     lineText:'可以理解～如果有活動，當然會希望等到比較優惠的時候再入手😊\n\n那您通常比較在意哪一種優惠方式？像是價格折扣、組合優惠，還是贈品呢？\n\n了解～那我就知道您比較在意哪一種方式，有符合的活動時再跟您說明，您再依當時的活動和自己的需求判斷就好。\n\n我先依您在意的優惠方式幫您留意，有合適的活動再讓您參考，到時候您再決定就可以。',
+     phoneText:'可以理解～如果有活動，確實會希望等到比較優惠的時候再入手😊\n\n那您通常會比較在意哪一種優惠方式？像是價格折扣、組合優惠，還是贈品呢？\n\n了解～那我就知道您比較在意哪一種方式。之後如果有符合您在意的活動，我可以再跟您說明，您再依當時的活動和自己的需求判斷就好。\n\n那我先依您在意的優惠方式幫您留意，有合適的活動時再讓您參考，您到時候再決定就可以。'},
+    {category:'價格/預算/優惠', phrase:'等發薪水/有錢再說',
+     tip:'這題是很典型的「目前資金安排」型拒處，重點不是再追問需求，而是先尊重客戶現在的財務安排，再確認是「暫時延後」還是「目前真的不適合」。',
+     step1:'了解～每個人的預算安排不一樣，等手邊比較寬裕的時候再規劃也可以😊',
+     step2:'那您是目前這段時間預算比較緊，還是想等下一筆收入進來之後再安排呢？',
+     step3:'了解～那就不用勉強現在一次安排，我可以先依您的需求抓出真正需要的部分，之後預算比較方便時，再從需要的開始就好。',
+     step4:'那我們先把適合您的保養方向確認下來，等您時間點到了，就可以直接從需要的部分開始，不用重新研究一次。',
+     lineText:'了解～每個人的預算安排不一樣，等手邊比較寬裕的時候再規劃也可以😊\n\n想了解一下，您是目前這段時間預算比較緊，還是想等下一筆收入進來之後再安排呢？\n\n了解～那就不用勉強現在一次安排，我可以先依您的需求抓出真正需要的部分，之後預算比較方便時，再從需要的開始就好。\n\n我們先把適合您的保養方向確認下來，等時間點到了，就可以直接從需要的部分開始，不用重新研究一次。',
+     phoneText:'了解～每個人的預算安排不一樣，等手邊比較寬裕的時候再規劃也可以😊\n\n那您是目前這段時間預算比較緊，還是想等下一筆收入進來之後再安排呢？\n\n了解～那就不用勉強現在一次安排，我可以先依您的需求抓出真正需要的部分，之後預算比較方便時，再從需要的開始就好。\n\n那我們先把適合您的保養方向確認下來，等您時間點到了，就可以直接從需要的部分開始，不用重新研究一次。'},
+    {category:'價格/預算/優惠', phrase:'有沒有試用包／小容量？',
+     tip:'這題屬於「想降低試用門檻」型拒處。客戶通常不是沒需求，而是想先確認適不適合、使用感受，再決定是否投入。重點是不要直接承諾一定有試用包，而是先了解他想降低哪一種風險。',
+     step1:'可以理解～第一次接觸新的保養品，想先從少量開始試試看，會比較安心😊',
+     step2:'您主要是想先確認使用起來的感覺，還是比較擔心不適合自己的膚況呢？',
+     step3:'了解～那我會先依您的膚況和需求幫您確認適不適合，再看看目前有沒有合適的試用或小容量方式，盡量降低您一開始的負擔。',
+     step4:'如果目前有適合的試用或小容量方案，就先從這個方式開始，您實際使用後，再決定後續怎麼安排。',
+     lineText:'可以理解～第一次接觸新的保養品，想先從少量開始試試看，會比較安心😊\n\n您主要是想先確認使用起來的感覺，還是比較擔心不適合自己的膚況呢？\n\n了解～那我會先依您的膚況和需求幫您確認適不適合，再看看目前有沒有合適的試用或小容量方式，盡量降低您一開始的負擔。\n\n如果目前有適合的試用或小容量方案，就先從這個方式開始，實際使用後再決定後續怎麼安排。',
+     phoneText:'可以理解～第一次接觸新的保養品，想先從少量開始試試看，會比較安心😊\n\n您主要是想先確認使用起來的感覺，還是比較擔心不適合自己的膚況呢？\n\n了解～那我會先依您的膚況和需求幫您確認適不適合，再看看目前有沒有合適的試用或小容量方式，盡量降低您一開始的負擔。\n\n如果目前有適合的試用或小容量方案，就先從這個方式開始，您實際使用後，再決定後續怎麼安排。'},
+    {category:'價格/預算/優惠', phrase:'別的通路買比較便宜',
+     tip:'這題的核心是「通路價格比較」，不要急著反駁「哪裡比較便宜」，而是先了解客戶是在意單純價格，還是在意購買條件、來源或保障。',
+     step1:'了解～現在購買保養品的通路很多，大家在下手前比較一下價格很正常😊',
+     step2:'您會比較在意的是單純的價格差異，還是也會一起看購買來源、產品是否有保障呢？',
+     step3:'了解～那我會建議您除了價格，也一起確認產品來源、保存狀況和售後方式，這樣比較能判斷哪種購買方式適合自己。',
+     step4:'那我先把我們這邊的購買方式和相關保障跟您說清楚，您就可以依照自己的考量決定。',
+     lineText:'了解～現在購買保養品的通路很多，下手前比較一下價格很正常😊\n\n想了解一下，您比較在意單純的價格差異，還是也會一起看購買來源、產品保障呢？\n\n了解～那除了價格，也可以一起確認產品來源、保存狀況和售後方式，這樣比較好判斷哪種購買方式適合自己。\n\n我先把我們這邊的購買方式和相關保障跟您說清楚，您再依自己的考量決定就可以。',
+     phoneText:'了解～現在購買保養品的通路很多，大家在下手前比較一下價格很正常😊\n\n您會比較在意的是單純的價格差異，還是也會一起看購買來源、產品是否有保障呢？\n\n了解～那我會建議您除了價格，也一起確認產品來源、保存狀況和售後方式，這樣比較能判斷哪種購買方式適合自己。\n\n那我先把我們這邊的購買方式和相關保障跟您說清楚，您就可以依照自己的考量決定。'},
+    {category:'需求不足/保養必要性', phrase:'我還年輕，不需要抗老',
+     tip:'這題不要急著反駁「年輕也要抗老」，比較自然的方式是先把「抗老」轉回客戶目前真正想照顧的需求。',
+     step1:'了解～如果目前沒有特別在意抗老，確實不用刻意做這方面的保養😊',
+     step2:'那您現在挑保養品時，自己比較在意哪一方面的肌膚狀況呢？',
+     step3:'了解～那我們就先從您現在真正想照顧的地方開始，不需要為了抗老增加自己沒有需求的保養。',
+     step4:'您跟我說一下目前最困擾您的地方，我幫您看看日常保養可以怎麼調整。',
+     lineText:'了解～如果目前沒有特別在意抗老，確實不用刻意做這方面的保養😊\n那您現在比較在意哪一方面的肌膚狀況？您跟我說一下，我幫您看看日常保養可以怎麼調整。',
+     phoneText:'了解～如果目前沒有特別在意抗老，確實不用刻意做這方面的保養😊\n\n那您現在挑保養品時，自己比較在意哪一方面的肌膚狀況呢？\n\n了解～那我們就先從您現在真正想照顧的地方開始，不需要為了抗老增加自己沒有需求的保養。\n\n您跟我說一下目前最困擾您的地方，我幫您看看日常保養可以怎麼調整。'},
+    {category:'需求不足/保養必要性', phrase:'我年紀大了，擦什麼都沒用了',
+     tip:'這題不要直接反駁「年紀大了還是有效」，比較適合先了解她為什麼會這樣認為，再從目前能照顧的需求切入。',
+     step1:'我了解～如果以前試過不少保養，卻沒有看到自己期待的改變，真的很容易有這種感覺😊',
+     step2:'您之前比較常遇到的是用了沒什麼感覺，還是覺得改善的速度不如預期呢？',
+     step3:'了解～那就不只是看年齡，還要一起看目前的膚況、保養方式和原本的期待，才比較知道問題出在哪裡。',
+     step4:'您可以跟我說說看目前最在意的膚況，我先幫您一起釐清。',
+     lineText:'我了解～如果以前試過不少保養，卻沒有看到期待的改變，真的很容易有這種感覺😊\n您之前比較常遇到的是用了沒什麼感覺，還是改善速度不如預期呢？\n您跟我說說目前最在意的膚況，我先陪您一起釐清。',
+     phoneText:'我了解～如果以前試過不少保養，卻沒有看到自己期待的改變，真的很容易有這種感覺😊\n\n您之前比較常遇到的是用了沒什麼感覺，還是覺得改善的速度不如預期呢？\n\n了解～那就不只是看年齡，還要一起看目前的膚況、保養方式和原本的期待，才比較知道問題出在哪裡。\n\n您可以跟我說說看目前最在意的膚況，我先幫您一起釐清。'},
+    {category:'需求不足/保養必要性', phrase:'我現在沒有需要',
+     tip:'這題「我現在沒有需要」不能急著創造需求，而是要先確認客人是真的沒有困擾，還是目前沒有急迫性。顧問感要放在「幫她判斷現在到底需不需要」。',
+     step1:'了解～如果目前沒有特別困擾，確實不用為了保養而多做😊',
+     step2:'那您平常的保養，主要是維持現況，還是有固定在照顧某個部位呢？',
+     step3:'了解～那我們就先以維持為主，不需要為了追求更多效果一直增加保養。',
+     step4:'我先了解一下您現在的保養方式，之後如果有需要調整，我再幫您一起看看。',
+     lineText:'了解～如果目前沒有特別困擾，確實不用為了保養而多做😊\n\n那您現在平常的保養，主要是維持現況，還是有固定在照顧某個部位呢？\n\n了解～那我們就先以維持為主，不需要為了追求更多效果一直增加保養。\n\n我先了解一下您現在的保養方式，之後如果有需要調整，我再幫您一起看看。',
+     phoneText:'了解～如果目前沒有特別困擾，確實不用為了保養而多做😊\n\n那您平常的保養，主要是維持現況，還是有固定在照顧某個部位呢？\n\n了解～那我們就先以維持為主，不需要為了追求更多效果一直增加保養。\n\n我先了解一下您現在的保養方式，之後如果有需要調整，我再幫您一起看看。'},
+    {category:'需求不足/保養必要性', phrase:'我平常都不擦保養品',
+     tip:'這題跟「我懶得保養」不同，客人可能不是懶，而是沒有保養習慣、也不覺得有必要。顧問角度應該先了解原因，再從最簡單的需求切入。',
+     step1:'了解～平常沒有保養習慣也很正常，每個人的習慣都不一樣😊',
+     step2:'您是覺得目前皮膚狀況還可以，還是單純覺得保養比較麻煩呢？',
+     step3:'了解～如果真的要開始，其實也不用一下子做很多，先從最需要的地方照顧就好。',
+     step4:'如果只選一個部分來照顧，您自己最在意的是哪一個呢？',
+     lineText:'了解～平常沒有保養習慣也很正常，每個人的習慣都不一樣😊\n\n您是覺得目前皮膚狀況還可以，還是單純覺得保養比較麻煩呢？\n\n了解～如果真的要開始，其實也不用一下子做很多，先從最需要的地方照顧就好。\n\n如果只選一個部分來照顧，您自己最在意的是哪一個呢？',
+     phoneText:'了解～平常沒有保養習慣也很正常，每個人的習慣都不一樣😊\n\n您是覺得目前皮膚狀況還可以，還是單純覺得保養比較麻煩呢？\n\n了解～如果真的要開始，其實也不用一下子做很多，先從最需要的地方照顧就好。\n\n如果只選一個部分來照顧，您自己最在意的是哪一個呢？'},
+    {category:'需求不足/保養必要性', phrase:'我平常只擦乳液就好了',
+     tip:'這題的重點不是去說服客戶「乳液不夠」，而是先了解目前這樣的保養是否符合他的需求。如果客戶覺得目前就很好，就沒有必要硬增加步驟。',
+     step1:'可以啊～如果您平常習慣這樣保養，簡單一點也比較容易持續😊',
+     step2:'那您目前的肌膚狀況，自己最在意的是哪一方面？像是乾燥、暗沉、細紋，還是其他地方呢？',
+     step3:'了解～那我們就不用把原本的保養全部換掉，可以針對您剛剛提到的地方，看看需不需要多做一個簡單的照顧。',
+     step4:'那我就依您剛剛提到的這個需求，幫您抓最簡單的搭配，不增加太多步驟。',
+     lineText:'可以啊～如果您平常習慣這樣保養，簡單一點也比較容易持續😊\n\n想先了解一下，您目前的肌膚狀況，自己最在意的是哪一方面？像是乾燥、暗沉、細紋，還是其他地方呢？\n\n了解～那我們就不用把原本的保養全部換掉，可以針對您剛剛提到的地方，看看需不需要多做一個簡單的照顧。\n\n我就依您剛剛提到的這個需求，幫您抓最簡單的搭配，不增加太多步驟。',
+     phoneText:'可以啊～如果您平常習慣這樣保養，簡單一點也比較容易持續😊\n\n那您目前的肌膚狀況，自己最在意的是哪一方面？像是乾燥、暗沉、細紋，還是其他地方呢？\n\n了解～那我們就不用把原本的保養全部換掉，可以針對您剛剛提到的地方，看看需不需要多做一個簡單的照顧。\n\n那我就依您剛剛提到的這個需求，幫您抓最簡單的搭配，不增加太多步驟。'},
+    {category:'需求不足/保養必要性', phrase:'我洗完臉什麼都不擦',
+     tip:'這題是客戶是完全沒有保養習慣。所以重點不是直接教育他「洗完一定要擦什麼」，而是先了解他目前為什麼不保養，再從需求切入。',
+     step1:'了解～如果平常沒有特別的保養習慣，步驟簡單一點確實比較自在😊',
+     step2:'那您平常洗完臉之後，肌膚自己摸起來是覺得舒服，還是偶爾會有乾、緊繃或其他讓您在意的感覺呢？',
+     step3:'了解～如果有特別在意的狀況，我們可以從最需要的地方開始，讓保養維持簡單就好。',
+     step4:'那我就先依您剛剛提到的狀況，幫您抓出最需要照顧的一個方向，再從這個方向開始就好。',
+     lineText:'了解～如果平常沒有特別的保養習慣，步驟簡單一點確實比較自在😊\n\n想先了解一下，您平常洗完臉之後，肌膚自己摸起來是覺得舒服，還是偶爾會有乾、緊繃或其他讓您在意的感覺呢？\n\n了解～如果有特別在意的狀況，我們可以從最需要的地方開始，讓保養維持簡單就好。\n\n那我就先依您剛剛提到的狀況，幫您抓出最需要照顧的一個方向，再從這個方向開始就好。',
+     phoneText:'了解～如果平常沒有特別的保養習慣，步驟簡單一點確實比較自在😊\n\n那您平常洗完臉之後，肌膚自己摸起來是覺得舒服，還是偶爾會有乾、緊繃或其他讓您在意的感覺呢？\n\n了解～如果有特別在意的狀況，我們可以從最需要的地方開始，讓保養維持簡單就好。\n\n那我就先依您剛剛提到的狀況，幫您抓出最需要照顧的一個方向，再從這個方向開始就好。'},
+    {category:'需求不足/保養必要性', phrase:'我平常很少化妝，也需要保養嗎？',
+     tip:'這題的關鍵是不要讓客戶把「化妝少」等同於「不需要保養」。\n要把觀念自然拉回「保養是看肌膚需求，不是看化妝頻率」，再讓客戶自己說出需求。',
+     step1:'了解～如果平常比較少化妝，確實會覺得好像不用特別做很多保養😊',
+     step2:'那您平常對自己的肌膚，最在意的是維持現在的狀態，還是有哪個地方希望再改善一些呢？',
+     step3:'了解～其實保養不一定跟化不化妝有關，主要還是看自己目前的膚況和想照顧的地方，所以不需要為了保養做很多步驟。',
+     step4:'那我就依您目前最在意的地方，幫您抓出真正需要的保養，不需要的部分就先不用增加。',
+     lineText:'了解～如果平常比較少化妝，確實會覺得好像不用特別做很多保養😊\n\n想先了解一下，您平常對自己的肌膚，最在意的是維持現在的狀態，還是有哪個地方希望再改善一些呢？\n\n其實保養不一定跟化不化妝有關，主要還是看自己的膚況和想照顧的地方，所以不需要為了保養做很多步驟。\n\n我就依您目前最在意的地方，幫您抓出真正需要的保養，不需要的部分就先不用增加。',
+     phoneText:'了解～如果平常比較少化妝，確實會覺得好像不用特別做很多保養😊\n\n那您平常對自己的肌膚，最在意的是維持現在的狀態，還是有哪個地方希望再改善一些呢？\n\n了解～其實保養不一定跟化不化妝有關，主要還是看自己目前的膚況和想照顧的地方，所以不需要為了保養做很多步驟。\n\n那我就依您目前最在意的地方，幫您抓出真正需要的保養，不需要的部分就先不用增加。'},
+    {category:'需求不足/保養必要性', phrase:'有需要我再買',
+     tip:'這題的核心是「目前不想先買，等有明確需求再處理」。不要硬製造需求，而是讓客戶把「什麼情況才算有需要」說清楚，再把下一步變得自然。',
+     step1:'可以啊～保養本來就是依自己的需求來安排，不需要為了買而買😊',
+     step2:'那您通常是出現哪一種肌膚狀況時，才會覺得「這時候需要特別保養」呢？',
+     step3:'了解～那我們就以您在意的狀況為主，不需要現在一次增加很多；先知道自己真正需要的是什麼，之後遇到狀況時會比較好處理。',
+     step4:'既然您比較重視這個部分，那我們就先從這一項開始，不用一次準備太多，您也比較好感受實際使用上的差異。',
+     lineText:'可以啊～保養本來就是依自己的需求來安排，不需要為了買而買😊\n\n想了解一下，您通常是出現哪一種肌膚狀況時，才會覺得「這時候需要特別保養」呢？\n\n了解～那我們就以您在意的狀況為主，不需要一次增加很多，先把真正需要的照顧好就可以。\n\n既然您比較重視這個部分，那我們就先從這一項開始，不用一次準備太多，也比較好感受實際使用上的差異。',
+     phoneText:'可以啊～保養本來就是依自己的需求來安排，不需要為了買而買😊\n\n那您通常是出現哪一種肌膚狀況時，才會覺得「這時候需要特別保養」呢？\n\n了解～那我們就以您在意的狀況為主，不需要現在一次增加很多；先知道自己真正需要的是什麼，之後遇到狀況時會比較好處理。\n\n既然您比較重視這個部分，那我們就先從這一項開始，不用一次準備太多，您也比較好感受實際使用上的差異。'},
+    {category:'需求不足/保養必要性', phrase:'我出門才會保養',
+     tip:'這題的客戶邏輯是：平常不用保養，只有出門、見人、重要場合才會保養。\n所以不要直接教育客戶「平常也要保養」，而是先了解客戶在意的是什麼情境，再從「維持狀態、減少臨時補救」切入。',
+     step1:'可以理解～很多人都是有出門、聚會或重要場合時，才會特別注意保養😊',
+     step2:'那您通常出門前，最在意的是哪一部分呢？像是保濕、氣色，還是讓肌膚看起來比較有精神呢？',
+     step3:'了解～其實不一定要每天做很多保養，如果平常能先把您最在意的部分照顧好，需要出門的時候，也會比較輕鬆，不用臨時加強很多。',
+     step4:'那我們就先針對您最在意的這個部分，找一個平常也容易維持的方式就好。',
+     lineText:'可以理解～很多人都是有出門、聚會或重要場合時，才會特別注意保養😊\n\n想了解一下，您通常出門前，最在意的是保濕、氣色，還是讓肌膚看起來比較有精神呢？\n\n其實不一定要每天做很多保養，如果平常能先把最在意的部分照顧好，需要出門時也會比較輕鬆。\n\n我們就先針對您最在意的部分，找一個平常也容易維持的方式就好。',
+     phoneText:'可以理解～很多人都是有出門、聚會或重要場合時，才會特別注意保養😊\n\n那您通常出門前，最在意的是哪一部分呢？像是保濕、氣色，還是讓肌膚看起來比較有精神呢？\n\n了解～其實不一定要每天做很多保養，如果平常能先把您最在意的部分照顧好，需要出門的時候，也會比較輕鬆，不用臨時加強很多。\n\n那我們就先針對您最在意的這個部分，找一個平常也容易維持的方式就好。'},
+    {category:'需求不足/保養必要性', phrase:'我朋友說不要擦太多',
+     tip:'這題不要去反駁朋友，否則很容易讓客戶進入「我要聽朋友的」的防衛狀態。重點是把「擦太多」拆開，了解客戶真正擔心的是步驟太多、肌膚負擔，還是怕用錯，再回到「適量、適合需求」來處理。',
+     step1:'了解～朋友會提醒您不要擦太多，應該也是擔心保養過度、反而增加肌膚負擔😊',
+     step2:'那您自己比較擔心的是保養步驟太多，還是怕擦了之後肌膚不舒服呢？',
+     step3:'了解～其實保養不是擦越多越好，重點是依自己的膚況選擇需要的，包含用量也不用過多，適合、簡單比較重要。',
+     step4:'那我們就不從增加產品開始，而是先把您目前真正需要的部分抓出來，能省略的就省略。',
+     lineText:'了解～朋友會提醒您不要擦太多，應該也是擔心保養過度、增加肌膚負擔😊\n\n想了解一下，您自己比較擔心的是步驟太多，還是怕擦了之後肌膚不舒服呢？\n\n其實保養不是擦越多越好，重點是依自己的膚況選擇需要的，用量也不用過多，適合、簡單比較重要。\n\n所以我們不從增加產品開始，而是先把真正需要的部分抓出來，能省略的就省略。',
+     phoneText:'了解～朋友會提醒您不要擦太多，應該也是擔心保養過度、反而增加肌膚負擔😊\n\n那您自己比較擔心的是保養步驟太多，還是怕擦了之後肌膚不舒服呢？\n\n了解～其實保養不是擦越多越好，重點是依自己的膚況選擇需要的，包含用量也不用過多，適合、簡單比較重要。\n\n那我們就不從增加產品開始，而是先把您目前真正需要的部分抓出來，能省略的就省略。'},
+    {category:'需求不足/保養必要性', phrase:'我都使用多效合一的',
+     tip:'這題不要直接說「多效合一不夠」，否則很容易讓客戶覺得你在否定他現在的選擇。比較好的做法是先肯定它的便利性，再了解客戶目前真正想照顧的需求。',
+     step1:'了解～多效合一確實很方便，一個產品就能完成日常保養，省時間也比較簡單😊',
+     step2:'那您選擇多效合一，主要是因為方便，還是目前用起來覺得自己的肌膚狀況都還不錯呢？',
+     step3:'了解～那我會先以您現在的使用習慣為基礎，不會為了增加保養而增加保養；如果有特別想改善的地方，再看需不需要做調整。',
+     step4:'那我們就先從您目前最在意的肌膚狀況來看，確認現在的保養方式是不是已經符合您的需求。',
+     lineText:'了解～多效合一確實很方便，一個產品就能完成日常保養，省時間也比較簡單😊\n\n想了解一下，您選擇多效合一，主要是因為方便，還是目前用起來覺得自己的肌膚狀況都還不錯呢？\n\n了解～那我會先以您現在的使用習慣為基礎，不會為了增加保養而增加保養；如果有特別想改善的地方，再看需不需要調整。\n\n我們就先從您目前最在意的肌膚狀況來看，確認現在的保養方式是不是已經符合您的需求。',
+     phoneText:'了解～多效合一確實很方便，一個產品就能完成日常保養，省時間也比較簡單😊\n\n那您選擇多效合一，主要是因為方便，還是目前用起來覺得自己的肌膚狀況都還不錯呢？\n\n了解～那我會先以您現在的使用習慣為基礎，不會為了增加保養而增加保養；如果有特別想改善的地方，再看需不需要做調整。\n\n那我們就先從您目前最在意的肌膚狀況來看，確認現在的保養方式是不是已經符合您的需求。'},
+    {category:'需求不足/保養必要性', phrase:'我皮膚很好，不用擦',
+     tip:'不要去打擊客戶的好膚況，而是先讚美與認同，再將維護好膚況轉化為簡化、維持性的基礎照顧。',
+     step1:'那真的太棒了～代表您的肌膚基礎非常好，維持得很好😊',
+     step2:'想了解一下，您平常主要是靠規律作息維持，還是有習慣做一些最基礎的簡單保濕呢？',
+     step3:'了解～天生膚況好真的很幸運，那我們就不用做複雜的保養，只要維持住目前的穩定狀態就好。',
+     step4:'那我幫您看有沒有最簡單、不給肌膚負擔的維護方式，讓好膚況可以一直維持下去。',
+     lineText:'那真的太棒了～代表您的肌膚基礎非常好，維持得很好😊\n\n想了解一下，您平常主要是靠規律作息維持，還是有習慣做一些最基礎的簡單保濕呢？\n\n了解～天生膚況好真的很幸運，那我們就不用做複雜的保養，只要維持住目前的穩定狀態就好。\n\n我幫您看有沒有最簡單、不給肌膚負擔的維護方式，讓好膚況可以一直維持下去。',
+     phoneText:'那真的太棒了～代表您的肌膚基礎非常好，維持得很好😊\n\n想了解一下，您平常主要是靠規律作息維持，還是有習慣做一些最基礎的簡單保濕呢？\n\n了解～天生膚況好真的很幸運，那我們就不用做複雜的保養，只要維持住目前的穩定狀態就好。\n\n那我幫您看有沒有最簡單、不給肌膚負擔的維護方式，讓好膚況可以一直維持下去。'},
+    {category:'已有產品/不想增加', phrase:'我已經有保養品了',
+     tip:'這題客人的重點是「已經有在照顧了」，所以不要跟現有產品競爭，而是站在顧問角度了解現在的保養是否符合她的需求。',
+     step1:'了解～有固定在保養很好啊😊',
+     step2:'那您目前用的保養，主要是針對哪一方面在照顧呢？',
+     step3:'了解～那我不會讓您重複買，主要是幫您看看現在的保養跟需求有沒有對上。',
+     step4:'如果目前用得很適合就維持就好；如果有哪個地方還沒顧到，我再幫您一起找看看。',
+     lineText:'了解～有固定在保養很好啊😊\n\n那您目前用的保養，主要是針對哪一方面在照顧呢？\n\n了解～那我不會讓您重複買，主要是幫您看看現在的保養跟需求有沒有對上。\n\n如果目前用得很適合就維持就好；如果有哪個地方還沒顧到，我再幫您一起找看看。',
+     phoneText:'了解～有固定在保養很好啊😊\n\n那您目前用的保養，主要是針對哪一方面在照顧呢？\n\n了解～那我不會讓您重複買，主要是幫您看看現在的保養跟需求有沒有對上。\n\n如果目前用得很適合就維持就好；如果有哪個地方還沒顧到，我再幫您一起找看看。'},
+    {category:'已有產品/不想增加', phrase:'我東西很多了',
+     tip:'這題跟「我已經有保養品了」不太一樣，客人真正的顧慮比較像是東西太多、怕再增加負擔。所以顧問角度要先幫她「減法」，而不是再增加產品。',
+     step1:'我懂～保養品多了，有時候反而會覺得不知道怎麼搭比較好😊',
+     step2:'您是覺得目前已經夠用了，還是手邊有些產品其實很少用呢？',
+     step3:'了解～那就不用再一直增加，我會比較建議先把現有的保養整理一下，看哪些真的需要留。',
+     step4:'您可以跟我說一下目前手邊有哪些，我幫您一起看看怎麼搭會比較精簡。',
+     lineText:'我懂～保養品多了，有時候反而會覺得不知道怎麼搭比較好😊\n\n您是覺得目前已經夠用了，還是手邊有些產品其實很少用呢？\n\n了解～那就不用再一直增加，我會比較建議先把現有的保養整理一下，看哪些真的需要留。\n\n您可以跟我說一下目前手邊有哪些，我幫您一起看看怎麼搭會比較精簡。',
+     phoneText:'我懂～保養品多了，有時候反而會覺得不知道怎麼搭比較好😊\n\n您是覺得目前已經夠用了，還是手邊有些產品其實很少用呢？\n\n了解～那就不用再一直增加，我會比較建議先把現有的保養整理一下，看哪些真的需要留。\n\n您可以跟我說一下目前手邊有哪些，我幫您一起看看怎麼搭會比較精簡。'},
+    {category:'已有產品/不想增加', phrase:'我怕買回去用不完',
+     tip:'這題的核心是「怕囤貨、怕浪費」，所以不要急著叫客戶買少一點，而是先了解過去為什麼會用不完，再從使用量、習慣和需求去規劃。',
+     step1:'了解～保養品買回去如果沒用完，確實會覺得浪費😊',
+     step2:'您以前比較常是因為用得慢，還是買了之後比較容易忘記用呢？',
+     step3:'了解～那我們就先照您平常的使用習慣和真正需要的量來規劃，不需要一次準備太多。',
+     step4:'我先幫您抓一個比較符合平常使用量的方式，讓您可以安心用、不容易囤在手上。',
+     lineText:'了解～保養品買回去如果沒用完，確實會覺得浪費😊\n您以前比較常是因為用得慢，還是買了之後比較容易忘記用呢？\n了解～那我們就先照您平常的使用習慣和真正需要的量來規劃，不需要一次準備太多。\n我先幫您抓一個比較符合平常使用量的方式，讓您可以安心用、不容易囤在手上。',
+     phoneText:'了解～保養品買回去如果沒用完，確實會覺得浪費😊\n\n您以前比較常是因為用得慢，還是買了之後比較容易忘記用呢？\n\n了解～那我們就先照您平常的使用習慣和真正需要的量來規劃，不需要一次準備太多。\n\n我先幫您抓一個比較符合平常使用量的方式，讓您可以安心用、不容易囤在手上。'},
+    {category:'已有產品/不想增加', phrase:'我不想換掉現在的保養',
+     tip:'這題要避免讓客戶覺得「你現在就是想叫我換掉原本的」。所以核心應該是：不要求更換 → 了解目前使用狀況 → 找出是否有額外需求 → 有需要才補充。',
+     step1:'了解～已經有自己習慣的保養方式，會希望維持原本的使用習慣很正常😊',
+     step2:'那您目前這套保養，主要是覺得使用起來很適合自己，還是單純不想重新建立一套新的保養方式呢？',
+     step3:'了解～那就不用特別換掉原本的，我們可以先以您現在的保養為基礎，看看有沒有哪個需求是目前比較少照顧到的。',
+     step4:'如果目前的保養已經很符合您的需求，就照原本的方式使用；有需要補充的地方，再針對那一項處理就好。',
+     lineText:'了解～已經有自己習慣的保養方式，會希望維持原本的使用習慣很正常😊\n\n想了解一下，您目前這套保養，是覺得使用起來很適合自己，還是單純不想重新建立一套新的保養方式呢？\n\n了解～那就不用特別換掉原本的，我們可以先以您現在的保養為基礎，看看有沒有哪個需求是目前比較少照顧到的。\n\n如果目前的保養已經很符合您的需求，就照原本的方式使用；有需要補充的地方，再針對那一項處理就好。',
+     phoneText:'了解～已經有自己習慣的保養方式，會希望維持原本的使用習慣很正常😊\n\n那您目前這套保養，主要是覺得使用起來很適合自己，還是單純不想重新建立一套新的保養方式呢？\n\n了解～那就不用特別換掉原本的，我們可以先以您現在的保養為基礎，看看有沒有哪個需求是目前比較少照顧到的。\n\n如果目前的保養已經很符合您的需求，就照原本的方式使用；有需要補充的地方，再針對那一項處理就好。'},
+    {category:'已有產品/不想增加', phrase:'我現在的保養用得很好',
+     tip:'這題客戶已經明確表達「目前用得很好」，不能再硬找缺點，否則很容易引起反感。比較好的銷售方式是尊重現況，再確認是否有「額外想改善」的需求。',
+     step1:'那很好啊～找到自己用得順手、也覺得適合的保養，其實很重要😊',
+     step2:'那您現在用這套保養時，自己最有感的是哪一點？例如保濕度、膚觸，還是整體膚況的穩定度呢？',
+     step3:'了解～我會以您現在的使用習慣來看，如果有需要補充的地方，再做適合的調整。',
+     step4:'那我就從您現在覺得最有感的這個部分延伸，幫您看看還有哪些方式可以讓目前的保養更完整。',
+     lineText:'那很好啊～找到自己用得順手、也覺得適合的保養，其實很重要😊\n\n想了解一下，您現在用這套保養時，自己最有感的是哪一點？例如保濕度、膚觸，還是整體膚況的穩定度呢？\n\n了解～我會以您現在的使用習慣來看，如果有需要補充的地方，再做適合的調整。\n\n我就從您現在覺得最有感的這個部分延伸，幫您看看還有哪些方式可以讓目前的保養更完整。',
+     phoneText:'那很好啊～找到自己用得順手、也覺得適合的保養，其實很重要😊\n\n那您現在用這套保養時，自己最有感的是哪一點？例如保濕度、膚觸，還是整體膚況的穩定度呢？\n\n了解～我會以您現在的使用習慣來看，如果有需要補充的地方，再做適合的調整。\n\n那我就從您現在覺得最有感的這個部分延伸，幫您看看還有哪些方式可以讓目前的保養更完整。'},
+    {category:'已有產品/不想增加', phrase:'我不想買這麼多瓶',
+     tip:'這題和「我不想一次買這麼多」很接近，但這裡客戶更明確是在抗拒瓶數／保養複雜度。所以不要再問預算，也不要說服他買完整套。',
+     step1:'我懂～保養品瓶瓶罐罐太多，不只花費增加，平常使用也會覺得很麻煩😊',
+     step2:'那您比較希望保養維持幾個步驟就好，還是希望一個產品可以照顧多個需求呢？',
+     step3:'了解～那就不用追求產品越多越完整，我們可以先把真正需要的留下來，能合併的就盡量簡化。',
+     step4:'那我就依您希望的使用方式來規劃，先抓必要的部分，讓整個保養維持在您能接受的範圍。',
+     lineText:'我懂～保養品瓶瓶罐罐太多，不只花費增加，平常使用也會覺得很麻煩😊\n\n想了解一下，您比較希望保養維持幾個步驟就好，還是希望一個產品可以照顧多個需求呢？\n\n了解～那就不用追求產品越多越完整，我們可以先把真正需要的留下來，能合併的就盡量簡化。\n\n我就依您希望的使用方式來規劃，先抓必要的部分，讓整個保養維持在您能接受的範圍。',
+     phoneText:'我懂～保養品瓶瓶罐罐太多，不只花費增加，平常使用也會覺得很麻煩😊\n\n那您比較希望保養維持幾個步驟就好，還是希望一個產品可以照顧多個需求呢？\n\n了解～那就不用追求產品越多越完整，我們可以先把真正需要的留下來，能合併的就盡量簡化。\n\n那我就依您希望的使用方式來規劃，先抓必要的部分，讓整個保養維持在您能接受的範圍。'},
+    {category:'已有產品/不想增加', phrase:'我可以只買一瓶嗎？',
+     tip:'這題客戶其實是在確認「能不能降低產品數量」，重點不是再問需求，而是先接受，再把一瓶聚焦到最需要的功能。',
+     step1:'可以啊～不一定要一次準備很多瓶，先從最需要的一項開始也可以😊',
+     step2:'如果只能先選一瓶，您會比較希望它優先照顧哪一方面？',
+     step3:'了解～那我們就以這個需求為主，不需要為了湊完整套組而增加其他產品，先把最需要的照顧好。',
+     step4:'那我就先依您剛剛提到的需求，幫您抓一瓶最適合優先使用的，其他部分之後有需要再補就好。',
+     lineText:'可以啊～不一定要一次準備很多瓶，先從最需要的一項開始也可以😊\n\n如果只能先選一瓶，您會比較希望它優先照顧哪一方面？\n\n了解～那我們就先針對這個需求，不需要為了湊整套而多買，先把最需要的照顧好就可以。',
+     phoneText:'可以啊～不一定要一次準備很多瓶，先從最需要的一項開始也可以😊\n\n如果只能先選一瓶，您會比較希望它優先照顧哪一方面？\n\n了解～那我們就以這個需求為主，不需要為了湊完整套組而增加其他產品，先把最需要的照顧好。\n\n那我就先依您剛剛提到的需求，幫您抓一瓶最適合優先使用的，其他部分之後有需要再補就好。'},
+    {category:'已有產品/不想增加', phrase:'我想先把家裡的用完',
+     tip:'這題客戶的重點是「手邊還有產品，不想造成浪費」，所以不要急著推新產品，可以把重點放在先用完、同時確認之後怎麼銜接。',
+     step1:'可以理解～家裡還有保養品，當然會想先把現有的用完，不然放著也浪費😊',
+     step2:'那您現在手邊主要還有哪些保養品？是日常都有在使用，還是有些已經比較少用了呢？',
+     step3:'了解～那就不用急著換掉，現有的先照原本習慣使用就好。之後如果有產品用完，或剛好想調整某個保養需求，再來看要怎麼補會比較剛好。',
+     step4:'您可以先把目前手邊的產品用完，我這邊也可以先幫您記住您在意的保養方向，之後要補的時候就不用重新找。',
+     lineText:'可以理解～家裡還有保養品，當然會想先把現有的用完，不然放著也浪費😊\n\n您現在手邊主要還有哪些保養品？我可以先幫您看看怎麼安排，之後用完再補就好。\n\n現有的先照原本習慣使用，不需要急著換；之後哪一項用完，再依當時的需求補充就可以。',
+     phoneText:'可以理解～家裡還有保養品，當然會想先把現有的用完，不然放著也浪費😊\n\n那您現在手邊主要還有哪些保養品？是日常都有在使用，還是有些已經比較少用了呢？\n\n了解～那就不用急著換掉，現有的先照原本習慣使用就好。之後如果有產品用完，或剛好想調整某個保養需求，再來看要怎麼補會比較剛好。\n\n您可以先把目前手邊的產品用完，我這邊也可以先幫您記住您在意的保養方向，之後要補的時候就不用重新找。'},
+    {category:'效果/信心/過往使用經驗', phrase:'我以前買很多保養品都沒用',
+     tip:'這題重點不是反駁客戶「沒用」，而是找出以前為什麼沒有達到期待，再從原因去判斷後續怎麼做。',
+     step1:'了解～以前花了不少錢在保養上，卻沒有感覺到自己期待的變化，確實會讓人很失望😊',
+     step2:'您之前比較常遇到的是用了沒什麼感覺，還是買了很多但不知道怎麼搭配使用呢？',
+     step3:'了解～那我們就先把之前的使用情況釐清，看看是產品、使用方式，還是保養步驟上出了問題，才比較知道該從哪裡調整。',
+     step4:'這次我們就先把真正需要的部分找出來，不需要再一次準備很多產品。',
+     lineText:'了解～以前花了不少錢在保養上，卻沒有感覺到期待的變化，確實會讓人很失望😊\n您之前比較常遇到的是用了沒什麼感覺，還是買了很多但不知道怎麼搭配？\n這次就先把真正需要的部分找出來，不需要再一次準備很多產品。',
+     phoneText:'了解～以前花了不少錢在保養上，卻沒有感覺到自己期待的變化，確實會讓人很失望😊\n\n您之前比較常遇到的是用了沒什麼感覺，還是買了很多但不知道怎麼搭配使用呢？\n\n了解～那我們就先把之前的使用情況釐清，看看是產品、使用方式，還是保養步驟上出了問題，才比較知道該從哪裡調整。\n\n這次我們就先把真正需要的部分找出來，不需要再一次準備很多產品。'},
+    {category:'效果/信心/過往使用經驗', phrase:'用了真的有效嗎？',
+     tip:'這題不要直接保證「有效」，顧問感應該是先了解客人期待改善什麼，再協助判斷產品是否適合，避免給人過度承諾的感覺。',
+     step1:'我懂～花錢保養，當然會希望真的看得到改變😊',
+     step2:'您比較希望改善的是哪一方面？我先了解您目前的狀況。',
+     step3:'了解～每個人的膚況和期待不同，我會先看您的需求，再跟您說適不適合，不會單純跟您保證效果。',
+     step4:'那您最希望看到的改變是什麼？我先從這個部分幫您評估看看。',
+     lineText:'我懂～花錢保養，當然會希望真的看得到改變😊\n\n您比較希望改善的是哪一方面？我先了解您目前的狀況。\n\n了解～每個人的膚況和期待不同，我會先看您的需求，再跟您說適不適合，不會單純跟您保證效果。\n\n那您最希望看到的改變是什麼？我先從這個部分幫您評估看看。',
+     phoneText:'我懂～花錢保養，當然會希望真的看得到改變😊\n\n您比較希望改善的是哪一方面？我先了解您目前的狀況。\n\n了解～每個人的膚況和期待不同，我會先看您的需求，再跟您說適不適合，不會單純跟您保證效果。\n\n那您最希望看到的改變是什麼？我先從這個部分幫您評估看看。'},
+    {category:'效果/信心/過往使用經驗', phrase:'我怕用了沒效果，浪費錢',
+     tip:'客人不是單純問「有效嗎」，而是怕花了錢卻不適合自己。所以要先降低試錯的顧慮，再從需求去評估。',
+     step1:'我懂～花錢買了卻不適合自己，確實會覺得可惜😊',
+     step2:'您之前有遇過用了沒感覺，或是買回去才發現不適合的情況嗎？',
+     step3:'了解～所以我會先看您的膚況和需求，再判斷適不適合，不會只是看產品好不好。',
+     step4:'您之前比較常遇到哪一種狀況？我先幫您找出原因，這樣比較好判斷從哪裡開始。',
+     lineText:'我懂～花錢買了卻不適合自己，確實會覺得可惜😊\n\n您之前有遇過用了沒感覺，或是買回去才發現不適合的情況嗎？\n\n了解～所以我會先看您的膚況和需求，再判斷適不適合，不會只是看產品好不好。\n\n您之前比較常遇到哪一種狀況？我先幫您找出原因，這樣比較好判斷從哪裡開始。',
+     phoneText:'我懂～花錢買了卻不適合自己，確實會覺得可惜😊\n\n您之前有遇過用了沒感覺，或是買回去才發現不適合的情況嗎？\n\n了解～所以我會先看您的膚況和需求，再判斷適不適合，不會只是看產品好不好。\n\n您之前比較常遇到哪一種狀況？我先幫您找出原因，這樣比較好判斷從哪裡開始。'},
+    {category:'效果/信心/過往使用經驗', phrase:'多久可以看到效果？',
+     tip:'這題不要直接給一個固定天數，因為不同膚況、產品和使用方式會有差異。可以先了解客戶期待，再說明合理的觀察方式。',
+     step1:'了解～開始使用保養品後，當然會想知道大概多久能感受到變化😊',
+     step2:'您目前最希望改善的是哪一方面？不同的肌膚問題，觀察的時間也會不太一樣。',
+     step3:'了解～那我會依您想改善的狀況和產品的使用方式跟您說明，不會用一個固定天數套在每個人身上。',
+     step4:'我會把使用方式、建議觀察的變化和使用期間跟您說清楚，您就能比較好掌握自己的狀況。',
+     lineText:'了解～開始使用保養品後，當然會想知道多久能感受到變化😊\n不同膚況和想改善的問題，觀察時間會不太一樣，我會依您的狀況說明。\n使用方式、可以觀察的變化和期間，我也會跟您說清楚，讓您比較好掌握。',
+     phoneText:'了解～開始使用保養品後，當然會想知道大概多久能感受到變化😊\n\n您目前最希望改善的是哪一方面？不同的肌膚問題，觀察的時間也會不太一樣。\n\n了解～那我會依您想改善的狀況和產品的使用方式跟您說明，不會用一個固定天數套在每個人身上。\n\n我會把使用方式、建議觀察的變化和使用期間跟您說清楚，您就能比較好掌握自己的狀況。'},
+    {category:'效果/信心/過往使用經驗', phrase:'如果沒有效怎麼辦？',
+     tip:'這題的核心是客戶擔心「花錢後沒有得到期待」，所以不要直接保證效果，而是把「效果」轉成先確認需求、正確使用、合理觀察。',
+     step1:'我懂～既然要花錢保養，當然會希望真的有感，不希望用了才發現不適合😊',
+     step2:'那您最希望改善的是哪一方面？我先了解您期待的效果到哪裡。',
+     step3:'了解～保養效果會受到膚況、使用方式和原本期待影響，所以我不會直接跟您保證一定有什麼結果；我會先確認產品是不是符合您的需求，再把正確的使用方式跟觀察方向說清楚。',
+     step4:'這樣您在開始使用前，就會知道自己是在觀察哪個方向，也比較不會單純用了幾天沒感覺，就覺得產品沒效。',
+     lineText:'我懂～花錢保養，當然會希望真的有感，不希望用了才發現不適合😊\n\n您最希望改善的是哪一方面？我先了解您的需求和期待。\n\n我不會直接跟您保證效果，而是先確認適不適合，再把使用方式和觀察方向說清楚，這樣會比較安心。',
+     phoneText:'我懂～既然要花錢保養，當然會希望真的有感，不希望用了才發現不適合😊\n\n那您最希望改善的是哪一方面？我先了解您期待的效果到哪裡。\n\n了解～保養效果會受到膚況、使用方式和原本期待影響，所以我不會直接跟您保證一定有什麼結果；我會先確認產品是不是符合您的需求，再把正確的使用方式跟觀察方向說清楚。\n\n這樣您在開始使用前，就會知道自己是在觀察哪個方向，也比較不會單純用了幾天沒感覺，就覺得產品沒效。'},
+    {category:'效果/信心/過往使用經驗', phrase:'是不是每個人用了都有效？',
+     tip:'這題要避免回答「每個人都有效」，反而可以把專業感放在每個人的膚況、需求與期待不同，再把對話帶回客戶本身。',
+     step1:'我懂～如果要花錢使用，當然會希望知道是不是每個人都能看到一樣的效果😊',
+     step2:'那您自己最希望改善的是哪一方面？我先了解您目前的膚況和期待。',
+     step3:'了解～每個人的膚況、生活習慣和使用方式都不同，所以感受不一定會完全一樣。我會先看產品是不是符合您的需求，而不是直接跟您保證每個人都會有相同結果。',
+     step4:'那我們就先以您目前最在意的這個部分來看，適合的話再從正確的使用方式開始，不需要一開始就買很多。',
+     lineText:'我懂～花錢保養，當然會希望知道效果😊\n\n每個人的膚況、生活習慣和使用方式不同，感受不一定會完全一樣，所以我不會直接跟您保證每個人都有相同效果。\n\n您目前最希望改善哪一方面？我先依您的需求看看適不適合，再決定怎麼使用就好。',
+     phoneText:'我懂～如果要花錢使用，當然會希望知道是不是每個人都能看到一樣的效果😊\n\n那您自己最希望改善的是哪一方面？我先了解您目前的膚況和期待。\n\n了解～每個人的膚況、生活習慣和使用方式都不同，所以感受不一定會完全一樣。我會先看產品是不是符合您的需求，而不是直接跟您保證每個人都會有相同結果。\n\n那我們就先以您目前最在意的這個部分來看，適合的話再從正確的使用方式開始，不需要一開始就買很多。'},
+    {category:'效果/信心/過往使用經驗', phrase:'我想要很快看到效果',
+     tip:'這題客戶在意的是「不要等太久」，所以先接住期待，再把「快」具體化，避免直接承諾多久見效。',
+     step1:'我懂～既然開始保養，當然會希望不要等太久，就能感覺到一些變化😊',
+     step2:'那您說的「快一點」，比較希望先看到哪一方面的變化？像是保濕度、膚觸，還是整體膚況？',
+     step3:'了解～不同的肌膚需求，能觀察到的變化和時間本來就不一樣，所以我不會直接跟您保證幾天一定有什麼效果。我會先依您的需求，跟您說明比較合理的觀察方向。',
+     step4:'那我們就先把您最想看到的那個變化抓清楚，使用時也比較知道自己該觀察什麼，不會只是一直等「有沒有立即見效」。',
+     lineText:'我懂～開始保養，當然會希望不要等太久就能感覺到變化😊\n\n您說的「快一點」，比較希望先看到哪一方面？像是保濕、膚觸，還是整體膚況？\n\n不同需求能觀察到的變化時間不一樣，我不會直接保證幾天見效，而是先依您的需求，讓您知道比較適合觀察哪個方向。',
+     phoneText:'我懂～既然開始保養，當然會希望不要等太久，就能感覺到一些變化😊\n\n那您說的「快一點」，比較希望先看到哪一方面的變化？像是保濕度、膚觸，還是整體膚況？\n\n了解～不同的肌膚需求，能觀察到的變化和時間本來就不一樣，所以我不會直接跟您保證幾天一定有什麼效果。我會先依您的需求，跟您說明比較合理的觀察方向。\n\n那我們就先把您最想看到的那個變化抓清楚，使用時也比較知道自己該觀察什麼，不會只是一直等「有沒有立即見效」。'},
+    {category:'效果/信心/過往使用經驗', phrase:'效果會不會很快就沒了？',
+     tip:'這題客戶擔心的是「效果是不是只能維持一下」，所以不要保證效果持續多久，而是把重點放在持續使用、生活狀況與期待的效果類型。',
+     step1:'我懂～如果用了之後很快又恢復原本的狀態，確實會讓人覺得很可惜😊',
+     step2:'那您比較在意的是使用當下的感受，還是希望肌膚狀態能維持得比較穩定呢？',
+     step3:'了解～保養品不是一次使用就能永久維持，實際感受也會受到膚況、使用方式和日常生活影響，所以重點會是持續、正確地照顧，而不是只看短時間的變化。',
+     step4:'那我們就先以您希望維持的狀態來安排使用方式，讓保養變成平常能持續做的習慣，而不是只追求短暫的感覺。',
+     lineText:'我懂～如果用了之後很快又恢復原本的狀態，確實會覺得可惜😊\n\n您比較在意的是使用當下的感受，還是希望肌膚狀態能維持得比較穩定呢？\n\n保養不是一次使用就能永久維持，還是要配合膚況、使用方式和日常習慣，所以我會比較重視持續、正確的照顧。',
+     phoneText:'我懂～如果用了之後很快又恢復原本的狀態，確實會讓人覺得很可惜😊\n\n那您比較在意的是使用當下的感受，還是希望肌膚狀態能維持得比較穩定呢？\n\n了解～保養品不是一次使用就能永久維持，實際感受也會受到膚況、使用方式和日常生活影響，所以重點會是持續、正確地照顧，而不是只看短時間的變化。\n\n那我們就先以您希望維持的狀態來安排使用方式，讓保養變成平常能持續做的習慣，而不是只追求短暫的感覺。'},
+    {category:'效果/信心/過往使用經驗', phrase:'停用之後會不會變回去？',
+     tip:'這題跟「效果會不會很快就沒了」不同，客戶是在擔心停用後能不能維持。不要保證「不會變回去」，而是讓客戶理解保養是持續性的日常管理。',
+     step1:'我懂～如果停用之後又回到原本的狀態，確實會讓人擔心之前的保養是不是白做了😊',
+     step2:'那您比較在意的是停用後肌膚狀態的維持，還是擔心需要一直使用才看得到變化呢？',
+     step3:'了解～保養品主要是在日常使用中照顧肌膚，停用後肌膚還是會受到年齡、作息、環境和日常習慣影響，所以不能把它當成一次使用就能永久維持的方式。',
+     step4:'所以我會比較建議依照自己的需求，把真正需要的保養留下來，穩定使用就好，不需要為了追求更多效果而一直增加產品。',
+     lineText:'我懂～如果停用後又回到原本的狀態，確實會擔心之前的保養是不是白做了😊\n\n其實保養主要是在日常使用中照顧肌膚，停用後還是會受到年齡、作息、環境和生活習慣影響，所以不能把它當成一次使用就能永久維持。\n\n我會比較建議依自己的需求，把真正需要的保養留下來，穩定使用就好。',
+     phoneText:'我懂～如果停用之後又回到原本的狀態，確實會讓人擔心之前的保養是不是白做了😊\n\n那您比較在意的是停用後肌膚狀態的維持，還是擔心需要一直使用才看得到變化呢？\n\n了解～保養品主要是在日常使用中照顧肌膚，停用後肌膚還是會受到年齡、作息、環境和日常習慣影響，所以不能把它當成一次使用就能永久維持的方式。\n\n所以我會比較建議依照自己的需求，把真正需要的保養留下來，穩定使用就好，不需要為了追求更多效果而一直增加產品。'},
+    {category:'效果/信心/過往使用經驗', phrase:'我用了很多保養品都沒用',
+     tip:'這題不要急著反駁「怎麼可能沒用」，而是把過去經驗拆開來看，找出到底是沒感覺、用法不對，還是本來就不符合需求。',
+     step1:'我懂～試過很多保養品，卻一直沒有感覺到自己期待的變化，真的會讓人很失望😊',
+     step2:'您之前比較常遇到的是「用了沒什麼感覺」，還是「用了之後覺得不適合自己」呢？',
+     step3:'了解～那我會先從您過去的使用經驗來看，不急著再增加產品。因為產品是否適合、使用方式和當時的膚況，都可能影響最後的感受。',
+     step4:'那這次我們就先避開以前讓您覺得沒效果的方式，從您真正想改善的地方開始，簡單一點就好。',
+     lineText:'我懂～試過很多保養品，卻一直沒有感覺到期待的變化，真的會很失望😊\n\n您之前比較常遇到的是「用了沒什麼感覺」，還是「用了覺得不適合自己」呢？\n\n我會先了解您過去的使用狀況，不急著增加產品，先找出之前為什麼沒有達到期待，再從真正需要的地方開始。',
+     phoneText:'我懂～試過很多保養品，卻一直沒有感覺到自己期待的變化，真的會讓人很失望😊\n\n您之前比較常遇到的是「用了沒什麼感覺」，還是「用了之後覺得不適合自己」呢？\n\n了解～那我會先從您過去的使用經驗來看，不急著再增加產品。因為產品是否適合、使用方式和當時的膚況，都可能影響最後的感受。\n\n那這次我們就先避開以前讓您覺得沒效果的方式，從您真正想改善的地方開始，簡單一點就好。'},
+    {category:'效果/信心/過往使用經驗', phrase:'我以前用保養品都沒有效果',
+     tip:'這題跟「用了很多保養品都沒用」很接近，但客戶更強調的是過去的使用經驗讓他對效果沒信心。所以話術要先找出「為什麼覺得沒效果」，不要馬上再介紹產品。',
+     step1:'我了解～以前也用過一些保養品，卻沒有感覺到自己期待的變化，現在會比較沒有信心很正常😊',
+     step2:'您以前使用時，通常是用了多久覺得沒變化？還是使用過程中就覺得跟自己的期待不太一樣呢？',
+     step3:'了解～那我會先從您過去的使用經驗來看，包含當時想改善什麼、怎麼使用，以及實際感受到什麼，而不是單純再換一個產品試試看。',
+     step4:'這次就先把您過去沒達到期待的原因釐清，再依您現在真正想改善的地方來規劃，這樣比較不會重複以前的方式。',
+     lineText:'我了解～以前也用過保養品，卻沒有感覺到期待的變化，現在會比較沒信心很正常😊\n\n想了解一下，您以前通常是用了多久覺得沒變化？還是使用過程中就覺得跟期待不太一樣呢？\n\n我會先了解您過去的使用情況，再依您現在真正想改善的地方來規劃，不會只是換一個產品再試試看。',
+     phoneText:'我了解～以前也用過一些保養品，卻沒有感覺到自己期待的變化，現在會比較沒有信心很正常😊\n\n您以前使用時，通常是用了多久覺得沒變化？還是使用過程中就覺得跟自己的期待不太一樣呢？\n\n了解～那我會先從您過去的使用經驗來看，包含當時想改善什麼、怎麼使用，以及實際感受到什麼，而不是單純再換一個產品試試看。\n\n這次就先把您過去沒達到期待的原因釐清，再依您現在真正想改善的地方來規劃，這樣比較不會重複以前的方式。'},
+    {category:'膚況/適合度', phrase:'我皮膚很敏感',
+     tip:'這題客人的核心是安全感，所以不要急著說「敏感肌也可以用」。顧問應該先了解她過去的反應，再依產品資訊與使用方式協助判斷。',
+     step1:'了解～如果皮膚比較敏感，挑保養品確實要更謹慎😊',
+     step2:'您平常比較容易出現泛紅、乾癢，還是使用某些產品會有不舒服的情況呢？',
+     step3:'了解～那我會先從您的膚況和過去使用狀況來看，再幫您確認適合的成分與使用方式。',
+     step4:'您平常用保養品時，哪一種情況最容易讓您覺得不舒服？我先幫您避開。',
+     lineText:'了解～每個人的膚況本來就不太一樣，挑保養品謹慎一點是好的😊\n\n您平常是比較容易有泛紅、乾燥，還是某些產品用起來比較不舒服呢？\n\n了解～那我會先從您的膚況和過去使用狀況來看，再幫您確認適合的成分與使用方式。\n\n您平常用保養品時，哪一種情況最容易讓您覺得不舒服？我先幫您避開',
+     phoneText:'了解～如果皮膚比較敏感，挑保養品確實要更謹慎😊\n\n您平常比較容易出現泛紅、乾癢，還是使用某些產品會有不舒服的情況呢？\n\n了解～那我會先從您的膚況和過去使用狀況來看，再幫您確認適合的成分與使用方式。\n\n您平常用保養品時，哪一種情況最容易讓您覺得不舒服？我先幫您避開。'},
+    {category:'膚況/適合度', phrase:'我很怕過敏',
+     tip:'這題的重點是降低「會不會過敏」的不安，不要直接保證不會過敏。顧問可以把重點放在了解過去經驗、確認成分與正確使用方式。',
+     step1:'我了解～第一次接觸新的保養品，會擔心這個很正常😊',
+     step2:'您以前有用過哪些保養品，讓您覺得不太舒服嗎？',
+     step3:'了解～那我們可以先看看您過去的使用狀況，再確認產品成分和適合的使用方式。',
+     step4:'您還記得之前是哪一類產品讓您不舒服嗎？我先幫您一起避開。',
+     lineText:'我了解～第一次接觸新的保養品，會擔心這個很正常😊\n\n您以前有用過哪些保養品，讓您覺得不太舒服嗎？\n\n了解～那我們可以先看看您過去的使用狀況，再確認產品成分和適合的使用方式。\n\n您還記得之前是哪一類產品讓您不舒服嗎？我先幫您一起避開。',
+     phoneText:'我了解～第一次接觸新的保養品，會擔心這個很正常😊\n\n您以前有用過哪些保養品，讓您覺得不太舒服嗎？\n\n了解～那我們可以先看看您過去的使用狀況，再確認產品成分和適合的使用方式。\n\n您還記得之前是哪一類產品讓您不舒服嗎？我先幫您一起避開。'},
+    {category:'膚況/適合度', phrase:'我以前用了保養品會長痘痘',
+     tip:'這題重點不是直接說「我們的產品不會長痘」，而是先釐清以前為什麼會長痘、是哪一類產品、使用後多久出現，再從顧問角度協助判斷。',
+     step1:'了解～之前有過這樣的經驗，難怪現在會比較謹慎😊',
+     step2:'您之前是用了哪一類保養品後比較容易長痘呢？',
+     step3:'了解～那除了產品本身，也要一起看當時的用量、使用方式和膚況，才比較找得到原因。',
+     step4:'您如果還記得當時的使用情況，我可以陪您一起拆解看看，之後挑保養品就比較有方向。',
+     lineText:'了解～之前有過這樣的經驗，難怪現在會比較謹慎😊\n\n您之前是用了哪一類保養品後比較容易長痘呢？\n\n了解～除了產品本身，也要一起看當時的用量、使用方式和膚況，才比較找得到原因。\n\n您如果還記得當時的使用情況，我可以陪您一起拆解看看，之後挑保養品就比較有方向。',
+     phoneText:'了解～之前有過這樣的經驗，難怪現在會比較謹慎😊\n\n您之前是用了哪一類保養品後比較容易長痘呢？\n\n了解～那除了產品本身，也要一起看當時的用量、使用方式和膚況，才比較找得到原因。\n\n您如果還記得當時的使用情況，我可以陪您一起拆解看看，之後挑保養品就比較有方向。'},
+    {category:'膚況/適合度', phrase:'我怕太滋潤／太油',
+     tip:'這題客戶在意的是使用感受與肌膚負擔，不要直接說「不會油」，而是先了解他平常喜歡的質地，再依需求判斷。',
+     step1:'我懂～保養品如果擦起來太厚重、太油，確實會讓人不舒服，也比較難持續使用😊',
+     step2:'您平常比較喜歡清爽、好吸收的質地，還是可以滋潤一點，但不要有黏膩感？',
+     step3:'了解～那我會把使用感受一起納入考量，不是單看保濕度越高越好，而是要找到您用起來舒服、也符合膚況的方式。',
+     step4:'那我就依您偏好的清爽程度來幫您挑，先避開您不喜歡的厚重、黏膩感。',
+     lineText:'我懂～如果保養品太厚重、太油，擦起來不舒服，也會比較難持續😊\n\n您平常比較喜歡清爽、好吸收的，還是可以滋潤一點但不要黏膩的？\n\n了解～我會把您的使用感受和膚況一起考量，先避開太厚重、黏膩的選擇。',
+     phoneText:'我懂～保養品如果擦起來太厚重、太油，確實會讓人不舒服，也比較難持續使用😊\n\n您平常比較喜歡清爽、好吸收的質地，還是可以滋潤一點，但不要有黏膩感？\n\n了解～那我會把使用感受一起納入考量，不是單看保濕度越高越好，而是要找到您用起來舒服、也符合膚況的方式。\n\n那我就依您偏好的清爽程度來幫您挑，先避開您不喜歡的厚重、黏膩感。'},
+    {category:'膚況/適合度', phrase:'我怕用了會乾／刺激',
+     tip:'這題重點是客戶擔心「用了之後反而讓肌膚更不舒服」，所以不要直接保證不會乾、不會刺激，而是先了解過去的使用情況，再決定怎麼挑。',
+     step1:'我懂～原本是想保養，結果用了反而覺得乾或不舒服，確實會讓人很擔心😊',
+     step2:'您以前使用保養品時，比較容易出現乾燥、緊繃，還是有其他不舒服的感覺呢？',
+     step3:'了解～那挑選時就不能只看想改善什麼，也要一起考量您過去的使用反應、目前膚況和產品的使用方式，避免選到不適合自己的。',
+     step4:'那我會先依您過去容易不舒服的情況幫您避開，再從適合您使用習慣的方向來看，不需要急著一次嘗試很多。',
+     lineText:'我懂～原本想保養，結果用了反而覺得乾或不舒服，確實會擔心😊\n\n您以前比較容易出現乾燥、緊繃，還是其他不舒服的感覺呢？\n\n了解～我會一起看您過去的使用反應、目前膚況和產品使用方式，先避開不適合自己的，再從比較合適的方向開始。',
+     phoneText:'我懂～原本是想保養，結果用了反而覺得乾或不舒服，確實會讓人很擔心😊\n\n您以前使用保養品時，比較容易出現乾燥、緊繃，還是有其他不舒服的感覺呢？\n\n了解～那挑選時就不能只看想改善什麼，也要一起考量您過去的使用反應、目前膚況和產品的使用方式，避免選到不適合自己的。\n\n那我會先依您過去容易不舒服的情況幫您避開，再從適合您使用習慣的方向來看，不需要急著一次嘗試很多。'},
+    {category:'膚況/適合度', phrase:'我皮膚很乾，這個適合嗎？',
+     tip:'這題客戶已經明確說「皮膚很乾」，所以不要再問是不是乾燥；應該進一步了解乾燥的表現與需求，再做適合度判斷。',
+     step1:'了解～如果肌膚比較乾，挑保養品時確實要特別注意使用後的舒適度和保濕需求😊',
+     step2:'您平常乾燥時，比較容易覺得緊繃、脫皮，還是上妝後特別容易卡粉呢？',
+     step3:'了解～那我會從您實際的乾燥狀況來判斷，而不是只看「乾肌」就直接推薦；也會一起考量產品的質地和使用方式。',
+     step4:'那我就依您剛剛提到的乾燥表現來幫您評估，先看這款是不是符合您現在的需求，適合再使用。',
+     lineText:'了解～如果肌膚比較乾，挑保養品時確實要注意保濕需求和使用舒適度😊\n\n您平常乾燥時，比較容易緊繃、脫皮，還是上妝後容易卡粉呢？\n\n我會依您實際的乾燥狀況，再一起看產品質地和使用方式，確認適不適合您。',
+     phoneText:'了解～如果肌膚比較乾，挑保養品時確實要特別注意使用後的舒適度和保濕需求😊\n\n您平常乾燥時，比較容易覺得緊繃、脫皮，還是上妝後特別容易卡粉呢？\n\n了解～那我會從您實際的乾燥狀況來判斷，而不是只看「乾肌」就直接推薦；也會一起考量產品的質地和使用方式。\n\n那我就依您剛剛提到的乾燥表現來幫您評估，先看這款是不是符合您現在的需求，適合再使用。'},
+    {category:'膚況/適合度', phrase:'我有痘痘／痘疤，可以用嗎？',
+     tip:'這題建議把「痘痘」和「痘疤」分開理解，因為客戶真正想處理的狀況可能不同。不要直接保證產品可以改善痘痘或痘疤。',
+     step1:'了解～如果目前有痘痘或痘疤，挑保養品時確實會比較謹慎，怕用了反而讓肌膚不舒服😊',
+     step2:'您現在比較在意的是正在冒痘，還是痘痘留下來的痘疤、痘印呢？',
+     step3:'了解～這兩種狀況在保養上的考量不太一樣，我會依您目前的膚況和使用中的產品，幫您抓適合的保養方向。',
+     step4:'那我們就先針對您現在最在意的這個狀況來搭配，從需要的部分開始，不用一次增加很多。',
+     lineText:'了解～如果目前有痘痘或痘疤，挑保養品時確實會比較謹慎😊\n\n您現在比較在意的是正在冒痘，還是痘痘留下來的痘疤、痘印呢？\n\n了解～我會依您目前的膚況和使用中的產品，幫您抓適合的保養方向，先從真正需要的部分開始就好。',
+     phoneText:'了解～如果目前有痘痘或痘疤，挑保養品時確實會比較謹慎，怕用了反而讓肌膚不舒服😊\n\n您現在比較在意的是正在冒痘，還是痘痘留下來的痘疤、痘印呢？\n\n了解～這兩種狀況在保養上的考量不太一樣，我會依您目前的膚況和使用中的產品，幫您抓適合的保養方向。\n\n那我們就先針對您現在最在意的這個狀況來搭配，從需要的部分開始，不用一次增加很多。'},
+    {category:'膚況/適合度', phrase:'我皺紋很多，這個有用嗎？',
+     tip:'這題客戶其實是在問「這款是不是針對我的皺紋需求」，所以不要直接承諾「可以淡化皺紋」，而是先了解皺紋狀況，再把產品定位說清楚。',
+     step1:'了解～如果現在比較在意皺紋，挑保養品時一定會希望是針對自己的狀況，而不是擦了卻沒有方向😊',
+     step2:'您目前比較在意的是眼周細紋、表情紋，還是臉上比較明顯的紋路呢？',
+     step3:'了解～不同位置和狀況的紋路，保養時會看的方向不太一樣。我會先依您目前的膚況和想改善的部位，幫您抓適合的保養重點。',
+     step4:'那我們就先從您最在意的紋路開始，依照這個部位的保養需求來搭配，讓每天的保養更有方向。',
+     lineText:'了解～如果現在比較在意皺紋，當然會希望保養是有方向的😊\n\n您目前比較在意的是眼周細紋、表情紋，還是臉上比較明顯的紋路呢？\n\n了解～我會依您目前的膚況和在意的部位，幫您抓適合的保養重點，從最在意的地方開始照顧就好。',
+     phoneText:'了解～如果現在比較在意皺紋，挑保養品時一定會希望是針對自己的狀況，而不是擦了卻沒有方向😊\n\n您目前比較在意的是眼周細紋、表情紋，還是臉上比較明顯的紋路呢？\n\n了解～不同位置和狀況的紋路，保養時會看的方向不太一樣。我會先依您目前的膚況和想改善的部位，幫您抓適合的保養重點。\n\n那我們就先從您最在意的紋路開始，依照這個部位的保養需求來搭配，讓每天的保養更有方向。'},
+    {category:'膚況/適合度', phrase:'我現在皮膚狀況不好，不敢亂擦',
+     tip:'這題客戶的重點是「目前膚況不穩，所以怕亂用」。這時候不要急著介紹產品，先把目前不舒服的狀況了解清楚，再給適合的保養方向。',
+     step1:'我了解～如果最近膚況比較不穩，確實會擔心亂擦之後讓肌膚更不舒服😊',
+     step2:'您最近主要是哪一種狀況比較明顯？像是泛紅、乾燥、長痘，還是容易有刺癢、緊繃的感覺呢？',
+     step3:'了解～那我們就先從您目前的膚況來看，不會單純看產品功能就直接搭配，而是一起考量目前的肌膚狀態和使用方式。',
+     step4:'那我先依您目前的狀況，幫您把日常保養順序和需要注意的地方整理清楚，這樣您就知道怎麼照顧會比較安心。',
+     lineText:'我了解～如果最近膚況比較不穩，確實會擔心亂擦之後讓肌膚更不舒服😊\n\n您最近主要是哪一種狀況比較明顯？像是泛紅、乾燥、長痘，還是容易刺癢、緊繃呢？\n\n了解～我會先依您目前的膚況和使用方式來看，再幫您把日常保養順序和需要注意的地方整理清楚，讓您照顧起來更安心。',
+     phoneText:'我了解～如果最近膚況比較不穩，確實會擔心亂擦之後讓肌膚更不舒服😊\n\n您最近主要是哪一種狀況比較明顯？像是泛紅、乾燥、長痘，還是容易有刺癢、緊繃的感覺呢？\n\n了解～那我們就先從您目前的膚況來看，不會單純看產品功能就直接搭配，而是一起考量目前的肌膚狀態和使用方式。\n\n那我先依您目前的狀況，幫您把日常保養順序和需要注意的地方整理清楚，這樣您就知道怎麼照顧會比較安心。'},
+    {category:'成分/安全性', phrase:'我孕婦可以用嗎？',
+     tip:'這題應該直接接住「孕期會更重視安全」→ 確認她在意的安全點 → 提供成分資訊 → 下一步協助確認。',
+     step1:'了解～孕期使用保養品，安全性確實要放在第一位😊',
+     step2:'您比較在意的是成分安全，還是怕使用後對肌膚造成負擔呢？',
+     step3:'了解～那我先幫您確認產品成分和使用方式，孕期不適合的我們就先避開。',
+     step4:'我先把產品成分跟您說明清楚，您也可以再讓醫師確認，這樣會比較安心。',
+     lineText:'了解～孕期使用保養品，安全性確實要放在第一位😊\n\n您比較在意的是成分安全，還是怕使用後對肌膚造成負擔呢？\n\n了解～那我先幫您確認產品成分和使用方式，孕期不適合的我們就先避開。\n\n我先把產品成分跟您說明清楚，您也可以再讓醫師確認，這樣會比較安心。',
+     phoneText:'了解～孕期使用保養品，安全性確實要放在第一位😊\n\n您比較在意的是成分安全，還是怕使用後對肌膚造成負擔呢？\n\n了解～那我先幫您確認產品成分和使用方式，孕期不適合的我們就先避開。\n\n我先把產品成分跟您說明清楚，您也可以再讓醫師確認，這樣會比較安心。'},
+    {category:'成分/安全性', phrase:'成分安全嗎？',
+     tip:'這題比較適合先確認客戶對「安全」的具體在意點，再提供可查證的成分資訊，不要直接保證「一定安全」。',
+     step1:'了解～保養品每天都會接觸肌膚，成分安全確實是很重要的考量😊',
+     step2:'您在成分安全上，主要比較在意哪些地方？例如成分來源、添加物，還是自己的膚況適不適合呢？',
+     step3:'了解～那我就依您在意的部分，把產品成分和相關資訊說明清楚，讓您先確認了解，再判斷是否適合。',
+     step4:'您如果有特別在意的成分，也可以直接跟我說，我先幫您確認產品裡面有沒有。',
+     lineText:'了解～保養品每天都會接觸肌膚，成分安全確實很重要😊\n您主要比較在意成分來源、添加物，還是自己的膚況適不適合呢？\n您有特別在意的成分也可以直接跟我說，我先幫您確認。',
+     phoneText:'了解～保養品每天都會接觸肌膚，成分安全確實是很重要的考量😊\n\n您在成分安全上，主要比較在意哪些地方？例如成分來源、添加物，還是自己的膚況適不適合呢？\n\n了解～那我就依您在意的部分，把產品成分和相關資訊說明清楚，讓您先確認了解，再判斷是否適合。\n\n您如果有特別在意的成分，也可以直接跟我說，我先幫您確認產品裡面有沒有。'},
+    {category:'成分/安全性', phrase:'有含香精嗎？我不用含香精的產品',
+     tip:'這題客戶已經把條件講得很明確：「不使用含香精的產品」。所以②不需要再問需求，直接確認成分；③提供符合條件的處理方式；④進到下一步確認產品成分即可。',
+     step1:'了解～如果您平常會避開香精，那成分這一點確實要先確認清楚😊',
+     step2:'那除了香精之外，您挑保養品時還會特別避開哪些成分或添加物呢？',
+     step3:'了解～那我會先依您在意的成分條件來篩選，把成分資訊確認清楚，再跟您說明這款產品的配方。',
+     step4:'那符合您使用條件的產品，我再依照您的膚況和需求幫您搭配，讓成分和保養方向都能兼顧。',
+     lineText:'了解～如果您平常會避開香精，那成分這一點確實要先確認清楚😊\n\n除了香精之外，您挑保養品時還會特別避開哪些成分或添加物呢？\n\n了解～我會先依您在意的成分條件來篩選，再搭配您的膚況和需求，讓成分和保養方向都能兼顧。',
+     phoneText:'了解～如果您平常會避開香精，那成分這一點確實要先確認清楚😊\n\n那除了香精之外，您挑保養品時還會特別避開哪些成分或添加物呢？\n\n了解～那我會先依您在意的成分條件來篩選，把成分資訊確認清楚，再跟您說明這款產品的配方。\n\n那符合您使用條件的產品，我再依照您的膚況和需求幫您搭配，讓成分和保養方向都能兼顧。'},
+    {category:'成分/安全性', phrase:'有含酒精？我不用含酒精的產品',
+     tip:'這題客戶已經明確說「不用含酒精」，所以重點是確認成分條件 → 依條件篩選 → 再搭配需求，不要重複確認。',
+     step1:'了解～如果您平常會避開酒精，那這個成分確實要先確認清楚😊',
+     step2:'除了酒精之外，您挑保養品時還會特別避開哪些成分或添加物呢？',
+     step3:'了解～那我會先依您在意的成分條件來篩選，再一起看產品是不是符合您目前的膚況和保養需求。',
+     step4:'那符合條件的部分，我就直接從您現在的保養步驟來安排，讓您用起來也比較順手。',
+     lineText:'了解～如果您平常會避開酒精，那這個成分確實要先確認清楚😊\n\n除了酒精之外，您挑保養品時還會特別避開哪些成分或添加物呢？\n\n了解～我會先依您在意的成分條件篩選，再看產品是否符合目前的膚況和保養需求，接著直接從您原本的保養步驟來安排就好。',
+     phoneText:'了解～如果您平常會避開酒精，那這個成分確實要先確認清楚😊\n\n除了酒精之外，您挑保養品時還會特別避開哪些成分或添加物呢？\n\n了解～那我會先依您在意的成分條件來篩選，再一起看產品是不是符合您目前的膚況和保養需求。\n\n那符合條件的部分，我就直接從您現在的保養步驟來安排，讓您用起來也比較順手。'},
+    {category:'成分/安全性', phrase:'有含防腐劑？我不用含防腐劑的產品',
+     tip:'這題客戶已經明確說「不用含防腐劑」，所以重點是確認成分條件 → 依條件篩選 → 再搭配需求，不要重複確認。',
+     step1:'了解～如果您平常會避開防腐劑，那成分這一點確實要先確認清楚😊',
+     step2:'除了防腐劑之外，您挑保養品時還會特別避開哪些成分或添加物呢？',
+     step3:'了解～那我會先依您在意的成分條件來篩選，再一起看產品是否符合您目前的膚況和保養需求。',
+     step4:'那我先依您這個條件把符合的選項整理出來，再從中挑最符合您目前需求的使用方式。',
+     lineText:'了解～如果您平常會避開防腐劑，那成分這一點確實要先確認清楚😊\n\n除了防腐劑之外，您挑保養品時還會特別避開哪些成分或添加物呢？\n\n了解～我會先依您的成分條件篩選，再從符合條件的選項裡，搭配您目前的膚況和需求。',
+     phoneText:'了解～如果您平常會避開防腐劑，那成分這一點確實要先確認清楚😊\n\n除了防腐劑之外，您挑保養品時還會特別避開哪些成分或添加物呢？\n\n了解～那我會先依您在意的成分條件來篩選，再一起看產品是否符合您目前的膚況和保養需求。\n\n那我先依您這個條件把符合的選項整理出來，再從中挑最符合您目前需求的使用方式。'},
+    {category:'成分/安全性', phrase:'保養品有不含防腐劑的嗎?那如何保存?',
+     tip:'這題客戶已經不是單純拒絕，而是在問「不含防腐劑是否存在，以及產品怎麼維持穩定」。這時候不要直接說「沒有防腐劑就一定比較安全」，要把「防腐系統、包裝、保存方式」講清楚。',
+     step1:'有些保養品確實會主打不添加特定防腐劑，不過「不含防腐劑」還是要看產品的完整成分和配方設計，不能只看標示😊',
+     step2:'您比較在意的是「產品裡完全沒有防腐系統」，還是希望了解它在保存和使用上是怎麼維持品質的呢？',
+     step3:'了解～保養品的保存方式會跟配方、包裝和產品本身的設計有關，有些產品會透過包裝設計、無菌製程或其他配方方式來降低污染風險，實際還是要以產品標示和原廠說明為準。',
+     step4:'那我可以直接依這款產品的實際成分、包裝方式和保存期限跟您說明，您就能清楚知道開封後該怎麼保存、怎麼使用。',
+     lineText:'有些保養品確實會主打不添加特定防腐劑，但還是要看完整成分和配方設計，不能只看「不含防腐劑」這幾個字😊\n\n保養品的保存方式會依配方、包裝和產品設計不同而不同，實際還是要以產品標示和原廠說明為準。\n\n我可以依這款產品的成分、包裝方式和保存期限跟您說明，讓您清楚知道開封後怎麼保存、怎麼使用。',
+     phoneText:'有些保養品確實會主打不添加特定防腐劑，不過「不含防腐劑」還是要看產品的完整成分和配方設計，不能只看標示😊\n\n您比較在意的是「產品裡完全沒有防腐系統」，還是希望了解它在保存和使用上是怎麼維持品質的呢？\n\n了解～保養品的保存方式會跟配方、包裝和產品本身的設計有關，有些產品會透過包裝設計、無菌製程或其他配方方式來降低污染風險，實際還是要以產品標示和原廠說明為準。\n\n那我可以直接依這款產品的實際成分、包裝方式和保存期限跟您說明，您就能清楚知道開封後該怎麼保存、怎麼使用。'},
+    {category:'成分/安全性', phrase:'成分天然嗎？我只用天然的產品',
+     tip:'這題客戶已經明確表達「只用天然」，所以不要跟客戶爭論天然或化學哪個比較好，而是先了解他所謂的「天然」是指來源、成分，還是完全不含特定添加物，這樣才知道選擇標準。',
+     step1:'了解～如果您平常比較偏好天然取向的產品，成分來源確實會是很重要的考量😊',
+     step2:'您說的「天然」，平常比較在意植物來源，還是會特別留意香精、色素這類成分呢？',
+     step3:'了解～那我就依您比較在意的方向，把產品的成分和來源跟您說明清楚，讓您更好判斷是否符合自己的使用習慣。',
+     step4:'您了解之後，就可以依照自己平常的挑選標準來判斷，選擇適合自己的。',
+     lineText:'了解～如果您平常比較偏好天然取向的產品，成分來源確實很重要😊\n\n您說的「天然」，平常比較在意植物來源，還是會特別留意香精、色素這類成分呢？\n\n了解～我會依您在意的方向，把成分和來源說明清楚，您了解後再依自己的挑選標準判斷就好。',
+     phoneText:'了解～如果您平常比較偏好天然取向的產品，成分來源確實會是很重要的考量😊\n\n您說的「天然」，平常比較在意植物來源，還是會特別留意香精、色素這類成分呢？\n\n了解～那我就依您比較在意的方向，把產品的成分和來源跟您說明清楚，讓您更好判斷是否符合自己的使用習慣。\n\n您了解之後，就可以依照自己平常的挑選標準來判斷，選擇適合自己的。'},
+    {category:'成分/安全性', phrase:'我有在擦藥，可以用嗎？',
+     tip:'這題屬於比較需要謹慎的狀況，因為「擦藥」的種類很多，不能直接回答可以或不可以。了解用藥狀況 → 提供產品資訊 → 建議由醫師／藥師確認，角色會比較專業也安全。話術可以讓顧客感受到你是在先保護他的使用安全，再談產品。',
+     step1:'了解～如果目前有在擦藥，保養品確實要更謹慎一點，不能隨便搭配😊',
+     step2:'您目前擦的藥主要是針對哪一方面的肌膚問題呢？',
+     step3:'了解～因為每種藥物的成分和用途都不一樣，我這邊可以先把產品的成分和使用方式提供給您參考。',
+     step4:'您可以把產品資訊帶給原本看診的醫師或藥師確認，確認可以搭配後，再依照建議使用會比較安心。',
+     lineText:'了解～如果目前有在擦藥，保養品確實要更謹慎一點😊\n\n您目前擦的藥主要是針對哪一方面的肌膚問題呢？\n\n因為每種藥物的成分和用途不同，我這邊可以先提供產品成分給您，再請醫師或藥師確認是否適合搭配。',
+     phoneText:'了解～如果目前有在擦藥，保養品確實要更謹慎一點，不能隨便搭配😊\n\n您目前擦的藥主要是針對哪一方面的肌膚問題呢？\n\n了解～因為每種藥物的成分和用途都不一樣，我這邊可以先把產品的成分和使用方式提供給您參考。\n\n您可以把產品資訊帶給原本看診的醫師或藥師確認，確認可以搭配後，再依照建議使用會比較安心。'},
+    {category:'成分/安全性', phrase:'我做醫美，可以一起用嗎？',
+     tip:'這題跟「有在擦藥」一樣，美容顧問不適合直接判斷醫美後能不能使用，重點放在先了解做了什麼醫美，再請專業醫療人員確認。',
+     step1:'了解～如果近期有做醫美，保養品的使用方式確實可以多留意一下😊',
+     step2:'您最近做的是哪一類醫美？大約是什麼時候做的呢？',
+     step3:'了解～因為不同醫美項目，在術後保養上需要注意的地方也不太一樣，我可以先跟您說明產品的成分和使用方式。',
+     step4:'如果您還在恢復期，也可以把產品資訊給施作的醫師或醫療人員確認一下，依照專業建議搭配會比較安心。',
+     lineText:'了解～如果近期有做醫美，保養品確實要多留意一下😊\n\n您最近做的是哪一類醫美？大約什麼時候做的呢？\n\n因為不同醫美項目和恢復期間的保養方式不一樣，我可以先提供產品成分和使用方式給您參考；如果還在恢復期，也可以再請施作的醫師或醫療人員確認一下，這樣會比較安心。',
+     phoneText:'了解～如果近期有做醫美，保養品的使用方式確實可以多留意一下😊\n\n您最近做的是哪一類醫美？大約是什麼時候做的呢？\n\n了解～因為不同醫美項目，在術後保養上需要注意的地方也不太一樣，我可以先跟您說明產品的成分和使用方式。\n\n如果您還在恢復期，也可以把產品資訊給施作的醫師或醫療人員確認一下，依照專業建議搭配會比較安心。'},
+    {category:'使用方式/懶惰/時間', phrase:'步驟太多了',
+     tip:'這題重點是「客戶嫌麻煩」，所以不要只是說「可以簡化」，而是要進一步找出他願意做到的程度，再幫他降低門檻。',
+     step1:'我懂～保養如果每天要做很多步驟，確實很容易覺得麻煩😊',
+     step2:'您比較希望保養可以簡單一點，還是平常真的沒有太多時間呢？',
+     step3:'了解～那就不用每個步驟都做，我們可以先留下真正需要的，把保養簡單化。',
+     step4:'那我就先幫您抓最必要的幾個步驟，讓您不用花太多時間也能比較好執行。',
+     lineText:'我懂～保養如果每天要做很多步驟，確實很容易覺得麻煩😊\n您比較希望保養可以簡單一點，還是平常真的沒有太多時間呢？\n了解～那就不用每個步驟都做，我們可以先留下真正需要的，把保養簡單化。\n那我就先幫您抓最必要的幾個步驟，讓您不用花太多時間也能比較好執行。',
+     phoneText:'我懂～保養如果每天要做很多步驟，確實很容易覺得麻煩😊\n\n您比較希望保養可以簡單一點，還是平常真的沒有太多時間呢？\n\n了解～那就不用每個步驟都做，我們可以先留下真正需要的，把保養簡單化。\n\n那我就先幫您抓最必要的幾個步驟，讓您不用花太多時間也能比較好執行。'},
+    {category:'使用方式/懶惰/時間', phrase:'我沒有時間保養',
+     tip:'這題跟「步驟太多」不太一樣，客戶核心是時間不足。所以要找出時間卡在哪裡，直接用這個原因設計更省時間的方式，進入具體安排。',
+     step1:'了解～平常事情多的話，要另外挪時間保養真的不容易😊',
+     step2:'您是平常早晚都比較趕，還是常常忙到連固定時間都沒有呢？',
+     step3:'了解～那保養就以簡單、快速為主，把時間花在真正需要的地方就好。',
+     step4:'那我先依您的生活步調，幫您抓一個幾分鐘就能完成的方式。',
+     lineText:'了解～平常事情多的話，要另外挪時間保養真的不容易😊\n您是平常早晚都比較趕，還是常常忙到連固定時間都沒有呢？\n了解～那保養就以簡單、快速為主，把時間花在真正需要的地方就好。\n那我先依您的生活步調，幫您抓一個幾分鐘就能完成的方式。',
+     phoneText:'了解～平常事情多的話，要另外挪時間保養真的不容易😊\n\n您是平常早晚都比較趕，還是常常忙到連固定時間都沒有呢？\n\n了解～那保養就以簡單、快速為主，把時間花在真正需要的地方就好。\n\n那我先依您的生活步調，幫您抓一個幾分鐘就能完成的方式。'},
+    {category:'使用方式/懶惰/時間', phrase:'我常常忘記擦',
+     tip:'這題核心不是「懶」，而是沒有形成固定習慣。所以可以從「怎麼讓保養自然融入原本習慣」去陪客戶找方法。',
+     step1:'了解～很多人不是不想保養，而是忙一忙就忘了😊',
+     step2:'您通常是早上比較容易忘記，還是晚上比較容易忘呢？',
+     step3:'了解～那可以把保養跟您原本每天一定會做的事情綁在一起，例如晚上洗完澡就直接擦，或早上刷完牙接著做，比較容易記得。',
+     step4:'那我先依您比較容易忘記的時段，幫您設計一個不用特別記、照著習慣就能做的方式。',
+     lineText:'了解～很多人不是不想保養，而是忙一忙就忘了😊\n您通常是早上比較容易忘記，還是晚上比較容易忘呢？\n了解～那可以把保養跟您原本每天一定會做的事情綁在一起，例如晚上洗完澡就直接擦，或早上刷完牙接著做，比較容易記得。\n那我先依您比較容易忘記的時段，幫您設計一個不用特別記、照著習慣就能做的方式。',
+     phoneText:'了解～很多人不是不想保養，而是忙一忙就忘了😊\n\n您通常是早上比較容易忘記，還是晚上比較容易忘呢？\n\n了解～那可以把保養跟您原本每天一定會做的事情綁在一起，例如晚上洗完澡就直接擦，或早上刷完牙接著做，比較容易記得。\n\n那我先依您比較容易忘記的時段，幫您設計一個不用特別記、照著習慣就能做的方式。'},
+    {category:'使用方式/懶惰/時間', phrase:'我現在很忙',
+     tip:'這題客戶已經明確說「現在很忙」，重點不是繼續談，而是尊重當下時間，確認什麼時候方便。不要再塞產品資訊。',
+     step1:'了解～您先忙手邊的事情😊',
+     step2:'您通常什麼時段比較方便留一點時間給自己呢？',
+     step3:'了解～那我就配合您的生活步調，不占用您現在忙碌的時間。',
+     step4:'那就依您剛剛說的時段，我到時候再簡單了解一下您的需求就好。',
+     lineText:'了解～您先忙手邊的事情😊\n您通常什麼時段比較方便留一點時間給自己呢？\n了解～那我就配合您的生活步調，不占用您現在忙碌的時間。\n那就依您剛剛說的時段，我到時候再簡單了解一下您的需求就好。',
+     phoneText:'了解～您先忙手邊的事情😊\n\n您通常什麼時段比較方便留一點時間給自己呢？\n\n了解～那我就配合您的生活步調，不占用您現在忙碌的時間。\n\n那就依您剛剛說的時段，我到時候再簡單了解一下您的需求就好。'},
+    {category:'使用方式/懶惰/時間', phrase:'我沒空聽',
+     tip:'這題比「我現在很忙」更直接，客戶是在說現在沒有時間聽內容。所以不要再問太多，先降低溝通成本。\n① 尊重沒空 → ② 快速抓需求 → ③ 說明會怎麼配合 → ④ 留下下一步',
+     step1:'了解～那我先不耽誤您😊',
+     step2:'那我想先知道，您目前比較在意哪一類的保養問題？之後我只針對這部分跟您說。',
+     step3:'了解～這樣我就不用讓您聽完整介紹，直接抓跟您有關的重點就好。',
+     step4:'我先記下您在意的這個部分，之後直接從這裡跟您說明，會比較省時間。',
+     lineText:'了解～那我先不耽誤您😊\n您目前比較在意哪一類的保養問題？之後我直接針對這部分跟您說，會比較省時間。',
+     phoneText:'了解～那我先不耽誤您😊\n\n那我想先知道，您目前比較在意哪一類的保養問題？之後我只針對這部分跟您說。\n\n了解～這樣我就不用讓您聽完整介紹，直接抓跟您有關的重點就好。\n\n我先記下您在意的這個部分，之後直接從這裡跟您說明，會比較省時間。'},
+    {category:'使用方式/懶惰/時間', phrase:'一天要擦幾次？',
+     tip:'這題客戶問的是很明確的使用方式，所以不需要再繞一圈問需求。',
+     step1:'可以～使用頻率確實要先了解清楚，才不會擦太多或太少😊',
+     step2:'您是想先了解一般建議的使用頻率，還是擔心每天擦太多會造成肌膚負擔呢？',
+     step3:'了解～實際使用次數還是要依產品的使用方式來看，不是擦越多次就越好。',
+     step4:'我可以直接跟您說明這款的建議用量、使用順序和一天適合使用幾次，照著方式使用就可以。',
+     lineText:'可以～使用頻率先了解清楚，才不會擦太多或太少😊\n這款我可以直接跟您說明建議用量、使用順序，以及一天適合使用幾次，照著方式使用就可以。',
+     phoneText:'可以～使用頻率確實要先了解清楚，才不會擦太多或太少😊\n\n您是想先了解一般建議的使用頻率，還是擔心每天擦太多會造成肌膚負擔呢？\n\n了解～實際使用次數還是要依產品的使用方式來看，不是擦越多次就越好。\n\n我可以直接跟您說明這款的建議用量、使用順序和一天適合使用幾次，照著方式使用就可以。'},
+    {category:'使用方式/懶惰/時間', phrase:'我懶得保養',
+     tip:'這題的重點不是勸客人「要勤勞保養」，而是站在陪跑員角度找出她覺得麻煩的地方，再把保養變簡單。',
+     step1:'我懂～每天要花時間保養，久了真的會覺得麻煩😊',
+     step2:'您是覺得步驟太多，還是常常忙到沒時間做呢？',
+     step3:'了解～其實保養不用做很多，重點是留下真正需要的幾個步驟。',
+     step4:'如果幫您簡化成最省事的方式，您會比較希望先照顧哪一個部分？',
+     lineText:'我懂～每天要花時間保養，久了真的會覺得麻煩😊\n\n您是覺得步驟太多，還是常常忙到沒時間做呢？\n\n了解～其實保養不用做很多，重點是留下真正需要的幾個步驟。\n\n如果幫您簡化成最省事的方式，您會比較希望先照顧哪一個部分？',
+     phoneText:'我懂～每天要花時間保養，久了真的會覺得麻煩😊\n\n您是覺得步驟太多，還是常常忙到沒時間做呢？\n\n了解～其實保養不用做很多，重點是留下真正需要的幾個步驟。\n\n如果幫您簡化成最省事的方式，您會比較希望先照顧哪一個部分？'},
+    {category:'使用方式/懶惰/時間', phrase:'我不喜歡瓶瓶罐罐',
+     tip:'這題可以把重點放在「討厭複雜、希望簡單」，不要一直談產品數量，這樣比較有顧問感。',
+     step1:'我懂～保養如果東一瓶、西一瓶，光想到要用就覺得很麻煩😊',
+     step2:'您比較在意的是使用步驟太多，還是希望平常保養可以簡單一點？',
+     step3:'了解～那就不用把每個步驟都做得很複雜，我會先依您的需求，把真正需要的保養留下來。',
+     step4:'那您平常比較習慣早上保養，還是晚上保養？我就依您原本的習慣來搭配。',
+     lineText:'我懂～保養如果東一瓶、西一瓶，光想到要用就覺得很麻煩😊\n\n您比較在意的是步驟太多，還是希望平常保養簡單一點？\n\n了解～那就不用把保養弄得很複雜，我會先依您的需求，把真正需要的留下來。\n\n您平常比較習慣早上保養，還是晚上保養？我就依您原本的習慣來搭配。',
+     phoneText:'我懂～保養如果東一瓶、西一瓶，光想到要用就覺得很麻煩😊\n\n您比較在意的是使用步驟太多，還是希望平常保養可以簡單一點？\n\n了解～那就不用把每個步驟都做得很複雜，我會先依您的需求，把真正需要的保養留下來。\n\n那您平常比較習慣早上保養，還是晚上保養？我就依您原本的習慣來搭配。'},
+    {category:'使用方式/懶惰/時間', phrase:'我不喜歡黏黏的感覺',
+     tip:'這題可以把「黏膩感」當成主要使用偏好，解決質地問題，就往實際使用方式走',
+     step1:'我懂～保養擦完如果覺得黏黏的，確實會讓人很不舒服😊',
+     step2:'您比較喜歡清爽、吸收快的感覺，還是只要不要有黏膩感就可以呢？',
+     step3:'了解～那挑保養時，除了看保養需求，也要把質地和使用感受一起考量，才比較容易持續使用。',
+     step4:'那我先從產品的質地和使用方式跟您說明，讓您先了解實際擦起來的感覺。',
+     lineText:'我懂～保養擦完如果覺得黏黏的，確實會讓人很不舒服😊\n\n您比較喜歡清爽、吸收快的感覺，還是只要不要有黏膩感就可以呢？\n\n了解～那挑保養時，我會把質地和使用感一起考量。\n\n那我先跟您說明產品的質地和使用方式，讓您先了解實際使用起來的感覺。',
+     phoneText:'我懂～保養擦完如果覺得黏黏的，確實會讓人很不舒服😊\n\n您比較喜歡清爽、吸收快的感覺，還是只要不要有黏膩感就可以呢？\n\n了解～那挑保養時，除了看保養需求，也要把質地和使用感受一起考量，才比較容易持續使用。\n\n那我先從產品的質地和使用方式跟您說明，讓您先了解實際擦起來的感覺。'},
+    {category:'使用方式/懶惰/時間', phrase:'我早晚都很忙',
+     tip:'這題重點不是再問「什麼時候方便」，而是先理解時間真的有限，再把保養方式簡化，直接落到可執行的方式。',
+     step1:'了解～如果早晚都很忙，要另外安排時間保養確實會覺得有負擔😊',
+     step2:'您平常比較困擾的是時間真的很趕，還是保養步驟太多、覺得很難配合？',
+     step3:'了解～那保養就不需要另外挪出一段完整時間，可以把必要的步驟放進原本的生活習慣裡，盡量簡單一點。',
+     step4:'我先幫您把日常保養整理成最精簡的方式，讓您不用特別多花時間，也比較容易持續。',
+     lineText:'了解～如果早晚都很忙，要另外安排時間保養確實會覺得有負擔😊\n\n您平常比較困擾的是時間很趕，還是保養步驟太多、覺得難配合？\n\n了解～那就不用另外挪時間，可以把必要的保養融入原本的生活習慣裡，盡量簡單一點。\n\n我先幫您把日常保養整理成最精簡的方式，讓您不用特別多花時間。',
+     phoneText:'了解～如果早晚都很忙，要另外安排時間保養確實會覺得有負擔😊\n\n您平常比較困擾的是時間真的很趕，還是保養步驟太多、覺得很難配合？\n\n了解～那保養就不需要另外挪出一段完整時間，可以把必要的步驟放進原本的生活習慣裡，盡量簡單一點。\n\n我先幫您把日常保養整理成最精簡的方式，讓您不用特別多花時間，也比較容易持續。'},
+    {category:'使用方式/懶惰/時間', phrase:'我平常很少化妝，不需要保養',
+     tip:'這題不要去反駁「少化妝」，而是把化妝和保養是不同需求拆開，再了解她平常真正的保養目的。',
+     step1:'了解～如果平常很少化妝，確實不會覺得需要花很多時間在保養上😊',
+     step2:'那您平常對肌膚比較在意的是維持現在的狀態，還是有特別想照顧的地方呢？',
+     step3:'了解～其實保養不一定是為了化妝，重點還是看自己平常的膚況和想照顧的需求；如果目前沒有特別需求，也不用刻意增加很多。',
+     step4:'那我就先從您平常的保養習慣來看，幫您整理哪些可以維持、哪些其實可以不用特別做。',
+     lineText:'了解～如果平常很少化妝，確實不會覺得需要花很多時間在保養上😊\n\n那您平常對肌膚比較在意的是維持現在的狀態，還是有特別想照顧的地方呢？\n\n其實保養不一定是為了化妝，還是要看自己的膚況和需求；如果目前沒有特別需求，也不用刻意增加很多。\n\n我先從您平常的保養習慣來看，幫您整理哪些可以維持、哪些其實不用特別做。',
+     phoneText:'了解～如果平常很少化妝，確實不會覺得需要花很多時間在保養上😊\n\n那您平常對肌膚比較在意的是維持現在的狀態，還是有特別想照顧的地方呢？\n\n了解～其實保養不一定是為了化妝，重點還是看自己平常的膚況和想照顧的需求；如果目前沒有特別需求，也不用刻意增加很多。\n\n那我就先從您平常的保養習慣來看，幫您整理哪些可以維持、哪些其實可以不用特別做。'},
+    {category:'使用方式/懶惰/時間', phrase:'我擦這個精華液／乳霜會起屑',
+     tip:'起屑通常是成分吸收時間差、使用量過多或前後產品摩擦導致。先安撫並找出用法關鍵，協助客人生出正確的使用習慣。',
+     step1:'了解～擦保養品如果遇到起屑，真的會讓人滿困擾的，尤其是後面還要上妝或出門😊',
+     step2:'想了解一下，您起屑通常是擦完當下搓出來的，還是後續擦別的產品或上底妝時才出現呢？',
+     step3:'了解～起屑通常跟質地交疊、用量過多或前一道還沒吸收完有關，我們可以稍微調整一下使用順序與用量。',
+     step4:'我教您一個簡單的塗抹技巧：建議先少量多次、用輕壓的方式上，等吸收後再擦下一道，起屑狀況就會改善很多！',
+     lineText:'了解～擦保養品如果遇到起屑，真的會滿困擾的😊\n\n想了解一下，您起屑通常是擦完當下搓出來的，還是後續擦別的產品或上底妝時才出現呢？\n\n起屑通常跟質地交疊或用量有關～建議可以少量多次、用「輕壓」代替搓揉，等前一道吸收完再擦下一道，狀況就會改善很多囉！',
+     phoneText:'了解～擦保養品如果遇到起屑，真的會讓人滿困擾的，尤其是後面還要上妝或出門😊\n\n想了解一下，您起屑通常是擦完當下搓出來的，還是後續擦別的產品或上底妝時才出現呢？\n\n了解～起屑通常跟質地交疊、用量過多或前一道還沒吸收完有關，我們可以稍微調整一下使用順序與用量。\n\n我教您一個簡單的塗抹技巧：建議先少量多次、用輕壓的方式上，等吸收後再擦下一道，起屑狀況就會改善很多！'},
+    {category:'品牌/比較/選擇', phrase:'我沒聽過你們品牌',
+     tip:'這題客人的核心是「對品牌還不熟悉」，不要急著介紹品牌歷史或強調有多厲害。顧問角度應該先讓客人知道：不熟悉很正常，我們可以先從她的需求來判斷是否適合。',
+     step1:'可以理解～保養品牌這麼多，沒聽過其實很正常😊',
+     step2:'您平常挑保養品時，會比較看品牌知名度，還是更在意適不適合自己的膚況呢？',
+     step3:'了解～那我就不先跟您講一堆品牌資訊，直接從您的膚況和需求來看會比較實際。',
+     step4:'您目前最想改善的是哪個部分？我先幫您看看我們的產品適不適合您。',
+     lineText:'可以理解～保養品牌這麼多，沒聽過其實很正常😊\n\n您平常挑保養品時，會比較看品牌知名度，還是更在意適不適合自己的膚況呢？\n\n了解～那我就不先跟您講一堆品牌資訊，直接從您的膚況和需求來看會比較實際。\n\n您目前最想改善的是哪個部分？我先幫您看看我們的產品適不適合您。',
+     phoneText:'可以理解～保養品牌這麼多，沒聽過其實很正常😊\n\n您平常挑保養品時，會比較看品牌知名度，還是更在意適不適合自己的膚況呢？\n\n了解～那我就不先跟您講一堆品牌資訊，直接從您的膚況和需求來看會比較實際。\n\n您目前最想改善的是哪個部分？我先幫您看看我們的產品適不適合您。'},
+    {category:'品牌/比較/選擇', phrase:'我只相信大品牌',
+     tip:'這題不要去反駁「大品牌比較可靠」，而是先理解客人為什麼需要大品牌帶來的安全感，再把判斷點帶回「適不適合自己」。',
+     step1:'我懂～選保養品時，品牌熟不熟悉，確實會影響安心感😊',
+     step2:'您會特別選大品牌，主要是比較在意品質、成分，還是使用起來比較放心呢？',
+     step3:'了解～那我會建議不要只看品牌大小，也可以一起看看成分、適用膚況和您想改善的問題。',
+     step4:'您如果方便，我可以先依您最在意的條件幫您看看，再由您自己判斷適不適合。',
+     lineText:'我懂～選保養品時，品牌熟不熟悉，確實會影響安心感😊\n\n您會特別選大品牌，主要是比較在意品質、成分，還是使用起來比較放心呢？\n\n了解～那我會建議不要只看品牌大小，也可以一起看看成分、適用膚況和您想改善的問題。\n\n您如果方便，我可以先依您最在意的條件幫您看看，再由您自己判斷適不適合。',
+     phoneText:'我懂～選保養品時，品牌熟不熟悉，確實會影響安心感😊\n\n您會特別選大品牌，主要是比較在意品質、成分，還是使用起來比較放心呢？\n\n了解～那我會建議不要只看品牌大小，也可以一起看看成分、適用膚況和您想改善的問題。\n\n您如果方便，我可以先依您最在意的條件幫您看看，再由您自己判斷適不適合。'},
+    {category:'品牌/比較/選擇', phrase:'我只用專櫃品牌',
+     tip:'這題客人已經有明確的選擇標準，所以不要去否定「專櫃品牌」，而是讓顧問進一步了解：她選專櫃最在意的是什麼，以及目前的保養是否真的符合需求。',
+     step1:'了解～您習慣用專櫃品牌，代表您對保養品質有一定的要求😊',
+     step2:'那您選專櫃時，通常最看重的是品牌、成分，還是使用後的感受呢？',
+     step3:'了解～那我就照您在意的條件來看，不需要改變原本的保養習慣，先找到適合自己的就好。',
+     step4:'那您現在的保養，最希望維持的是哪個部分？我可以從這個方向幫您一起評估。',
+     lineText:'了解～您習慣用專櫃品牌，對品質也比較有自己的標準😊\n\n那您平常挑保養品時，最在意的是品牌、成分，還是使用感受呢？\n\n了解～那我就照您在意的條件來看，不需要改變原本的保養習慣，先找到適合自己的就好。\n\n那您現在的保養，最希望維持的是哪個部分？我可以從這個方向幫您一起評估。',
+     phoneText:'了解～您習慣用專櫃品牌，代表您對保養品質有一定的要求😊\n\n那您選專櫃時，通常最看重的是品牌、成分，還是使用後的感受呢？\n\n了解～那我就照您在意的條件來看，不需要改變原本的保養習慣，先找到適合自己的就好。\n\n那您現在的保養，最希望維持的是哪個部分？我可以從這個方向幫您一起評估。'},
+    {category:'品牌/比較/選擇', phrase:'網路上很多品牌，我自己買就好了',
+     tip:'這題客人其實是在說「我有能力自己做功課、自己選」，所以不要跟她比誰懂得多。顧問角度可以把價值放在幫她依膚況篩選、少走冤枉路。',
+     step1:'可以啊～現在網路上資訊很多，自己挑確實很方便😊',
+     step2:'那您平常挑保養品時，通常會先看成分、評價，還是自己的膚況呢？',
+     step3:'了解～那其實我能幫您的，就是把選擇範圍縮小，依您的膚況和需求去篩，不用花很多時間一個個比較。',
+     step4:'您最近比較想找哪一類的保養？我可以先幫您整理適合的方向。',
+     lineText:'可以啊～現在網路上資訊很多，自己挑確實很方便😊\n\n那您平常挑保養品時，通常會先看成分、評價，還是自己的膚況呢？\n\n了解～那我能幫您的，就是依您的膚況和需求先篩選，這樣不用花很多時間一個個比較。\n\n您最近比較想找哪一類的保養？我可以先幫您整理適合的方向。',
+     phoneText:'可以啊～現在網路上資訊很多，自己挑確實很方便😊\n\n那您平常挑保養品時，通常會先看成分、評價，還是自己的膚況呢？\n\n了解～那其實我能幫您的，就是把選擇範圍縮小，依您的膚況和需求去篩，不用花很多時間一個個比較。\n\n您最近比較想找哪一類的保養？我可以先幫您整理適合的方向。'},
+    {category:'品牌/比較/選擇', phrase:'A牌比較有名',
+     tip:'這題不要去否定「A牌比較有名」，而是把「知名度」接住，再自然帶回客戶真正重視的條件。',
+     step1:'了解～您會優先想到A牌，應該也是因為平常比較常接觸到這個品牌😊',
+     step2:'那您選保養品時，通常會特別在意品牌的哪些地方呢？',
+     step3:'了解～那我們就從您在意的條件來看，再搭配您的膚況和需求，這樣會比較容易找到適合自己的方式。',
+     step4:'您如果願意，可以跟我說一下您目前最在意的保養需求，我就從這個方向幫您一起比較看看。',
+     lineText:'了解～您會優先想到A牌，應該也是因為平常比較常接觸到這個品牌😊\n那您選保養品時，通常會特別在意品牌的哪些地方呢？\n了解～那我們就從您在意的條件來看，再搭配您的膚況和需求，這樣比較容易找到適合自己的方式。\n您如果願意，可以跟我說一下您目前最在意的保養需求，我就從這個方向幫您一起比較看看。',
+     phoneText:'了解～您會優先想到A牌，應該也是因為平常比較常接觸到這個品牌😊\n\n那您選保養品時，通常會特別在意品牌的哪些地方呢？\n\n了解～那我們就從您在意的條件來看，再搭配您的膚況和需求，這樣會比較容易找到適合自己的方式。\n\n您如果願意，可以跟我說一下您目前最在意的保養需求，我就從這個方向幫您一起比較看看。'},
+    {category:'品牌/比較/選擇', phrase:'我朋友推薦另一個牌子',
+     tip:'這題可以把重點放在「尊重朋友推薦，但回到客戶自己的膚況與需求」，不要去比較哪個品牌比較好。',
+     step1:'了解～朋友自己用過覺得不錯，願意推薦給您，這份分享確實很有參考價值😊',
+     step2:'那您朋友推薦的主要是針對哪一方面的保養呢？',
+     step3:'了解～朋友適合的不一定跟您的膚況、需求一樣，我會建議一起看您自己目前最需要改善的部分，再判斷哪種保養方式比較適合您。',
+     step4:'如果您方便，也可以跟我說一下朋友推薦的是哪一類產品，我可以幫您一起對照看看，這樣您會比較好判斷。',
+     lineText:'了解～朋友自己用過覺得不錯，願意推薦給您，這份分享確實很有參考價值😊\n那您朋友推薦的主要是針對哪一方面的保養呢？\n了解～朋友適合的不一定跟您的膚況、需求一樣，我會先從您自己目前最需要的部分來看。\n如果您方便，也可以跟我說朋友推薦的是哪一類產品，我幫您一起對照看看，您會比較好判斷。',
+     phoneText:'了解～朋友自己用過覺得不錯，願意推薦給您，這份分享確實很有參考價值😊\n\n那您朋友推薦的主要是針對哪一方面的保養呢？\n\n了解～朋友適合的不一定跟您的膚況、需求一樣，我會建議一起看您自己目前最需要改善的部分，再判斷哪種保養方式比較適合您。\n\n如果您方便，也可以跟我說一下朋友推薦的是哪一類產品，我可以幫您一起對照看看，這樣您會比較好判斷。'},
+    {category:'品牌/比較/選擇', phrase:'你們跟某某品牌差在哪？',
+     tip:'這題不要急著直接說「我們比某某品牌好在哪」，因為客戶真正想知道的通常是兩個品牌的差異，哪一個更符合自己的需求。所以先把比較的方向問清楚，再針對需求說明。',
+     step1:'可以理解～挑保養品時，想先比較清楚再決定很正常😊',
+     step2:'那我先了解一下，您現在最希望改善的是哪個保養問題呢？',
+     step3:'了解～那我們先從您目前的膚況和需求來看，比較容易判斷現在真正需要的是哪一類保養。',
+     step4:'那我先依您目前的需求幫您整理一個適合的保養方向，從真正需要的開始就好。',
+     lineText:'可以理解～挑保養品時，想先了解清楚再決定很正常😊\n那我先了解一下，您現在最希望改善的是哪個保養問題呢？\n了解～那我們先從您目前的膚況和需求來看，比較容易判斷現在真正需要的是哪一類保養。\n那我先依您目前的需求幫您整理一個適合的保養方向，從真正需要的開始就好。',
+     phoneText:'可以理解～挑保養品時，想先比較清楚再決定很正常😊\n\n那我先了解一下，您現在最希望改善的是哪個保養問題呢？\n\n了解～那我們先從您目前的膚況和需求來看，比較容易判斷現在真正需要的是哪一類保養。\n\n那我先依您目前的需求幫您整理一個適合的保養方向，從真正需要的開始就好。'},
+    {category:'品牌/比較/選擇', phrase:'我想多比較幾家',
+     tip:'這題重點是尊重比較的需求，不急著阻止客戶比較，再把比較標準找出來，讓後續比較更有方向。',
+     step1:'可以啊～現在保養品牌很多，想多比較幾家、了解清楚再決定很正常😊',
+     step2:'您比較時，通常會特別看價格、成分，還是針對自己的保養需求呢？',
+     step3:'了解～那您比較的時候，可以先抓自己最在意的條件，會比較容易判斷。',
+     step4:'那我先依您最在意的條件，把我們產品相關資訊整理給您，您之後比較時也會更有方向。',
+     lineText:'可以啊～現在保養品牌很多，想多比較幾家、了解清楚再決定很正常😊\n\n您比較時，通常會特別看價格、成分，還是自己的保養需求呢？\n\n了解～那比較時先抓自己最在意的條件就好\n\n我可以先把我們產品相關資訊整理給您，讓您之後比較時更有方向。',
+     phoneText:'可以啊～現在保養品牌很多，想多比較幾家、了解清楚再決定很正常😊\n\n您比較時，通常會特別看價格、成分，還是針對自己的保養需求呢？\n\n了解～那您比較的時候，可以先抓自己最在意的條件，會比較容易判斷。\n\n那我先依您最在意的條件，把我們產品相關資訊整理給您，您之後比較時也會更有方向。'},
+    {category:'品牌/比較/選擇', phrase:'我已經有在使用XX品牌了',
+     tip:'這題不要急著否定原本品牌，也不要問「用了有沒有不好」，避免讓客戶覺得是在挑戰她現在的選擇。重點是先了解目前的保養方向，再看是否真的有需要調整。',
+     step1:'了解～您已經有固定在使用的品牌，代表平常本來就有在照顧肌膚😊',
+     step2:'那您目前使用XX品牌，主要是針對哪一方面的保養呢？',
+     step3:'了解～那我們可以先從您現在的保養內容和需求來看，確認目前主要在照顧哪些部分，再看看還有沒有其他需要補充的地方。',
+     step4:'那您目前手上的產品，大概是哪些呢？我先幫您看看彼此怎麼搭配會比較順。',
+     lineText:'了解～您已經有固定在使用的品牌，代表平常本來就有在照顧肌膚😊\n\n那您目前使用XX品牌，主要是針對哪一方面的保養呢？\n\n了解～那我們可以先從您現在的保養內容和需求來看，確認目前主要在照顧哪些部分，再看看還有沒有其他需要補充的地方。\n\n那我就先依您目前在意的部分，幫您整理適合的保養方向，您再看看有沒有需要調整的地方。',
+     phoneText:'了解～您已經有固定在使用的品牌，代表平常本來就有在照顧肌膚😊\n\n那您目前使用XX品牌，主要是針對哪一方面的保養呢？\n\n了解～那我們可以先從您現在的保養內容和需求來看，確認目前主要在照顧哪些部分，再看看還有沒有其他需要補充的地方。\n\n那您目前手上的產品，大概是哪些呢？我先幫您看看彼此怎麼搭配會比較順。'},
+    {category:'網路/信任/購買疑慮', phrase:'我怕你們是騙人的',
+     tip:'這題不能急著說「我們不是騙人的」，因為客人真正需要的是安全感與可驗證的資訊。陪跑員的角色是讓她自己確認，而不是要求她相信我們。',
+     step1:'我可以理解～現在網路資訊很多，第一次接觸陌生品牌，會擔心很正常😊',
+     step2:'您比較擔心的是公司資訊、產品安全，還是付款這些部分呢？',
+     step3:'了解～那您在意的部分，我都可以先把相關資訊提供給您確認，您了解清楚再決定就好。',
+     step4:'您最想先確認哪一項？我先把您在意的資訊整理給您。',
+     lineText:'我可以理解～第一次接觸陌生品牌，會擔心很正常😊\n\n您比較擔心的是公司資訊、產品安全，還是付款這些部分呢？\n\n了解～您在意的部分，我都可以先把相關資訊提供給您確認，了解清楚再決定就好。\n\n您最想先確認哪一項？我先把您在意的資訊整理給您。',
+     phoneText:'我可以理解～現在網路資訊很多，第一次接觸陌生品牌，會擔心很正常😊\n\n您比較擔心的是公司資訊、產品安全，還是付款這些部分呢？\n\n了解～那您在意的部分，我都可以先把相關資訊提供給您確認，您了解清楚再決定就好。\n\n您最想先確認哪一項？我先把您在意的資訊整理給您。'},
+    {category:'網路/信任/購買疑慮', phrase:'網路評價說你們不好',
+     tip:'這題重點是不要急著反駁網路評價，也不要說「網路評價不一定是真的」，而是先把客戶看到的疑慮找出來，再針對那個疑慮處理。',
+     step1:'了解～您有先上網看評價再決定，這樣很謹慎，我可以理解😊',
+     step2:'您看到的評價，主要是讓您擔心哪一個部分呢？',
+     step3:'了解～那我們就針對您在意的地方來看，我可以把相關的產品資訊、使用方式跟您說清楚，讓您了解完整再判斷。',
+     step4:'那我先依您剛剛在意的部分，把相關資訊整理給您，您看過之後我們再一起評估適不適合。',
+     lineText:'了解～您有先上網看評價再決定，這樣很謹慎，我可以理解😊\n您看到的評價，主要是讓您擔心哪一個部分呢？\n了解～那我們就針對您在意的地方來看，我可以把相關的產品資訊、使用方式跟您說清楚，讓您了解完整再判斷。\n那我先依您剛剛在意的部分，把相關資訊整理給您，您看過之後我們再一起評估適不適合。',
+     phoneText:'了解～您有先上網看評價再決定，這樣很謹慎，我可以理解😊\n\n您看到的評價，主要是讓您擔心哪一個部分呢？\n\n了解～那我們就針對您在意的地方來看，我可以把相關的產品資訊、使用方式跟您說清楚，讓您了解完整再判斷。\n\n那我先依您剛剛在意的部分，把相關資訊整理給您，您看過之後我們再一起評估適不適合。'},
+    {category:'網路/信任/購買疑慮', phrase:'我以前被電話推銷騙過',
+     tip:'這題重點是先接住客戶的戒心，不要急著證明「我們不是騙人的」，而是讓客戶知道可以先查證、先了解，不需要當下做決定。',
+     step1:'了解～之前有過不好的經驗，現在接到電話會比較有戒心，我可以理解😊',
+     step2:'您當時比較在意的是費用、產品內容，還是對方說明的方式讓您覺得不安心呢？',
+     step3:'了解～那這次您在意的部分，我們都可以先把資訊說清楚，您確認過內容，再自己判斷要不要繼續了解。',
+     step4:'您不用急著做決定，確認清楚之後，再依自己的想法決定就可以。',
+     lineText:'了解～之前有過不好的經驗，現在接到電話會比較有戒心，我可以理解😊\n您當時比較在意的是費用、產品內容，還是對方說明的方式讓您覺得不安心呢？\n這次我們把您在意的地方說清楚，您確認後再依自己的想法決定就可以。',
+     phoneText:'了解～之前有過不好的經驗，現在接到電話會比較有戒心，我可以理解😊\n\n您當時比較在意的是費用、產品內容，還是對方說明的方式讓您覺得不安心呢？\n\n了解～那這次您在意的部分，我們都可以先把資訊說清楚，您確認過內容，再自己判斷要不要繼續了解。\n\n您不用急著做決定，確認清楚之後，再依自己的想法決定就可以。'},
+    {category:'網路/信任/購買疑慮', phrase:'你們這個到底是做什麼的？',
+     tip:'這題客戶是在問「你們到底能幫我什麼」，所以不要急著講品牌或產品特色，先把用途講清楚，再接到客戶需求。',
+     step1:'可以～我先跟您說清楚，這樣您比較好判斷適不適合自己😊',
+     step2:'您現在比較想了解的是產品主要在照顧什麼，還是想知道適合哪些膚況呢？',
+     step3:'了解～我們主要是依照不同的肌膚需求，搭配相對應的保養方式，讓保養可以更有方向。',
+     step4:'您先了解我們是怎麼做的，如果覺得方向符合您的需求，再來往下了解就可以。',
+     lineText:'可以～我先跟您說清楚，這樣您比較好判斷適不適合自己😊\n我們主要是依照不同的肌膚需求，搭配相對應的保養方式，讓保養可以更有方向。\n您先了解我們是怎麼做的，覺得方向符合您的需求，再往下了解就可以。',
+     phoneText:'可以～我先跟您說清楚，這樣您比較好判斷適不適合自己😊\n\n您現在比較想了解的是產品主要在照顧什麼，還是想知道適合哪些膚況呢？\n\n了解～我們主要是依照不同的肌膚需求，搭配相對應的保養方式，讓保養可以更有方向。\n\n您先了解我們是怎麼做的，如果覺得方向符合您的需求，再來往下了解就可以。'},
+    {category:'網路/信任/購買疑慮', phrase:'我自己上網買比較便宜',
+     tip:'這題重點不是跟客戶爭價格，而是讓客戶說出自己網購時最在意的是價格，還是方便／選擇多／習慣，再把顧問價值放在「依需求篩選」。',
+     step1:'了解～現在網路上選擇很多，價格也比較容易直接比較，自己買確實很方便😊',
+     step2:'您平常上網買保養品時，最主要就是希望價格划算，還是也會在意適不適合自己的膚況呢？',
+     step3:'了解～價格當然可以比較，但我這邊可以直接依您的膚況和需求，幫您把適合的產品和使用方式一起看清楚',
+     step4:'您目前最想改善的是哪一個部分？我先從這個需求幫您挑，您直接比較看看就好。',
+     lineText:'了解～現在網路上選擇很多，價格也比較容易比較，自己買確實很方便😊\n\n您平常上網買保養品時，最主要是希望價格划算，還是也會在意適不適合自己的膚況呢？\n\n了解～價格當然可以比較，但我這邊可以直接依您的膚況和需求，幫您把適合的產品和使用方式一起看清楚。\n\n那您目前最想改善哪一個部分？我先從這個需求幫您挑，您直接比較看看就好。',
+     phoneText:'了解～現在網路上選擇很多，價格也比較容易直接比較，自己買確實很方便😊\n\n您平常上網買保養品時，最主要就是希望價格划算，還是也會在意適不適合自己的膚況呢？\n\n了解～價格當然可以比較，但我這邊可以直接依您的膚況和需求，幫您把適合的產品和使用方式一起看清楚\n\n您目前最想改善的是哪一個部分？我先從這個需求幫您挑，您直接比較看看就好。'},
+    {category:'網路/信任/購買疑慮', phrase:'我想先看網路評價',
+     tip:'這題不要急著阻止客戶看評價，反而可以把「看評價」變成一個確認資訊＋了解產品是否符合需求的過程，最後再把客戶帶回來。',
+     step1:'可以啊～現在買保養品前先看看網路評價，想多了解一些很正常😊',
+     step2:'您看評價時，通常比較在意使用感受、實際效果，還是其他人的使用經驗呢？',
+     step3:'了解～那您可以先從自己最在意的部分去看，不同人的膚況和使用方式不一樣，評價也可以當作參考，再搭配自己的需求來判斷。',
+     step4:'您看完如果有哪一點讓您比較在意，直接跟我說，我可以再針對那個部分跟您說明。',
+     lineText:'可以啊～現在買保養品前先看看網路評價，想多了解一些很正常😊\n\n您看評價時，通常比較在意使用感受、實際效果，還是其他人的使用經驗呢？\n\n了解～那您可以先看自己最在意的部分，評價可以當參考，再搭配自己的需求來判斷。\n\n看完如果有哪一點讓您比較在意，直接跟我說，我再針對那個部分跟您說明。',
+     phoneText:'可以啊～現在買保養品前先看看網路評價，想多了解一些很正常😊\n\n您看評價時，通常比較在意使用感受、實際效果，還是其他人的使用經驗呢？\n\n了解～那您可以先從自己最在意的部分去看，不同人的膚況和使用方式不一樣，評價也可以當作參考，再搭配自己的需求來判斷。\n\n您看完如果有哪一點讓您比較在意，直接跟我說，我可以再針對那個部分跟您說明。'},
+    {category:'網路/信任/購買疑慮', phrase:'我怕買到假貨',
+     tip:'這題客戶的核心是「來源可信度」，不要急著保證「一定不會是假貨」，而是先了解他擔心的來源問題，再提供可查證的資訊。',
+     step1:'了解～保養品每天都會接觸肌膚，擔心買到來源不明的產品很正常😊',
+     step2:'您比較擔心的是網路上買到假貨，還是會特別在意產品的來源和購買管道呢？',
+     step3:'了解～那來源確實要先確認清楚，我可以把公司的相關資訊、產品來源和購買方式跟您說明，讓您有依據可以確認。',
+     step4:'那我先把您需要確認的資訊整理給您，您了解清楚後，再決定要不要從我們這邊購買就可以。',
+     lineText:'了解～保養品每天都會接觸肌膚，擔心買到來源不明的產品很正常😊\n\n您比較擔心的是網路上買到假貨，還是會特別在意產品的來源和購買管道呢？\n\n了解～那來源確實要先確認清楚，我可以把公司的相關資訊、產品來源和購買方式跟您說明，讓您有依據可以確認。\n\n我先把您需要確認的資訊整理給您，您了解清楚後，再決定要不要從我們這邊購買就可以。',
+     phoneText:'了解～保養品每天都會接觸肌膚，擔心買到來源不明的產品很正常😊\n\n您比較擔心的是網路上買到假貨，還是會特別在意產品的來源和購買管道呢？\n\n了解～那來源確實要先確認清楚，我可以把公司的相關資訊、產品來源和購買方式跟您說明，讓您有依據可以確認。\n\n那我先把您需要確認的資訊整理給您，您了解清楚後，再決定要不要從我們這邊購買就可以。'},
+    {category:'網路/信任/購買疑慮', phrase:'我想先去門市看看',
+     tip:'這題客戶是在表達「想親自確認、看過再決定」，所以不要急著把他拉回電話成交。可以先接住，再了解他去門市最想確認什麼，最後把線上能提供的資訊接上。',
+     step1:'可以啊～保養品自己看過、了解清楚再決定，這樣也比較安心😊',
+     step2:'您想去門市主要是想看看產品、試用質地，還是想直接了解適合自己的保養方式呢？',
+     step3:'了解～那我可以先把您在意的產品資訊和使用方式跟您說清楚，讓您到門市時也比較知道自己要看什麼。',
+     step4:'那您先照自己的步調去了解，等您看過之後，有任何想比較或確認的地方，再跟我說就可以。',
+     lineText:'可以啊～保養品自己看過、了解清楚再決定，這樣也比較安心😊\n\n您想去門市主要是想看看產品、試用質地，還是想了解適合自己的保養方式呢？\n\n了解～那我可以先把您在意的產品資訊和使用方式跟您說清楚，這樣到門市時也比較知道自己要看什麼。',
+     phoneText:'可以啊～保養品自己看過、了解清楚再決定，這樣也比較安心😊\n\n您想去門市主要是想看看產品、試用質地，還是想直接了解適合自己的保養方式呢？\n\n了解～那我可以先把您在意的產品資訊和使用方式跟您說清楚，讓您到門市時也比較知道自己要看什麼。\n\n那您先照自己的步調去了解，等您看過之後，有任何想比較或確認的地方，再跟我說就可以。'},
+    {category:'網路/信任/購買疑慮', phrase:'你怎麼會有我的電話？',
+     tip:'因為客戶的疑問其實是「為什麼你們會有我的電話」，答案就是曾經購買過品牌、留下會員資料。重點是自然說明',
+     step1:'了解～突然接到電話，您一定會想知道我們怎麼會有您的聯絡方式😊',
+     step2:'您是比較想了解當初留下資料的方式，還是想確認我們現在為什麼會聯絡您呢？',
+     step3:'會聯絡到您，是因為您過去曾經購買過我們的品牌，當時有留下會員聯絡資料，所以我們這邊才會有您的電話。',
+     step4:'那我今天主要也是想了解您之前的使用狀況和現在的保養需求，看有沒有需要協助的地方。',
+     lineText:'了解～突然接到電話，您一定會想知道我們怎麼會有您的聯絡方式😊\n\n因為您過去曾經購買過我們的品牌，當時有留下會員聯絡資料，所以我們這邊才會有您的電話。\n\n今天主要也是想了解一下您現在的保養需求，看看有沒有需要協助的地方。',
+     phoneText:'了解～突然接到電話，您一定會想知道我們怎麼會有您的聯絡方式😊\n\n您是比較想了解當初留下資料的方式，還是想確認我們現在為什麼會聯絡您呢？\n\n會聯絡到您，是因為您過去曾經購買過我們的品牌，當時有留下會員聯絡資料，所以我們這邊才會有您的電話。\n\n那我今天主要也是想了解您之前的使用狀況和現在的保養需求，看有沒有需要協助的地方。'},
+    {category:'網路/信任/購買疑慮', phrase:'你先傳資料給我／傳LINE就好',
+     tip:'這題客戶其實是在說「現在不想聽，但願意先接收資訊」，不要再追問太多，直接把資訊傳送這個下一步做掉，同時保留後續互動空間。',
+     step1:'可以啊～沒問題😊先讓您用自己的時間看，會比較方便。',
+     step2:'那您比較想先了解產品資訊、使用方式，還是針對您目前的保養需求呢？',
+     step3:'了解～我就依您在意的部分整理，不會一次傳一大堆讓您還要慢慢找重點。',
+     step4:'那我先把重點整理給您，您看完之後，有哪個部分想進一步了解，再直接跟我說就可以。',
+     lineText:'可以啊～沒問題😊先讓您用自己的時間看，會比較方便。\n\n您比較想先了解產品資訊、使用方式，還是目前的保養需求呢？\n\n了解～我就依您在意的部分整理，不會一次傳一大堆。\n\n我先把重點整理給您，您看完有想了解的地方，再直接跟我說就可以。',
+     phoneText:'可以啊～沒問題😊先讓您用自己的時間看，會比較方便。\n\n那您比較想先了解產品資訊、使用方式，還是針對您目前的保養需求呢？\n\n了解～我就依您在意的部分整理，不會一次傳一大堆讓您還要慢慢找重點。\n\n那我先把重點整理給您，您看完之後，有哪個部分想進一步了解，再直接跟我說就可以。'},
+    {category:'電話拒絕/決策者異議', phrase:'不要再打電話給我',
+     tip:'這題「不要再打電話給我」已經是很明確的拒絕，不適合再探詢原因或繼續推進。重點應該是尊重、確認停止聯繫，避免讓客戶有壓力。',
+     step1:'了解～好的，我尊重您的意思😊',
+     step2:'',
+     step3:'之後如果您有保養上的問題，再主動找我們就可以。',
+     step4:'我這邊就先替您註記，後續不再透過電話打擾您。',
+     lineText:'了解～好的，我尊重您的意思😊\n我這邊會替您註記，後續不再透過電話打擾您。\n之後如果有保養上的問題，您有需要時再找我們就可以。',
+     phoneText:'了解～好的，我尊重您的意思😊\n\n之後如果您有保養上的問題，再主動找我們就可以。\n\n我這邊就先替您註記，後續不再透過電話打擾您。'},
+    {category:'電話拒絕/決策者異議', phrase:'有需要我再買',
+     tip:'這題客戶已經很明確表達「有需要再處理」，所以不要再硬找理由成交。顧問式的重點是確認目前到底有沒有需求，如果沒有，就把關係留好。',
+     step1:'可以啊～保養本來就是有需要再補充，不需要為了買而買😊',
+     step2:'那您目前比較想先維持現在的狀況，還是有哪個地方其實一直想改善呢？',
+     step3:'了解～如果目前沒有特別需要，就先維持原本的方式；如果有想改善的地方，再針對那個問題處理就好。',
+     step4:'那您之後只要發現哪個地方開始有困擾，直接跟我說，我再陪您從那個需求一起找適合的方式。',
+     lineText:'可以啊～保養本來就是有需要再補充，不需要為了買而買😊\n那您目前比較想先維持現在的狀況，還是有哪個地方其實一直想改善呢？\n了解～如果目前沒有特別需要，就先維持原本的方式；如果有想改善的地方，再針對那個問題處理就好。\n那您之後只要發現哪個地方開始有困擾，直接跟我說，我再陪您從那個需求一起找適合的方式。',
+     phoneText:'可以啊～保養本來就是有需要再補充，不需要為了買而買😊\n\n那您目前比較想先維持現在的狀況，還是有哪個地方其實一直想改善呢？\n\n了解～如果目前沒有特別需要，就先維持原本的方式；如果有想改善的地方，再針對那個問題處理就好。\n\n那您之後只要發現哪個地方開始有困擾，直接跟我說，我再陪您從那個需求一起找適合的方式。'},
+    {category:'電話拒絕/決策者異議', phrase:'不用了，謝謝',
+     tip:'這題「不用了，謝謝」通常已經是明確結束訊號，不適合再追問原因。重點是尊重、收尾、留下未來有需要時的選項。',
+     step1:'好的～了解😊',
+     step2:'那我就不多打擾您了。',
+     step3:'之後如果有保養上的問題，您有需要時再找我們就可以。',
+     step4:'祝您今天順心，謝謝您接聽。',
+     lineText:'好的～了解😊\n那我就不多打擾您了，之後如果有保養上的問題，您有需要時再找我們就可以。\n祝您今天順心，謝謝您。',
+     phoneText:'好的～了解😊\n\n那我就不多打擾您了。\n\n之後如果有保養上的問題，您有需要時再找我們就可以。\n\n祝您今天順心，謝謝您接聽。'},
+    {category:'電話拒絕/決策者異議', phrase:'我自己研究就好',
+     tip:'這題客戶已經表達「想自己做功課」，所以不要再追問或試圖說服。可以把角色放在補充資訊、協助查漏，讓客戶保有主導權。',
+     step1:'可以啊～自己先研究清楚再決定，這樣也比較安心😊',
+     step2:'您平常研究保養品時，會比較看成分、功效，還是使用評價呢？',
+     step3:'了解～那您就先照自己習慣的方式研究，我這邊可以補充您查不到的產品資訊，讓您多一個參考。',
+     step4:'等您看過之後，如果有哪個地方看不懂，再把問題丟給我，我幫您一起釐清。',
+     lineText:'可以啊～自己先研究清楚再決定，這樣也比較安心😊\n您平常比較會看成分、功效還是使用評價？\n您先照自己的方式研究，有哪個地方看不懂，再問我就可以。',
+     phoneText:'可以啊～自己先研究清楚再決定，這樣也比較安心😊\n\n您平常研究保養品時，會比較看成分、功效，還是使用評價呢？\n\n了解～那您就先照自己習慣的方式研究，我這邊可以補充您查不到的產品資訊，讓您多一個參考。\n\n等您看過之後，如果有哪個地方看不懂，再把問題丟給我，我幫您一起釐清。'},
+    {category:'電話拒絕/決策者異議', phrase:'我要問老公',
+     tip:'這題的重點是尊重客戶需要和先生商量，同時了解她需要的是預算上的共識，還是希望先生一起參與決定。不要讓客戶覺得我們在催她做決定。',
+     step1:'當然可以～家裡的事情一起商量，先跟先生討論清楚比較安心😊',
+     step2:'您主要是想跟先生討論預算，還是想讓他一起了解您的保養需求呢？',
+     step3:'了解～那您可以先把您目前最想改善的地方跟先生說明，讓他知道您為什麼會想調整保養。',
+     step4:'您跟先生討論後，如果還有哪裡不清楚，再跟我說，我再幫您釐清。',
+     lineText:'當然可以～家裡的事情一起商量，先跟先生討論清楚比較安心😊\n您主要是想跟先生討論預算，還是想讓他一起了解您的保養需求呢？\n您先跟先生說明目前最想改善的地方，討論後有疑問再跟我說，我再幫您釐清。',
+     phoneText:'當然可以～家裡的事情一起商量，先跟先生討論清楚比較安心😊\n\n您主要是想跟先生討論預算，還是想讓他一起了解您的保養需求呢？\n\n了解～那您可以先把您目前最想改善的地方跟先生說明，讓他知道您為什麼會想調整保養。\n\n您跟先生討論後，如果還有哪裡不清楚，再跟我說，我再幫您釐清。'},
+    {category:'電話拒絕/決策者異議', phrase:'我要跟家人商量',
+     tip:'這題跟「我要問老公」類似，但範圍更廣，所以不要預設是哪一位家人、也不要預設是討論預算。重點是先找出家人需要一起商量的原因。',
+     step1:'可以啊～如果家裡的事情需要一起討論，先商量清楚比較安心😊',
+     step2:'您主要是想跟家人討論預算，還是希望家人一起了解您的保養需求呢？',
+     step3:'了解～那就先把家人比較在意的部分說清楚，大家有共識之後再決定。',
+     step4:'您們商量好之後，再跟我說一聲，我就依照您們的決定往下協助。',
+     lineText:'可以啊～如果家裡的事情需要一起討論，先商量清楚比較安心😊\n您主要是想跟家人討論預算，還是希望家人一起了解您的保養需求呢？\n您們有共識後再跟我說一聲，我再依照您們的決定協助您。',
+     phoneText:'可以啊～如果家裡的事情需要一起討論，先商量清楚比較安心😊\n\n您主要是想跟家人討論預算，還是希望家人一起了解您的保養需求呢？\n\n了解～那就先把家人比較在意的部分說清楚，大家有共識之後再決定。\n\n您們商量好之後，再跟我說一聲，我就依照您們的決定往下協助。'},
+    {category:'電話拒絕/決策者異議', phrase:'我不是自己決定',
+     tip:'這題要先尊重「不是自己決定」這件事，不要硬把客戶拉回成交。重點是確認誰會一起決定，以及對方最需要了解什麼，讓客戶比較好帶回去討論。',
+     step1:'了解～如果平常這類事情不是由您自己決定，先跟負責決定的人討論比較合適😊',
+     step2:'那通常是家人一起討論，還是由家裡固定一個人決定呢？',
+     step3:'了解～那我可以先把相關資訊整理清楚，讓您轉達時比較容易說明。',
+     step4:'等您們確認後，您再跟我說結果，我再依照決定的方向協助您。',
+     lineText:'了解～如果這類事情不是由您自己決定，當然要先跟負責決定的人討論😊\n我可以先把相關資訊整理清楚，您轉達時會比較容易說明；等您們確認後，再跟我說結果就可以。',
+     phoneText:'了解～如果平常這類事情不是由您自己決定，先跟負責決定的人討論比較合適😊\n\n那通常是家人一起討論，還是由家裡固定一個人決定呢？\n\n了解～那我可以先把相關資訊整理清楚，讓您轉達時比較容易說明。\n\n等您們確認後，您再跟我說結果，我再依照決定的方向協助您。'},
+    {category:'電話拒絕/決策者異議', phrase:'我想先問我的美容師',
+     tip:'這題不要去否定客戶的美容師，反而可以把美容師變成客戶做決定時的參考來源，再把我們能提供的資訊留下來。',
+     step1:'可以啊～平常有固定配合的美容師，先問一下再決定也比較安心😊',
+     step2:'您主要是想跟美容師確認產品適不適合，還是想聽聽她對您目前膚況的建議呢？',
+     step3:'了解～那我可以先把產品的成分、使用方式和您目前想改善的部分整理清楚，讓您拿給美容師時，也比較好一起討論。',
+     step4:'那我先依您現在最在意的需求幫您整理，您拿給美容師確認時，就可以直接針對這幾個重點問，這樣會比較有效率。',
+     lineText:'可以啊～平常有固定配合的美容師，先問一下再決定也比較安心😊\n\n您主要是想跟美容師確認產品適不適合，還是想聽聽她對您目前膚況的建議呢？\n\n了解～那我先把產品成分、使用方式和您目前在意的部分整理清楚，您拿給美容師時就能直接針對重點詢問，會比較好判斷。',
+     phoneText:'可以啊～平常有固定配合的美容師，先問一下再決定也比較安心😊\n\n您主要是想跟美容師確認產品適不適合，還是想聽聽她對您目前膚況的建議呢？\n\n了解～那我可以先把產品的成分、使用方式和您目前想改善的部分整理清楚，讓您拿給美容師時，也比較好一起討論。\n\n那我先依您現在最在意的需求幫您整理，您拿給美容師確認時，就可以直接針對這幾個重點問，這樣會比較有效率。'},
+    {category:'電話拒絕/決策者異議', phrase:'我過一陣子再看看',
+     tip:'這句通常代表客戶目前沒有立即決定的打算，所以不要一直追問「為什麼」，而是把「過一陣子」具體化，讓下一步有機會延續。',
+     step1:'可以啊～保養本來就可以依照自己的狀況和時間來安排，不用急著決定😊',
+     step2:'您是想等目前手邊的保養先用一陣子，還是想過一陣子再看看自己的膚況呢？',
+     step3:'解～那我們就先不急著做決定，等您比較適合的時候，再依當時的需求來看會比較剛好。',
+     step4:'那我先把今天談到的重點幫您留著，之後您要再了解時，就可以直接從這裡接著看。',
+     lineText:'可以啊～保養本來就可以依照自己的狀況和時間來安排，不用急著決定😊\n\n您是想等目前手邊的保養先用一陣子，還是想過一陣子再看看自己的膚況呢？\n\n了解～那我們先不用急著決定，等您比較適合的時候，再依當時的需求來看。\n\n我先把今天談到的重點幫您留著，之後要再了解時，就可以直接從這裡接著看。',
+     phoneText:'可以啊～保養本來就可以依照自己的狀況和時間來安排，不用急著決定😊\n\n您是想等目前手邊的保養先用一陣子，還是想過一陣子再看看自己的膚況呢？\n\n解～那我們就先不急著做決定，等您比較適合的時候，再依當時的需求來看會比較剛好。\n\n那我先把今天談到的重點幫您留著，之後您要再了解時，就可以直接從這裡接著看。'},
+    {category:'電話拒絕/決策者異議', phrase:'有需要我會自己聯絡',
+     tip:'這句已經很接近「不要再追蹤」的意思，所以不要再設計問題去拉客戶。重點是尊重＋留下主動聯絡的入口，反而比較不會造成反感。',
+     step1:'可以啊～當然以您的狀況為主',
+     step2:'',
+     step3:'',
+     step4:'那我今天先不耽誤您，之後有任何想了解的，直接找我就可以。',
+     lineText:'可以啊～當然以您的狀況為主\n\n那我今天先不耽誤您，之後有任何想了解的，直接找我就可以。',
+     phoneText:'可以啊～當然以您的狀況為主\n\n那我今天先不耽誤您，之後有任何想了解的，直接找我就可以。'},
+    {category:'電話拒絕/決策者異議', phrase:'我做醫美效果比較快比較好',
+     tip:'這句客人其實是在表達「我已經有更習慣、效果也更快的方式」，重點不要去否定醫美，而是把對話拉回日常保養和醫美的需求差異。',
+     step1:'了解～如果您本身有做醫美，而且對效果和速度有自己的感受，會比較習慣那種方式很正常😊',
+     step2:'那您做醫美時，通常比較在意的是哪一方面？例如膚況改善、維持，還是日常保養？',
+     step3:'了解～醫美主要是針對特定問題做處理，平常的保養則可以從清潔、保濕和日常照顧去維持肌膚狀態，兩者可以依照自己的情況搭配。',
+     step4:'那您下次做完療程後，可以把當時的保養方式跟我說，我就能依照您的療程安排，幫您看看日常可以怎麼搭配。',
+     lineText:'了解～如果您本身有做醫美，而且對效果和速度有自己的感受，會比較習慣那種方式很正常😊\n\n那您做醫美時，通常比較在意的是改善、維持，還是療程後的保養呢？\n\n了解～醫美療程後的肌膚狀況會跟平常不太一樣，這時候保養的重點也會有所不同，像是清潔、保濕和日常照顧，都可以依當時狀況來安排。\n\n您下次做完療程後，可以把當時的療程和保養方式跟我說，我再幫您看看日常怎麼搭配。',
+     phoneText:'了解～如果您本身有做醫美，而且對效果和速度有自己的感受，會比較習慣那種方式很正常😊\n\n那您做醫美時，通常比較在意的是哪一方面？例如膚況改善、維持，還是日常保養？\n\n了解～醫美主要是針對特定問題做處理，平常的保養則可以從清潔、保濕和日常照顧去維持肌膚狀態，兩者可以依照自己的情況搭配。\n\n那您下次做完療程後，可以把當時的保養方式跟我說，我就能依照您的療程安排，幫您看看日常可以怎麼搭配。'},
+  ],
+  intimate: []
+};
+
+// 向下兼容舊的 OBJ_DATA
 const OBJ_DATA = {
   skincare: {
     title: '🧴 保養品異議即時通',
-    categories: ['全部','價格異議','效果懷疑','成分疑慮','競品比較','時間不夠','需要考慮','已有其他產品','不需要','家人反對','過敏敏感','已在使用','其他'],
-    items: [
-      // 範例 dummy data（待填入真實話術）
-      {cat:'價格異議', q:'這個好貴，比市面上的都貴', phone:'（電銷口語版話術）', line:'（客服LINE版話術）'},
-      {cat:'效果懷疑', q:'用了真的有效果嗎？', phone:'（電銷口語版話術）', line:'（客服LINE版話術）'},
-      {cat:'成分疑慮', q:'成分安全嗎？有沒有副作用？', phone:'（電銷口語版話術）', line:'（客服LINE版話術）'},
-    ]
+    categories: ['價格/預算/優惠','需求不足/保養必要性','已有產品/不想增加','效果/信心/過往使用經驗','膚況/適合度','成分/安全性','使用方式/懶惰/時間','品牌/比較/選擇','網路/信任/購買疑慮','電話拒絕/決策者異議'],
+    items: objectionData.skincare.map(d=>({
+      cat: d.category,
+      q: d.phrase,
+      tip: d.tip,
+      steps:[
+        {label:'Step 1 接住', text:d.step1},
+        {label:'Step 2 探詢', text:d.step2},
+        {label:'Step 3 解決', text:d.step3},
+        {label:'Step 4 成交', text:d.step4},
+      ].filter(s=>s.text && s.text.trim()),
+      line: d.lineText,
+      phone: d.phoneText
+    }))
   },
   intimate: {
     title: '🌸 私密處異議即時通',
-    categories: ['全部'],
-    items: [] // 內容建置中
+    categories: ['價格/預算/優惠','需求不足/保養必要性','已有產品/不想增加','效果/信心/過往使用經驗','膚況/適合度','成分/安全性','使用方式/懶惰/時間','品牌/比較/選擇','網路/信任/購買疑慮','電話拒絕/決策者異議'],
+    items: []
   }
 };
+
+let objCurrentItem = null;
 
 let objCurrentType = 'skincare';
 let objCurrentTab = 'phone';
 let objActiveTag = '全部';
 
-function openObjectionModal(){
-  var modal = document.getElementById('objectionModal');
-  if(modal){ modal.style.display='flex'; document.body.style.overflow='hidden'; }
-  else{ console.error('找不到 objectionModal 元素'); }
-}
-function closeObjectionModal(){
-  var modal = document.getElementById('objectionModal');
-  if(modal){ modal.style.display='none'; document.body.style.overflow=''; }
+
+
+
+
+
+
+
+
+
+
+
+function initObjectionPage(){
+  // 每次點進「異議神助手」分頁，回到第一層（選擇保養品／私密處）
+  backToObjL1();
 }
 
-function openObjectionDetail(type){
-  objCurrentType = type;
-  objActiveTag = '全部';
-  objCurrentTab = 'phone';
-  const data = OBJ_DATA[type];
-  document.getElementById('obj-detail-title').textContent = data.title;
-  document.getElementById('obj-search').value = '';
-  // Reset tabs
-  document.getElementById('obj-tab-phone').classList.add('active');
-  document.getElementById('obj-tab-line').classList.remove('active');
-  // Build tags
-  buildObjTags();
-  renderObjectionItems();
-  var dm=document.getElementById('objectionDetailModal'); if(dm) dm.style.display='flex';
-}
-function closeObjectionDetail(){
-  var dm=document.getElementById('objectionDetailModal'); if(dm) dm.style.display='none';
-}
-
-function switchObjTab(tab){
-  objCurrentTab = tab;
-  document.getElementById('obj-tab-phone').classList.toggle('active', tab==='phone');
-  document.getElementById('obj-tab-line').classList.toggle('active', tab==='line');
-  renderObjectionItems();
+function selectObjType(type){
+  objPageCurrentType = type;
+  objPageActiveTag = '';
+  objPageCurrentIdx = 0;
+  // 顯示第二層
+  document.getElementById('obj-l1').style.display='none';
+  document.getElementById('obj-l2plus').style.display='block';
+  // 麵包屑
+  const labels={skincare:'🧴 保養品異議即時通',intimate:'🌸 私密處異議即時通'};
+  document.getElementById('obj-breadcrumb').textContent=labels[type]||'';
+  // 搜尋清空
+  document.getElementById('obj-page-search').value='';
+  // 重置第四層
+  document.getElementById('obj-page-content').style.display='none';
+  document.getElementById('obj-page-empty').style.display='block';
+  buildObjPageTags();
+  renderObjPagePills();
 }
 
-function buildObjTags(){
-  const row = document.getElementById('obj-tags');
+function backToObjL1(){
+  document.getElementById('obj-l1').style.display='grid';
+  document.getElementById('obj-l2plus').style.display='none';
+  document.getElementById('obj-page-content').style.display='none';
+  document.getElementById('obj-page-empty').style.display='block';
+}
+
+function switchObjBrand(val){
+  objPageCurrentType = val;
+  selectObjType(val);
+}
+
+function buildObjPageTags(){
+  const row = document.getElementById('obj-page-tags');
+  if(!row) return;
   row.innerHTML = '';
-  const cats = OBJ_DATA[objCurrentType].categories;
-  cats.forEach(cat=>{
+  const data = OBJ_DATA[objPageCurrentType];
+  if(!data) return;
+  data.categories.forEach(cat=>{
+    const isActive = cat === objPageActiveTag;
     const b = document.createElement('button');
-    b.className = 'obj-tag' + (cat===objActiveTag?' active':'');
-    b.textContent = cat;
-    b.onclick = ()=>{ objActiveTag=cat; buildObjTags(); renderObjectionItems(); };
+    // Show count for active category
+    const cnt = data.items.filter(x=>x.cat===cat).length;
+    b.textContent = cat + (isActive ? ` (${cnt}則)` : '');
+    b.style.cssText=`padding:7px 16px;border-radius:999px;border:2px solid ${isActive?'var(--b2)':'var(--border)'};background:${isActive?'var(--b2)':'#fff'};color:${isActive?'#fff':'var(--text)'};font-size:13px;font-weight:${isActive?'700':'500'};cursor:pointer;font-family:inherit;white-space:nowrap;transition:all .15s`;
+    b.onclick=()=>{
+      objPageActiveTag=cat;
+      objPageCurrentIdx=0;
+      // Hide content when switching category
+      document.getElementById('obj-page-content').style.display='none';
+      document.getElementById('obj-page-empty').style.display='block';
+      buildObjPageTags();
+      renderObjPagePills();
+    };
     row.appendChild(b);
   });
 }
 
-function renderObjectionItems(){
-  const q = (document.getElementById('obj-search').value||'').toLowerCase().trim();
-  const body = document.getElementById('obj-detail-body');
-  body.innerHTML = '';
-  const items = OBJ_DATA[objCurrentType].items;
-  const filtered = items.filter(item=>{
-    const catMatch = objActiveTag==='全部' || item.cat===objActiveTag;
-    const txt = (item.q + ' ' + item.phone + ' ' + item.line).toLowerCase();
-    const qMatch = !q || txt.includes(q);
-    return catMatch && qMatch;
-  });
-
-  if(!filtered.length){
-    body.innerHTML = `<div class="obj-empty">${OBJ_DATA[objCurrentType].items.length===0?'🚧 內容建置中，敬請期待！':'🔎 找不到相關話術，試試其他關鍵字'}</div>`;
+function renderObjPagePills(){
+  const row = document.getElementById('obj-page-pills');
+  if(!row) return;
+  row.innerHTML='';
+  const q=(document.getElementById('obj-page-search').value||'').toLowerCase().trim();
+  const data=OBJ_DATA[objPageCurrentType];
+  // If no category selected and no search query, show hint
+  if(!data||!data.items.length){
+    row.innerHTML='<span style="color:var(--hint);font-size:13px">🚧 內容建置中，敬請期待！</span>';
     return;
   }
+  // Only show pills when a category is selected OR when searching
+  if(!objPageActiveTag && !q){
+    row.innerHTML='<span style="color:var(--hint);font-size:13px">👆 請先點選上方主題分類</span>';
+    return;
+  }
+  const filtered=data.items.filter(item=>{
+    const catMatch=q?true:(!objPageActiveTag||item.cat===objPageActiveTag);
+    const qMatch=!q||item.q.toLowerCase().includes(q)||item.cat.toLowerCase().includes(q);
+    return catMatch&&qMatch;
+  });
+  objPageCurrentItems=filtered;
+  if(!filtered.length){
+    row.innerHTML='<span style="color:var(--hint);font-size:13px">🔎 找不到相關拒絕詞</span>';
+    return;
+  }
+  filtered.forEach((item,idx)=>{
+    const isActive=(objPageCurrentIdx===idx&&document.getElementById('obj-page-content').style.display!=='none');
+    const b=document.createElement('button');
+    b.textContent=item.q;
+    b.style.cssText=`padding:8px 18px;border-radius:999px;border:2px solid ${isActive?'var(--b2)':'#c8e6f5'};background:${isActive?'var(--b2)':'#e8f4fc'};color:${isActive?'#fff':'var(--b1)'};font-size:13px;font-weight:600;cursor:pointer;font-family:inherit;white-space:nowrap;transition:all .15s`;
+    b.onclick=()=>{ objPageCurrentIdx=idx; renderObjPagePills(); showObjPageContent(item,idx,filtered.length); };
+    row.appendChild(b);
+  });
+}
 
-  filtered.forEach(item=>{
-    const ans = objCurrentTab==='phone' ? item.phone : item.line;
-    const div = document.createElement('div');
-    div.className = 'obj-item';
-    div.innerHTML = `
-      <div class="obj-item-head" onclick="this.closest('.obj-item').classList.toggle('open')">
-        <span class="obj-item-q">Q：${item.q}</span>
-        <span class="obj-item-cat">${item.cat}</span>
-      </div>
-      <div class="obj-item-body">${ans}</div>`;
-    body.appendChild(div);
+function showObjPageContent(item,idx,total){
+  document.getElementById('obj-page-empty').style.display='none';
+  document.getElementById('obj-page-content').style.display='block';
+  // Title
+  document.getElementById('obj-page-qtitle').textContent='客戶說：「'+item.q+'」';
+  // Nav
+  document.getElementById('obj-page-nav-label').textContent=(idx+1)+' / '+total;
+  // Tip (from raw data)
+  const tip=item.tip||'';
+  const tipEl=document.getElementById('obj-page-tip');
+  if(tip){tipEl.style.display='block';document.getElementById('obj-page-tip-text').textContent=tip;}
+  else{tipEl.style.display='none';}
+  // Steps
+  const stepsEl=document.getElementById('obj-page-steps');
+  stepsEl.innerHTML='';
+  const stepColors=['#3b82f6','#8b5cf6','#10b981','#f59e0b'];
+  (item.steps||[]).forEach((step,i)=>{
+    const div=document.createElement('div');
+    div.style.cssText=`background:#f8f9fa;border-left:4px solid ${stepColors[i]};border-radius:0 var(--rs) var(--rs) 0;padding:10px 14px;`;
+    div.innerHTML=`<div style="font-size:11px;font-weight:700;color:${stepColors[i]};margin-bottom:4px">${step.label}</div><div style="font-size:13px;color:var(--text);line-height:1.7">${step.text}</div>`;
+    stepsEl.appendChild(div);
+  });
+  // Right tab content
+  objRightTab='line';
+  updateObjRightTab(item);
+  // Reset copy btn
+  const cb=document.getElementById('obj-page-copy-btn');
+  if(cb) cb.textContent='📋 一鍵複製';
+}
+
+function switchObjRightTab(tab){
+  objRightTab=tab;
+  if(!objPageCurrentItems.length) return;
+  const item=objPageCurrentItems[objPageCurrentIdx];
+  if(item) updateObjRightTab(item);
+  // Style tabs
+  const lb=document.getElementById('obj-tab-line-btn');
+  const pb=document.getElementById('obj-tab-phone-btn');
+  if(lb){lb.style.background=tab==='line'?'var(--b2)':'#fff';lb.style.color=tab==='line'?'#fff':'var(--muted)';lb.style.borderColor=tab==='line'?'var(--b2)':'var(--border)';}
+  if(pb){pb.style.background=tab==='phone'?'var(--b2)':'#fff';pb.style.color=tab==='phone'?'#fff':'var(--muted)';pb.style.borderColor=tab==='phone'?'var(--b2)':'var(--border)';}
+}
+
+function updateObjRightTab(item){
+  const el=document.getElementById('obj-page-line');
+  if(!el) return;
+  if(objRightTab==='line'){
+    el.textContent=item.line||'（LINE版本建置中）';
+  } else {
+    el.textContent=item.phone||'（電話口條版建置中）';
+  }
+}
+
+function objPageNav(dir){
+  if(!objPageCurrentItems.length) return;
+  objPageCurrentIdx=(objPageCurrentIdx+dir+objPageCurrentItems.length)%objPageCurrentItems.length;
+  renderObjPagePills();
+  showObjPageContent(objPageCurrentItems[objPageCurrentIdx],objPageCurrentIdx,objPageCurrentItems.length);
+}
+
+function copyObjPageLine(){
+  const txt=document.getElementById('obj-page-line').textContent;
+  const btn=document.getElementById('obj-page-copy-btn');
+  const done=()=>{if(btn){btn.textContent='✅ 已複製！';setTimeout(()=>btn.textContent='📋 一鍵複製',2000);}};
+  navigator.clipboard.writeText(txt).then(done).catch(()=>{
+    var ta=document.createElement('textarea');ta.value=txt;
+    document.body.appendChild(ta);ta.select();document.execCommand('copy');document.body.removeChild(ta);
+    done();
   });
 }
 
 // ── INIT ──
+// Update objection count
+try{
+  var el=document.getElementById('obj-count');
+  if(el) el.textContent=objectionData.skincare.length;
+}catch(e){}
 buildFilters();
 filterProducts();
 buildVideos();
@@ -2734,58 +3731,6 @@ appendMsg("bot","嗨！我是黛后商品小助理 👑\n\n我只根據「商品
   </div>
 </div>
 
-<!-- 異議神助手主選單 -->
-<div id="objectionModal" onclick="if(event.target===this)closeObjectionModal()" style="display:none">
-  <div id="obj-box">
-    <div id="obj-header">
-      <button id="obj-close" onclick="closeObjectionModal()">✕</button>
-      <h2>⚡ 異議神助手</h2>
-      <p>快速找到最佳話術，輕鬆應對各種客戶異議</p>
-    </div>
-    <div class="obj-cards">
-      <div class="obj-card" onclick="openObjectionDetail('skincare')">
-        <div class="obj-card-icon">🧴</div>
-        <div class="obj-card-info">
-          <div class="obj-card-title">保養品異議即時通</div>
-          <div class="obj-card-sub">10 大分類 / 100 則話術</div>
-        </div>
-        <div class="obj-card-arrow">›</div>
-      </div>
-      <div class="obj-card" onclick="openObjectionDetail('intimate')">
-        <div class="obj-card-icon">🌸</div>
-        <div class="obj-card-info">
-          <div class="obj-card-title">私密處異議即時通</div>
-          <div class="obj-card-sub">10 大分類 / 100 則話術</div>
-        </div>
-        <div class="obj-card-arrow">›</div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- 異議詳情彈窗 -->
-<div id="objectionDetailModal" onclick="if(event.target===this)closeObjectionDetail()" style="display:none">
-  <div id="obj-detail-box">
-    <div id="obj-detail-header">
-      <button id="obj-detail-close" class="obj-detail-close" onclick="closeObjectionDetail()">✕</button>
-      <h3 id="obj-detail-title">保養品異議即時通</h3>
-    </div>
-    <div class="obj-detail-toolbar">
-      <!-- 搜尋列 -->
-      <div class="obj-search-row">
-        <input class="obj-search-inp" id="obj-search" type="text" placeholder="搜尋異議話術關鍵字..." oninput="renderObjectionItems()"/>
-      </div>
-      <!-- 電銷/客服 分頁 -->
-      <div class="obj-tabs">
-        <button class="obj-tab-btn active" id="obj-tab-phone" onclick="switchObjTab('phone')">📞 電銷口語版</button>
-        <button class="obj-tab-btn" id="obj-tab-line" onclick="switchObjTab('line')">💬 客服 LINE 版</button>
-      </div>
-      <!-- 分類 Tag -->
-      <div class="obj-tags-row" id="obj-tags"></div>
-    </div>
-    <div id="obj-detail-body"></div>
-  </div>
-</div>
 
 <iframe name="hidden_iframe_feedback" id="hidden_iframe_feedback" style="display:none"></iframe>
 </body>
