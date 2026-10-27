@@ -45,6 +45,11 @@ body{font-family:-apple-system,'PingFang TC','Noto Sans TC',sans-serif;backgroun
 .cat-btn:hover{border-color:var(--b2);color:var(--b1);}
 .cat-btn.active{background:var(--b2);color:#fff;border-color:var(--b2);font-weight:600;}
 
+/* 電銷／客服｜保養品必問（兩個品牌外觀一致，不隨品牌色變動）*/
+.cat-btn.cs-must{border:2px solid #f59e0b;background:#fffbeb;color:#b45309;font-weight:700;}
+.cat-btn.cs-must:hover,body.rd-theme .cat-btn.cs-must:hover{border-color:#d97706;background:#fef3c7;color:#92400e;}
+.cat-btn.cs-must.active,body.rd-theme .cat-btn.cs-must.active{background:#f59e0b;border-color:#f59e0b;color:#fff;}
+.nav-tab{flex-shrink:0;}
 /* PAGES */
 .tab-page{display:none;}
 .tab-page.active{display:block;}
@@ -313,6 +318,41 @@ body.rd-theme .qadb-item-head:hover{background:var(--rd-light);}
 body.rd-theme .qadb-tag{background:var(--rd-bg);color:var(--rd1);}
 body.rd-theme .qadb-q mark{background:#ffd0e5;}
 
+
+/* ── 標題列響應式：約1000px以下改兩列；手機不固定標題列，只固定選單列 ── */
+@media(max-width:1000px){
+  .site-header{position:static;height:auto;min-height:66px;flex-wrap:wrap;gap:8px 12px;padding:10px 1rem;}
+  .nav-tabs{top:0;}
+  .logo-circle{width:38px;height:38px;font-size:18px;}
+  .logo-text{flex:1 1 0;min-width:0;}
+  .logo-title{font-size:20px !important;line-height:1.3;flex-wrap:wrap;gap:2px 8px;}
+  .logo-sub{font-size:13px !important;line-height:1.3;}
+  .hbadge{white-space:nowrap;}
+  .brand-switcher{order:3;width:100%;margin-left:0;gap:8px;}
+  .brand-btn{flex:1;padding:8px 6px;font-size:15px;text-align:center;}
+}
+@media(max-width:640px){
+  .logo-title{font-size:18px !important;}
+  .hbadge{display:none;}
+}
+
+/* ── 電銷／客服｜保養品必問：提問卡片 ── */
+.cs-head{margin:0 0 14px;color:var(--text);}
+.cs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(340px,100%),1fr));gap:14px;align-items:start;}
+.cs-card{background:#fff;border-radius:var(--r);border:1px solid var(--border);padding:1rem 1.1rem .9rem;display:flex;flex-direction:column;gap:8px;box-shadow:var(--sh);transition:border-color .18s,box-shadow .18s;}
+.cs-card:hover,.cs-card.open{border-color:var(--b2);box-shadow:var(--shh);}
+.cs-toggle{align-self:flex-start;margin-top:2px;}
+.cs-detail{display:none;border-top:1px solid #f0f0f0;padding-top:12px;margin-top:2px;}
+.cs-card.open .cs-detail{display:block;}
+.cs-qlist{display:flex;flex-direction:column;gap:8px;margin-top:12px;}
+.cs-copy-btn{font-family:inherit;font-size:16px;font-weight:600;padding:8px 16px;border-radius:var(--rp);border:1.5px solid var(--b2);background:#fff;color:var(--b2);cursor:pointer;transition:all .15s;}
+.cs-copy-btn:hover{background:var(--b2);color:#fff;}
+.cs-toast{position:fixed;top:20px;left:50%;transform:translateX(-50%);background:var(--b2);color:#fff;padding:12px 24px;border-radius:50px;font-size:16px;font-weight:700;z-index:99999;box-shadow:0 4px 12px rgba(0,0,0,.2);max-width:90vw;text-align:center;}
+body.rd-theme .cs-card:hover,body.rd-theme .cs-card.open{border-color:var(--rd2);}
+body.rd-theme .cs-copy-btn{border-color:var(--rd2);color:var(--rd1);}
+body.rd-theme .cs-copy-btn:hover{background:var(--rd2);color:#fff;}
+body.rd-theme .cs-toast{background:var(--rd2);}
+@media(max-width:640px){ .cs-copy-btn{width:100%;} }
 </style>
 </head>
 <body>
@@ -348,7 +388,7 @@ body.rd-theme .qadb-q mark{background:#ffd0e5;}
 
 <header class="site-header">
   <div class="logo-circle">后</div>
-  <div>
+  <div class="logo-text">
     <div class="logo-title">Dr.Hold 黛后 <span style="opacity:.4;font-weight:300">◆</span> 內部知識庫</div>
     <div class="logo-sub">醫美級私密保養領導品牌 · 同仁專用系統</div>
   </div>
@@ -365,6 +405,7 @@ body.rd-theme .qadb-q mark{background:#ffd0e5;}
   <button class="nav-tab" data-tab="ai">💬 AI問答</button>
   <button class="nav-tab" data-tab="audio">🎬 語音教案</button>
   <button class="nav-tab" data-tab="objection">⚡ 異議神助手</button>
+  <button class="nav-tab" data-tab="ingredients">🧪 保養品成分解析</button>
   <button class="nav-tab" data-tab="quiz">📝 測驗</button>
   <button class="nav-tab" data-tab="exam">🎓 考核</button>
   <button class="nav-tab" data-tab="score">🏆 成績</button>
@@ -374,13 +415,17 @@ body.rd-theme .qadb-q mark{background:#ffd0e5;}
 <!-- 產品查詢 -->
 <div class="tab-page active" id="tab-products">
   <div class="cat-row" id="catFilters"></div>
-  <div class="pwrap">
+  <div class="pwrap" id="csMustAskPanel" style="display:none">
+    <h2 class="cs-head">📞 電銷／客服｜保養品必問</h2>
+    <div class="cs-grid" id="csMustAskGrid"></div>
+  </div>
+  <div class="pwrap" id="productsWrap">
     <div class="search-row">
       <div class="sbox">
-        <input type="text" id="searchInput" placeholder="搜尋商品名稱、成分、功效、適用族群..." oninput="filterProducts()"/>
+        <input type="text" id="searchInput" placeholder="搜尋商品名稱、成分、功效、適用族群..." oninput="refreshProductList()"/>
         <span class="sicon">🔍</span>
       </div>
-      <select class="sort-sel" id="sortSelect" onchange="filterProducts()">
+      <select class="sort-sel" id="sortSelect" onchange="refreshProductList()">
         <option value="default">預設排序</option>
         <option value="name">商品名稱</option>
         <option value="cat">依系列</option>
@@ -551,6 +596,15 @@ body.rd-theme .qadb-q mark{background:#ffd0e5;}
       </div>
     </div>
 
+  </div>
+</div>
+
+<!-- 保養品成分解析 -->
+<div class="tab-page" id="tab-ingredients">
+  <div style="max-width:1100px;margin:0 auto;padding:2.5rem 1.5rem;text-align:center">
+    <div style="font-size:56px;margin-bottom:12px">🧪</div>
+    <h2 style="margin:0 0 8px;color:var(--text)">保養品成分解析</h2>
+    <p style="font-size:16px;color:var(--muted);margin:0">內容建置中 🚧</p>
   </div>
 </div>
 
@@ -938,6 +992,7 @@ const P=[
    qa:[
      {q:'身體除草保養步驟？',a:'身體（不含私密肌）：除草霜或慕斯除毛 → 萬能保濕修護凝膠；私密肌：專用除草霜 → 緊實潤澤凝膠'},
      {q:'和緊實潤澤凝膠的差別？',a:'萬能修護凝膠適用身體各部位（不含私密肌），主打醫美術後修護；緊實潤澤凝膠是私密肌專用，含大豆異黃酮、蜂王乳等特殊成分。'},
+     {q:'請問黛后的萬能保濕修護凝膠是擦在精華液之前還是之後?',a:'您好~萬能保濕修護凝膠可以在精華液後使用，除此之外，還可以單獨使用，像是醫美 / 除毛術後、換季乾癢 / 脫皮、非常溫和，全身上下（除私密處外）都能安心使用喔~謝謝您~',aiSkip:true},
    ],
    pitch:'醫美後的最強救星！法國蘆薈+普魯蘭多糖+尿囊素三重修護，六大功效瞬效鎮定補水，讓肌膚快速恢復最佳狀態！',
    salesScript:{
@@ -1299,14 +1354,149 @@ document.querySelectorAll(".nav-tab").forEach(btn=>{
     if(tabEl) tabEl.classList.add("active");
     if(btn.dataset.tab==='qadb') initQADB();
     if(btn.dataset.tab==='objection') initObjectionPage();
+    var navBar=btn.parentElement;
+    if(navBar && navBar.scrollTo) navBar.scrollTo({left:btn.offsetLeft-(navBar.clientWidth-btn.offsetWidth)/2,behavior:'smooth'});
   };
 });
 
+// ── 電銷／客服｜保養品必問（兩個品牌共用）──
+function showCsMustAsk(on){
+  const panel=document.getElementById('csMustAskPanel');
+  const wrap=document.getElementById('productsWrap');
+  if(panel) panel.style.display=on?'block':'none';
+  if(on) renderCsMustAsk();
+  if(wrap) wrap.style.display=on?'none':'';
+}
+// ── 電銷／客服｜保養品必問：提問清單（畫面與複製內容共用同一份資料）──
+const CS_MUST_ASK=[
+  {id:'abnormal',
+   title:'保養品肌膚異常提問',
+   intro:'客戶使用保養品後產生肌膚問題，你可依狀況了解或詢問以下問題(依情況全問或挑著問)',
+   questions:[
+     '請問您平常的膚質比較偏油性、乾性、混合性T油兩頰偏乾，混合性T油兩頰微油呢？',
+     '這項產品您目前使用多久了？大約使用多久後開始出現目前這個狀況呢？',
+     '想跟您確認一下，這項產品平常是怎麼使用的呢？使用的順序、用量及頻率是？',
+     '除了這項產品之外，這段期間還有搭配其他保養品嗎？最近有沒有新增或更換其他產品呢？',
+     '目前還有繼續使用嗎？如果有停用，肌膚狀況後來有沒有變化？大約多久開始改善或有其它變化呢？'
+   ]},
+  {id:'need',
+   title:'保養品肌膚需求提問',
+   intro:'我適合什麼保養品?(全數提問)',
+   questions:[
+     '請問您的膚質是比較偏油性、乾性、混合性T油兩頰偏乾，混合性T油兩頰微油呢？',
+     '肌膚是否容易敏感?',
+     '以前是否有使用過含有酸類的產品？',
+     '如有使用過，是否有出現不適的肌膚反應呢？',
+     '想要改善的肌膚問題？(依最想改善的順序排列)'
+   ]}
+];
+
+function csQuestionsText(card){
+  return card.questions.map((q,i)=>(i+1)+'. '+q).join('\n');
+}
+
+function renderCsMustAsk(){
+  const grid=document.getElementById('csMustAskGrid');
+  if(!grid) return;
+  grid.innerHTML='';
+  CS_MUST_ASK.forEach(card=>{
+    const box=document.createElement('div'); box.className='cs-card'; box.id='csCard-'+card.id;
+    const title=document.createElement('div'); title.className='cname'; title.textContent=card.title;
+    const intro=document.createElement('div'); intro.className='cdesc'; intro.textContent=card.intro;
+    const toggle=document.createElement('button'); toggle.type='button'; toggle.className='vbtn cs-toggle';
+    toggle.textContent='詳情 →'; toggle.setAttribute('aria-expanded','false');
+    toggle.onclick=()=>toggleCsCard(card.id);
+
+    const detail=document.createElement('div'); detail.className='cs-detail';
+    const copyBtn=document.createElement('button'); copyBtn.type='button'; copyBtn.className='cs-copy-btn';
+    copyBtn.textContent='📋 一鍵複製以下 '+card.questions.length+' 個問題';
+    copyBtn.onclick=()=>copyCsQuestions(card.id, copyBtn);
+    const list=document.createElement('div'); list.className='cs-qlist';
+    card.questions.forEach((q,i)=>{
+      const row=document.createElement('div'); row.className='ustep';
+      const n=document.createElement('div'); n.className='unum'; n.textContent=String(i+1);
+      const t=document.createElement('div'); t.className='utxt'; t.textContent=q;
+      row.appendChild(n); row.appendChild(t); list.appendChild(row);
+    });
+    detail.appendChild(copyBtn); detail.appendChild(list);
+
+    box.appendChild(title); box.appendChild(intro); box.appendChild(toggle); box.appendChild(detail);
+    grid.appendChild(box);
+  });
+}
+
+function toggleCsCard(id){
+  const box=document.getElementById('csCard-'+id); if(!box) return;
+  const open=box.classList.toggle('open');
+  const t=box.querySelector('.cs-toggle');
+  if(t){ t.textContent=open?'收合 ↑':'詳情 →'; t.setAttribute('aria-expanded',open?'true':'false'); }
+}
+
+function showToast(msg){
+  const t=document.createElement('div'); t.className='cs-toast'; t.textContent=msg;
+  document.body.appendChild(t);
+  setTimeout(()=>{ if(t.parentNode) t.parentNode.removeChild(t); },2200);
+}
+
+function fallbackCopyText(text){
+  const ta=document.createElement('textarea');
+  ta.value=text; ta.setAttribute('readonly','');
+  ta.style.cssText='position:fixed;top:-1000px;left:0;opacity:0;';
+  document.body.appendChild(ta); ta.select();
+  try{ ta.setSelectionRange(0,text.length); }catch(e){}
+  let ok=false;
+  try{ ok=document.execCommand('copy'); }catch(e){}
+  document.body.removeChild(ta);
+  return ok;
+}
+function copyTextToClipboard(text){
+  if(navigator.clipboard && navigator.clipboard.writeText){
+    return navigator.clipboard.writeText(text).then(()=>true).catch(()=>fallbackCopyText(text));
+  }
+  return Promise.resolve(fallbackCopyText(text));
+}
+
+function copyCsQuestions(id, btn){
+  const card=CS_MUST_ASK.find(c=>c.id===id); if(!card) return;
+  const label=btn.textContent;
+  copyTextToClipboard(csQuestionsText(card)).then(ok=>{
+    if(ok){
+      showToast('✅ 複製成功');
+      btn.textContent='✅ 已複製';
+      setTimeout(()=>{ btn.textContent=label; },2000);
+    } else {
+      showToast('⚠️ 複製失敗，請手動選取文字複製');
+    }
+  });
+}
+
+function appendCsMustAskBtn(row){
+  const b=document.createElement('button');
+  b.className='cat-btn cs-must';
+  b.id='csMustAskBtn';
+  b.textContent='📞 電銷／客服｜保養品必問';
+  b.onclick=()=>{
+    document.querySelectorAll('#catFilters .cat-btn').forEach(x=>x.classList.remove('active'));
+    b.classList.add('active');
+    showCsMustAsk(true);
+  };
+  row.appendChild(b);
+}
+
 // ── FILTERS ──
 let activeCat="all";
+let rdCurrentCat='all';   // 瑞丹絲目前選中的系列（搜尋／排序時沿用）
+const EMPTY_HTML_DR='<div style="font-size:48px;margin-bottom:12px">🔎</div><div style="font-size:15px;color:var(--muted);margin-bottom:6px">找不到符合的商品</div><div style="font-size:13px">試試其他關鍵字，例如：益生菌、除毛、抗皺</div>';
+const EMPTY_HTML_RD='<div style="font-size:48px;margin-bottom:12px">🔎</div><div style="font-size:15px;color:var(--muted);margin-bottom:6px">找不到符合的商品</div><div style="font-size:13px">試試其他關鍵字，例如：美白、除毛、保濕</div>';
+// 搜尋框／排序下拉選單依目前品牌，走各自的篩選函式
+function refreshProductList(){
+  if(currentBrand==='redance') filterRDProducts(rdCurrentCat);
+  else filterProducts();
+}
 function buildFilters(){
   const row=document.getElementById("catFilters");
   row.innerHTML='';
+  activeCat="all";
   CATS.forEach(c=>{
     const cnt=c.id==="all"?P.length:P.filter(x=>x.cat===c.id).length;
     const b=document.createElement("button");
@@ -1320,10 +1510,12 @@ function buildFilters(){
     };
     row.appendChild(b);
   });
+  appendCsMustAskBtn(row);
 }
 
 // ── PRODUCTS ──
 function filterProducts(){
+  showCsMustAsk(false);
   const q=document.getElementById("searchInput").value.toLowerCase().trim();
   const sort=document.getElementById("sortSelect").value;
   const grid=document.getElementById("productGrid");
@@ -1339,7 +1531,7 @@ function filterProducts(){
   if(sort==="name")f.sort((a,b)=>a.name.localeCompare(b.name,"zh-TW"));
   else if(sort==="cat")f.sort((a,b)=>a.cat.localeCompare(b.cat));
   document.getElementById("countShown").textContent=f.length;
-  if(!f.length){empty.style.display="block";return;}
+  if(!f.length){empty.innerHTML=EMPTY_HTML_DR;empty.style.display="block";return;}
   empty.style.display="none";
   f.forEach(p=>{
     const card=document.createElement("div");
@@ -1674,6 +1866,9 @@ const OFFICIAL_QA_LIST=[
    ans:'【擦撫紋油可以讓妊娠紋消除嗎？】\n妊娠紋一旦生成較難百分之百消失，但可以透過保養大幅度淡化。建議從備孕時就開始使用、勤加按摩，增加肌膚延展力來維持肌膚緊緻與美觀。'},
   {kws:['私密痘痘','毛囊炎','私密長痘'],
    ans:'【私密肌容易長痘痘可以使用私密面膜慕斯嗎？】\n私密肌容易長痘痘（通常是毛囊炎）時，可以繼續使用溫和的私密肌專用清潔慕斯。私密肌都需要用弱酸性的成分來做清潔，我們的產品非常溫和不刺激，並且通過SGS抗菌認證。重點是清潔外陰部，且需避免去擠壓痘痘。若有傷口、劇烈疼痛或持續不適，應停止使用並就醫。'},
+  {kws:['萬能保濕修護凝膠是擦在精華液','萬能保濕修護凝膠擦在精華液','精華液之前還是之後','凝膠是擦在精華液'],
+   req:[['萬能','修護凝膠'],['精華液','精華前','精華後','精華之','精華還','先擦精華','精華先','哪個先']],
+   ans:'【請問黛后的萬能保濕修護凝膠是擦在精華液之前還是之後?】\n您好~萬能保濕修護凝膠可以在精華液後使用，除此之外，還可以單獨使用，像是醫美 / 除毛術後、換季乾癢 / 脫皮、非常溫和，全身上下（除私密處外）都能安心使用喔~謝謝您~'},
 ];
 
 // ── 瑞丹絲額外QA ──
@@ -1717,7 +1912,7 @@ function buildFullProductReply(p, q){
   // If query provided, check QA first → show QA-only if matched
   if(q && p.qa && p.qa.length){
     const ql2=q.toLowerCase();
-    const scoredQA=(p.qa||[]).map(qa=>{
+    const scoredQA=(p.qa||[]).filter(qa=>!qa.aiSkip).map(qa=>{
       const qt=(qa.q+' '+qa.a).toLowerCase();
       let sc=qt.includes(ql2)?50:0;
       for(let i=0;i<ql2.length-1;i++) if(qt.includes(ql2.substring(i,i+2))) sc+=2;
@@ -1792,7 +1987,7 @@ function matchProduct(p, ql){
     p.desc, p.keys||'', p.spec||'',
     (p.tags||[]).join(' '),
     (p.ingredients||[]).map(i=>i.name+' '+i.effect).join(' '),
-    (p.qa||[]).map(i=>i.q+' '+i.a).join(' '),
+    (p.qa||[]).filter(i=>!i.aiSkip).map(i=>i.q+' '+i.a).join(' '),   // aiSkip：已由 OFFICIAL_QA_LIST 精準觸發，不參與模糊比對
     (p.targets||[]).join(' '),
     (p.notes||[]).join(' '),
     p.pitch||'',
@@ -1813,6 +2008,8 @@ function localSearch(q){
   // Official QA check
   for(const oqa of OFFICIAL_QA_LIST){
     if(oqa.kws.some(k=>ql.includes(k))) return oqa.ans;
+    // req：每一組詞都至少出現一個才觸發（例如「商品名」＋「問題主題」）
+    if(oqa.req && oqa.req.every(g=>g.some(k=>ql.includes(k)))) return oqa.ans;
   }
   // Shortcut check
   for(const sc of SHORTCUTS){
@@ -2325,36 +2522,44 @@ function switchBrand(brand){
 function buildRDFilters(){
   const row=document.getElementById('catFilters');
   row.innerHTML='';
-  let rdActiveCat='all';
+  rdCurrentCat='all';
   RD_CATS.forEach(c=>{
     const cnt=c.id==='all'?RD_P.length:RD_P.filter(x=>x.cat===c.id).length;
     const b=document.createElement('button');
     b.className='cat-btn'+(c.id==='all'?' active':'');
     b.textContent=c.label+(c.id!=='all'?` (${cnt})`:'');
     b.onclick=()=>{
-      rdActiveCat=c.id;
+      rdCurrentCat=c.id;
       document.querySelectorAll('.cat-btn').forEach(x=>x.classList.remove('active'));
       b.classList.add('active');
-      filterRDProducts(rdActiveCat);
+      filterRDProducts(rdCurrentCat);
     };
     row.appendChild(b);
   });
+  appendCsMustAskBtn(row);
 }
 
-function filterRDProducts(cat='all'){
+function filterRDProducts(cat=rdCurrentCat){
+  showCsMustAsk(false);
   const q=document.getElementById('searchInput').value.toLowerCase().trim();
+  const sort=document.getElementById('sortSelect').value;
   const grid=document.getElementById('productGrid');
   const empty=document.getElementById('emptyState');
   grid.innerHTML='';
+  const has=s=>String(s||'').toLowerCase().includes(q);
   let f=RD_P.filter(p=>{
     const mc=cat==='all'||p.cat===cat;
-    const mq=!q||p.name.includes(q)||p.desc.includes(q);
+    const mq=!q||has(p.name)||has(p.desc)||has(p.keys)
+      ||(p.tags||[]).some(t=>has(t))
+      ||(p.ingredients||[]).some(i=>has(i.name)||has(i.effect));
     return mc&&mq;
   });
+  if(sort==='name') f.sort((a,b)=>a.name.localeCompare(b.name,'zh-TW'));
+  else if(sort==='cat') f.sort((a,b)=>a.cat.localeCompare(b.cat));
   document.getElementById('countShown').textContent=f.length;
   if(!f.length){
+    empty.innerHTML=EMPTY_HTML_RD;
     empty.style.display='block';
-    empty.innerHTML='<div style="font-size:48px;margin-bottom:12px">🌸</div><div style="font-size:15px;color:var(--muted);margin-bottom:6px">瑞丹絲商品資料建置中</div><div style="font-size:13px">敬請期待！</div>';
     return;
   }
   empty.style.display='none';
